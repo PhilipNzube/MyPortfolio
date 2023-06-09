@@ -1,0 +1,2590 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+  background-color: hsl(218, 28%, 13%);
+  width: 100%;
+  height: 100%;
+}
+
+#Overlay {
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  animation-name: OverlaySlideIn;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  backdrop-filter: blur(0.2em);
+}
+
+#PicOverlay {
+  z-index: 1;
+  object-fit: contain;
+  background: url('./images/ProfilePic.jpg') center no-repeat;
+  background-size: contain;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  animation-name: PicOverlaySlideIn;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  backdrop-filter: blur(0.2em);
+}
+
+@media only screen and (min-width:781px) {
+  #HamBurger {
+    display: none;
+  }
+
+
+  #LOADINGTOP {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 10px;
+    animation-name: Load;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes Load {
+    0% {
+      width: 10%;
+    }
+
+    50% {
+      width: 50%;
+    }
+
+    100% {
+      width: 90%;
+    }
+  }
+
+  #LOADING {
+    opacity: 0;
+    font-size: 500%;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    animation-name: LOADIN;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes LOADIN {
+    30% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #LOADINGBG {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+
+  #Container {
+    position: relative;
+    top: 25px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    opacity: 0;
+    animation-name: FADEIN;
+    animation-delay: 6s;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+  }
+
+  #AboutContainer {
+    position: relative;
+    top: 25px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+
+  #ProjectsContainer {
+    position: relative;
+    top: 25px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+
+  #ContactContainer {
+    position: relative;
+    top: 25px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+
+  @keyframes FADEIN {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+  }
+
+  #About {
+    height: 5%;
+    cursor: pointer;
+    color: palevioletred;
+    backdrop-filter: blur(0.2em);
+    font-size: xx-large;
+    position: fixed;
+    top: 6%;
+    right: 375px;
+    z-index: 1;
+  }
+
+  /* #About:hover {
+    bottom: 1px;
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 1px;
+    animation-name: Underline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  } */
+
+  #Projects {
+    height: 5%;
+    cursor: pointer;
+    color: palevioletred;
+    backdrop-filter: blur(0.2em);
+    font-size: xx-large;
+    position: fixed;
+    top: 6%;
+    right: 200px;
+    z-index: 1;
+  }
+
+  /* #Projects:hover {
+    cursor: pointer;
+    bottom: 1px;
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 1px;
+    animation-name: Underline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  } */
+
+  #Contact {
+    height: 5%;
+    cursor: pointer;
+    color: palevioletred;
+    backdrop-filter: blur(0.2em);
+    font-size: xx-large;
+    position: fixed;
+    top: 6%;
+    right: 45px;
+    z-index: 1;
+  }
+
+  #ContactMeLink {
+    cursor: pointer;
+    color: palevioletred;
+    text-decoration: underline;
+  }
+
+  /* #Contact:hover {
+    cursor: pointer;
+    bottom: 1px;
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 1px;
+    animation-name: Underline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  } */
+
+  @keyframes Underline {
+    0% {
+      text-decoration-color: rgba(216, 112, 147, 0.185);
+      text-decoration-thickness: 1px;
+    }
+
+    50% {
+      text-decoration-color: rgba(216, 112, 147, 0.473);
+      text-decoration-thickness: 2px;
+    }
+
+    100% {
+      text-decoration-color: rgba(216, 112, 147, 0.856);
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  #NavBar {
+    display: none;
+    margin-right: 3.5%;
+    animation-name: FADEIN;
+    animation-delay: 6s;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+  }
+
+  #NavBarCont {
+    width: 37%;
+    backdrop-filter: blur(0.2em);
+    font-size: xx-large;
+    position: fixed;
+    top: 2%;
+    right: 0;
+    z-index: 1;
+  }
+
+  #Name {
+    width: 5%;
+    cursor: pointer;
+    position: relative;
+    font-weight: 540;
+    font-size: 300%;
+    color: hsl(236, 48%, 33%);
+    left: 3%;
+  }
+
+  #Hi {
+    position: relative;
+    top: 10px;
+    color: bisque;
+  }
+
+  #Name2 {
+    max-width: 60%;
+    word-wrap: break-word;
+    position: relative;
+    right: 0.5%;
+    font-weight: 540;
+    font-size: 600%;
+    color: hsl(236, 48%, 33%);
+  }
+
+  #Prof {
+    position: relative;
+    bottom: 150px;
+    text-align: left;
+    max-width: fit-content;
+    color: palevioletred;
+    border-right: 0.1em solid palevioletred;
+    white-space: nowrap;
+    letter-spacing: .10em;
+    animation: blink .5s step-end infinite alternate;
+  }
+
+
+  #Download{
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    box-shadow: 0 0 15px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    padding-right: 50px;
+    height: 45px;
+    width: 220px;
+    background-color: hsl(218, 28%, 13%);
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Download:hover {
+    cursor: pointer;
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: palevioletred;
+  }
+
+  #DownloadIcon{
+    position: relative;
+    top: 10px; 
+    left:2%;
+  }
+
+
+  #Aboutme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: palevioletred;
+  }
+
+  #Aboutbody {
+    position: relative;
+    right: 0.5%;
+    font-weight: 540;
+    font-size: 200%;
+    color: bisque;
+  }
+
+  #Skills {
+    font-weight: bold;
+    font-size: 150%;
+    position: relative;
+    color: palevioletred;
+  }
+
+  #SkillIcons {
+    text-align: center;
+  }
+
+  #ReactJS {
+    width: 6%;
+  }
+
+  /* #ReactJSParent{
+
+  } */
+
+  #ReactJSText {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: bisque;
+  }
+
+  #Javascript {
+    width: 6%;
+  }
+
+
+  #JavascriptParent {
+    left: 31%;
+  }
+
+  #JavascriptText {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: bisque;
+  }
+
+  #CSharp {
+    width: 6%;
+  }
+
+  #CSharpParent {
+    left: 31%;
+  }
+
+  #CSharpText {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: bisque;
+  }
+
+  #MyProjects {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: palevioletred;
+  }
+
+  #Filter{
+    position: relative;
+    top:20px;
+    color: bisque;
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: hsl(210, 13%, 6%);
+    border: 2px solid bisque;
+    width: 20%;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  #ProjCards{
+    position: relative;
+    top: 60px;
+  }
+
+  #Proj1{
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj1Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%;
+  }
+
+  #Proj1Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj1Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj1Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    width: 25.1%;
+    height:10%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+  #Proj2{
+    position: relative;
+    bottom: 250px;
+    left:35%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj2Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%; 
+  }
+
+  #Proj2Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj2Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj2Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+  #Proj3{
+    position: relative;
+    bottom: 500px;
+    left:70%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj3Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj3Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj3Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj3Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #Proj4{
+    position: relative;
+    bottom: 450px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj4Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj4Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj4Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj4Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #Proj5{
+    position: relative;
+    bottom: 700px;
+    left:35%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj5Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj5Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    white-space: nowrap;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 125%;
+    color: bisque;
+  }
+
+  #Proj5Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj5Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #Proj6{
+    position: relative;
+    bottom: 950px;
+    left:70%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj6Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj6Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj6Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj6Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #VLS{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VLS:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VC{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VC:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VLS2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VLS2:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VC2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VC2:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #ProjLink{
+    text-decoration: none;
+    color: bisque;
+  }
+
+
+  @keyframes ProjOverlayAnim {
+    0%{
+      height: 1px;
+    }
+
+    100%{
+      height: -150px;
+    }
+  }
+
+  @keyframes ProjOverlayAnimOut {
+    0%{
+      height: -150px;
+    }
+
+    100%{
+      height: 1px;
+    }
+  }
+
+  #Contactme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: palevioletred;
+  }
+
+  #ContactName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #ContactName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #ContactNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+  #EmailNameParent {
+    position: relative;
+    left: 50%;
+    bottom: 87px;
+  }
+
+  #EmailName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #EmailName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #EmailNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+
+  #SubjectNameParent {
+    position: relative;
+    bottom: 50px;
+  }
+
+  #SubjectName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 97.5%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #SubjectName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #SubjectNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+  #MessageName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 120px;
+    width: 97.5%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #MessageName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #MessageNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+  #Submit {
+    position: relative;
+    top: 40px;
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    width: 15%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Submit:hover {
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: palevioletred;
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  #Elipses {
+    opacity: 0;
+    animation-name: Dot1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot1 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses2 {
+    opacity: 0;
+    animation-name: Dot2;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot2 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses3 {
+    opacity: 0;
+    animation-name: Dot3;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot3 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #SocialIcons {
+    position: relative;
+    top: 50px;
+  }
+
+  #Twitter {
+    position: relative;
+    right: 1%;
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #GitHub {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #LinkedIn {
+    position: relative;
+    cursor: pointer;
+    height: 80px;
+    left: 1%;
+  }
+
+  #Profile {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    right: 10%;
+    position: fixed;
+    bottom: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.767);
+    border: 1px solid rgba(255, 255, 255, 0.767);
+  }
+}
+
+@media only screen and (max-width:780px) {
+  #OverlayNavBarCont {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-size: 300%;
+  }
+
+  @keyframes OverlaySlideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes OverlaySlideOut {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+
+  @keyframes PicOverlaySlideIn {
+    0% {
+      width: 0%;
+      height: 0%;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @keyframes PicOverlaySlideOut {
+    0% {
+      width: 100%;
+      height: 100%;
+    }
+
+    100% {
+      width: 0%;
+      height: 0%;
+    }
+  }
+
+
+  #Close {
+    cursor: pointer;
+    top: 6.8%;
+    right: 5%;
+    position: fixed;
+    cursor: pointer;
+    height: 30px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.637);
+    box-shadow: 0 0 5px white;
+    border-radius: 10%;
+  }
+
+  #ClosePicOverlay {
+    cursor: pointer;
+    top: 5%;
+    right: 5%;
+    position: fixed;
+    cursor: pointer;
+    height: 30px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.637);
+    box-shadow: 0 0 5px white;
+    border-radius: 10%;
+  }
+
+  #ContainerCont {
+    position: relative;
+    top: 100px;
+  }
+
+  #HamBurger {
+    top: 6.8%;
+    right: 5%;
+    position: fixed;
+    backdrop-filter: blur(0.2em);
+    z-index: 1;
+    cursor: pointer;
+    height: 30px;
+    display: block;
+  }
+
+  #LOADINGTOP {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 10px;
+    animation-name: Load;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes Load {
+    0% {
+      width: 10%;
+    }
+
+    50% {
+      width: 50%;
+    }
+
+    100% {
+      width: 90%;
+    }
+  }
+
+  #LOADING {
+    opacity: 0;
+    font-size: 400%;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    animation-name: LOADIN;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes LOADIN {
+    30% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #LOADINGBG {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+
+  #Container {
+    z-index: -1;
+    position: relative;
+    top: 25px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    opacity: 0;
+    animation-name: FADEIN;
+    animation-delay: 6s;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+  }
+
+  #AboutContainer {
+    z-index: 0;
+    position: relative;
+    top: 80px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+
+  #ProjectsContainer {
+    z-index: 0;
+    position: relative;
+    top: 80px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+
+  #ContactContainer {
+    position: relative;
+    top: 80px;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+
+  @keyframes FADEIN {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+  }
+
+  #AboutOverlay {
+    color: palevioletred;
+    cursor: pointer;
+  }
+
+  /* #AboutOverlay:hover {
+    cursor: pointer;
+    bottom: 1px;
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 1px;
+    animation-name: Underline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  } */
+
+  #ProjectsOverlay {
+    color: palevioletred;
+    cursor: pointer;
+  }
+
+  /* #ProjectsOverlay:hover {
+    cursor: pointer;
+    bottom: 1px;
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 1px;
+    animation-name: Underline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  } */
+
+  #ContactOverlay {
+    color: palevioletred;
+    cursor: pointer;
+  }
+
+  /* #ContactOverlay:hover {
+    cursor: pointer;
+    bottom: 1px;
+    text-decoration: underline;
+    text-decoration-color: palevioletred;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 1px;
+    animation-name: Underline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  } */
+
+  @keyframes Underline {
+    0% {
+      text-decoration-color: rgba(216, 112, 147, 0.185);
+      text-decoration-thickness: 1px;
+    }
+
+    50% {
+      text-decoration-color: rgba(216, 112, 147, 0.473);
+      text-decoration-thickness: 2px;
+    }
+
+    100% {
+      text-decoration-color: rgba(216, 112, 147, 0.856);
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  #About {
+    display: none;
+  }
+
+  #Projects {
+    display: none;
+  }
+
+  #Contact {
+    display: none;
+  }
+
+  #ContactMeLink {
+    cursor: pointer;
+    color: palevioletred;
+    text-decoration: underline;
+  }
+
+  #NavBar {
+    display: none;
+    animation-name: FADEIN;
+    animation-delay: 6s;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+  }
+
+  #NavBarCont {
+    font-size: xx-large;
+    position: fixed;
+    top: 2%;
+    right: 5%;
+  }
+
+  #Name {
+    z-index: 1;
+    backdrop-filter: blur(0.2em);
+    width: 11%;
+    cursor: pointer;
+    position: fixed;
+    font-weight: 540;
+    font-size: 300%;
+    color: hsl(236, 48%, 33%);
+    left: 58px;
+    top: 0%;
+  }
+
+  #Hi {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: bisque;
+  }
+
+  #Name2 {
+    text-align: center;
+    position: relative;
+    right: 0.5%;
+    font-weight: 540;
+    font-size: 400%;
+    color: hsl(236, 48%, 33%);
+  }
+
+  #Prof {
+    /* max-width: fit-content; */
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+    color: palevioletred;
+    border-bottom: 0.1em solid palevioletred;
+    white-space: nowrap;
+    letter-spacing: .10em;
+    /* animation: blink .5s step-end infinite alternate; */
+  }
+
+  #Aboutme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: palevioletred;
+  }
+
+  #Aboutbody {
+    position: relative;
+    right: 0.5%;
+    font-weight: 540;
+    font-size: 150%;
+    color: bisque;
+  }
+
+  #Skills {
+    font-weight: bold;
+    font-size: 150%;
+    position: relative;
+    color: palevioletred;
+  }
+
+  #SkillIcons {
+    text-align: center;
+  }
+
+  #ReactJS {
+    width: 10%;
+  }
+
+  /* #ReactJSParent{
+
+  } */
+
+  #ReactJSText {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: bisque;
+  }
+
+  #Javascript {
+    width: 10%;
+  }
+
+  #JavascriptParent {
+    left: 10%;
+  }
+
+  #JavascriptText {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: bisque;
+  }
+
+  #CSharp {
+    width: 10%;
+  }
+
+  #CSharpParent {
+    left: 10%;
+  }
+
+  #CSharpText {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: bisque;
+  }
+
+
+
+  #MyProjects {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: palevioletred;
+  }
+
+  #Filter{
+    position: relative;
+    top:20px;
+    color: bisque;
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: hsl(210, 13%, 6%);
+    border: 2px solid bisque;
+    width: 20%;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  #ProjCards{
+    position: relative;
+    top: 60px;
+  }
+
+  #Proj1{
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj1Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%;
+  }
+
+  #Proj1Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj1Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj1Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    width: 40.1%;
+    height:10%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+  #Proj2{
+    position: relative;
+    bottom: 250px;
+    left:57%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj2Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%; 
+  }
+
+  #Proj2Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj2Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj2Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+  #Proj3{
+    position: relative;
+    bottom: 200px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj3Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj3Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj3Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj3Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #Proj4{
+    position: relative;
+    bottom: 450px;
+    left:57%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj4Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj4Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj4Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj4Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #Proj5{
+    position: relative;
+    bottom: 400px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj5Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj5Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    white-space: nowrap;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 125%;
+    color: bisque;
+  }
+
+  #Proj5Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj5Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #Proj6{
+    position: relative;
+    bottom: 650px;
+    left:57%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj6Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj6Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj6Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj6Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  #VLS{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VLS:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VC{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VC:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VLS2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VLS2:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VC2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VC2:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #ProjLink{
+    text-decoration: none;
+    color: bisque;
+  }
+
+
+  @keyframes ProjOverlayAnim {
+    0%{
+      height: 1px;
+    }
+
+    100%{
+      height: -150px;
+    }
+  }
+
+  @keyframes ProjOverlayAnimOut {
+    0%{
+      height: -150px;
+    }
+
+    100%{
+      height: 1px;
+    }
+  }
+
+
+
+  #Contactme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: palevioletred;
+  }
+
+  #ContactName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #ContactName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #ContactNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+  #EmailNameParent {
+    position: relative;
+    left: 50%;
+    bottom: 87px;
+  }
+
+  #EmailName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #EmailName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #EmailNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+
+  #SubjectNameParent {
+    position: relative;
+    bottom: 50px;
+  }
+
+  #SubjectName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 97.5%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #SubjectName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #SubjectNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+  #MessageName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 120px;
+    width: 97.5%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #MessageName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: white;
+  }
+
+  #MessageNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+
+  #Submit {
+    position: relative;
+    top: 40px;
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    width: 15%;
+    background-color: hsl(218, 28%, 13%);
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Submit:hover {
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: palevioletred;
+  }
+
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  #Elipses {
+    opacity: 0;
+    animation-name: Dot1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot1 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses2 {
+    opacity: 0;
+    animation-name: Dot2;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot2 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses3 {
+    opacity: 0;
+    animation-name: Dot3;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot3 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #SocialIcons {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    /* left: 25%;
+    right:0%; */
+  }
+
+  #Download {
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    box-shadow: 0 0 15px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    padding-right: 50px;
+    height: 45px;
+    width: 220px;
+    background-color: hsl(218, 28%, 13%);
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Download:hover {
+    cursor: pointer;
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: palevioletred;
+  }
+
+  #DownloadIcon{
+    position: relative;
+    top: 10px; 
+    left:2%;
+  }
+
+  #Twitter {
+    position: relative;
+    right: 1%;
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #GitHub {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #LinkedIn {
+    position: relative;
+    cursor: pointer;
+    height: 80px;
+    left: 1%;
+  }
+
+  #Profile {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    left: 0%;
+    top: 5%;
+    position: fixed;
+    bottom: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.767);
+    border: 1px solid rgba(255, 255, 255, 0.767);
+  }
+
+  /* #ProfileOverlay{
+    text-align: center;
+  } */
+
+  /* #ProfileOverlay2{
+    position: relative;
+    bottom:30px; */
+  /* border-radius: 50%; */
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.767);
+    border: 1px solid rgba(255, 255, 255, 0.767); */
+  /* } */
+}
+
+@media only screen and (max-width:600px) {
+  #SocialIcons {
+    height: 50px;
+    width: 90%;
+  }
+
+  #Prof {
+    white-space: normal;
+    overflow: hidden;
+    bottom: 40px;
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+  }
+
+  #Filter{
+    width: 97%;
+    height: 40px;
+  }
+
+  #ProjCards{
+    position: relative;
+    top: 60px;
+  }
+
+  #Proj1{
+    width: 97%;
+    height: 250px;
+  }
+
+  #Proj1Text{
+    font-size: 150%;
+  }
+
+  #Proj1Info{
+    top:35px;
+    left:0%; 
+    padding:1%;
+    width: 50%;
+  }
+
+  #Proj1Overlay{
+    width: 97.1%;
+  }
+
+
+  #Proj2{
+    top: 55px;
+    left:0%;
+    width: 97%;
+    height: 250px;
+  }
+
+  #Proj2Text{
+    font-size: 150%;
+  }
+
+  #Proj2Info{
+    top:35px;
+    left:0%;  
+    padding:1%;
+    width: 50%;
+  }
+
+
+  #Proj3{
+    top: 105px;
+    left:0%;
+    width: 97%;
+    height: 250px;
+  }
+
+  #Proj3Text{
+    font-size: 150%;
+  }
+
+  #Proj3Info{
+    top:35px;
+    left:0%;  
+    padding:1%;
+    width: 50%;
+  }
+
+  #Proj4{
+    top: 160px;
+    left:0%;
+    width: 97%;
+    height: 250px;
+  }
+
+  #Proj4Text{
+    font-size: 150%;
+  }
+
+  #Proj4Info{
+    top:35px;
+    left:0%; 
+    padding:1%;
+    width: 50%;
+  }
+
+  #Proj5{
+    top: 215px;
+    left:0%;
+    width: 97%;
+    height: 250px;
+  }
+
+  #Proj5Text{
+    font-size: 150%;
+  }
+
+  #Proj5Info{
+    top:35px;
+    left:0%;  
+    padding:1%;
+    width: 50%;
+  }
+
+  #Proj6{
+    position: relative;
+    top: 270px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 97%;
+    height: 250px;
+  }
+  
+  #Proj6Text{
+    font-size: 150%;
+  }
+
+  #Proj6Info{
+    top:35px;
+    left:0%; 
+    padding:1%;
+    width: 50%;
+  }
+
+  #VLS{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15.7%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VLS:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VC{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15.7%;
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VC:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VLS2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15.7%; 
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VLS2:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #VC2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left:15.7%;
+    width:60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VC2:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: palevioletred;
+  }
+
+  #Name {
+    width: 15%;
+  }
+
+  #Name2 {
+    top: 50px
+  }
+
+  #ContactName {
+    height: 30px;
+    width: 97.5%;
+  }
+
+  #EmailNameParent {
+    position: relative;
+    left: 0%;
+    bottom: 0;
+  }
+
+  #EmailName {
+    height: 30px;
+    width: 97.5%;
+  }
+
+
+  #SubjectNameParent {
+    position: relative;
+    bottom: 0px;
+  }
+
+  #SubjectName {
+    height: 30px;
+    width: 97.5%;
+  }
+
+  #Submit {
+    left: 25%;
+    height: 40px;
+    width: 50%;
+  }
+}

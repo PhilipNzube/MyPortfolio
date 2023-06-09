@@ -1,7 +1,8 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   overflow-x: hidden;
-  background-color: hsl(218, 28%, 13%);
+  background-color:bisque;
+  /* background-color: hsl(218, 28%, 13%); */
   width: 100%;
   height: 100%;
 }
@@ -54,7 +55,7 @@ body {
     left: 0px;
     border: 1px solid black;
     border-radius: 2px;
-    background-color: antiquewhite;
+    background-color: hsl(218, 28%, 13%);
     width: 100%;
     height: 10px;
     animation-name: Load;
@@ -156,7 +157,7 @@ body {
   #About {
     height: 5%;
     cursor: pointer;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     backdrop-filter: blur(0.2em);
     font-size: xx-large;
     position: fixed;
@@ -168,7 +169,7 @@ body {
   /* #About:hover {
     bottom: 1px;
     text-decoration: underline;
-    text-decoration-color: palevioletred;
+    text-decoration-color: hsl(236, 48%, 33%);
     text-decoration-thickness: 4px;
     text-underline-offset: 1px;
     animation-name: Underline;
@@ -179,7 +180,7 @@ body {
   #Projects {
     height: 5%;
     cursor: pointer;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     backdrop-filter: blur(0.2em);
     font-size: xx-large;
     position: fixed;
@@ -192,7 +193,7 @@ body {
     cursor: pointer;
     bottom: 1px;
     text-decoration: underline;
-    text-decoration-color: palevioletred;
+    text-decoration-color: hsl(236, 48%, 33%);
     text-decoration-thickness: 4px;
     text-underline-offset: 1px;
     animation-name: Underline;
@@ -203,7 +204,7 @@ body {
   #Contact {
     height: 5%;
     cursor: pointer;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     backdrop-filter: blur(0.2em);
     font-size: xx-large;
     position: fixed;
@@ -214,7 +215,7 @@ body {
 
   #ContactMeLink {
     cursor: pointer;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     text-decoration: underline;
   }
 
@@ -222,7 +223,7 @@ body {
     cursor: pointer;
     bottom: 1px;
     text-decoration: underline;
-    text-decoration-color: palevioletred;
+    text-decoration-color: hsl(236, 48%, 33%);
     text-decoration-thickness: 4px;
     text-underline-offset: 1px;
     animation-name: Underline;
@@ -232,17 +233,17 @@ body {
 
   @keyframes Underline {
     0% {
-      text-decoration-color: rgba(216, 112, 147, 0.185);
+      text-decoration-color: hsla(236, 48%, 33%, 0.068);
       text-decoration-thickness: 1px;
     }
 
     50% {
-      text-decoration-color: rgba(216, 112, 147, 0.473);
+      text-decoration-color: hsla(236, 48%, 33%, 0.527);
       text-decoration-thickness: 2px;
     }
 
     100% {
-      text-decoration-color: rgba(216, 112, 147, 0.856);
+      text-decoration-color: hsl(236, 48%, 33%);
       text-decoration-thickness: 3px;
     }
   }
@@ -250,10 +251,10 @@ body {
   #NavBar {
     display: none;
     margin-right: 3.5%;
-    animation-name: FADEIN;
+    /* animation-name: FADEIN;
     animation-delay: 6s;
     animation-duration: 7s;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
   }
 
   #NavBarCont {
@@ -279,7 +280,7 @@ body {
   #Hi {
     position: relative;
     top: 10px;
-    color: bisque;
+    color: black;
   }
 
   #Name2 {
@@ -297,8 +298,9 @@ body {
     bottom: 150px;
     text-align: left;
     max-width: fit-content;
-    color: palevioletred;
-    border-right: 0.1em solid palevioletred;
+    /* color: hsl(236, 48%, 33%); */
+    color:black;
+    border-right: 0.1em solid hsl(236, 48%, 33%);
     white-space: nowrap;
     letter-spacing: .10em;
     animation: blink .5s step-end infinite alternate;
@@ -327,7 +329,7 @@ body {
     cursor: pointer;
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #DownloadIcon{
@@ -341,7 +343,7 @@ body {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #Aboutbody {
@@ -349,14 +351,14 @@ body {
     right: 0.5%;
     font-weight: 540;
     font-size: 200%;
-    color: bisque;
+    color: black;
   }
 
   #Skills {
     font-weight: bold;
     font-size: 150%;
     position: relative;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #SkillIcons {
@@ -375,7 +377,7 @@ body {
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: bisque;
+    color: black;
   }
 
   #Javascript {
@@ -391,7 +393,7 @@ body {
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: bisque;
+    color: black;
   }
 
   #CSharp {
@@ -406,17 +408,18 @@ body {
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: bisque;
+    color: black;
   }
 
   #MyProjects {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #Filter{
+    cursor: pointer;
     position: relative;
     top:20px;
     color: bisque;
@@ -424,7 +427,7 @@ body {
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
-    border: 2px solid bisque;
+    border: 2px solid hsl(236, 48%, 33%);
     width: 20%;
     height: 40px;
     border-radius: 3px;
@@ -824,7 +827,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VC{
@@ -845,7 +848,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VLS2{
@@ -866,7 +869,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VC2{
@@ -887,7 +890,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #ProjLink{
@@ -920,7 +923,7 @@ body {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #ContactName {
@@ -931,19 +934,19 @@ body {
     width: 47%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #ContactName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #ContactNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
   #EmailNameParent {
@@ -960,19 +963,19 @@ body {
     width: 47%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #EmailName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #EmailNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
 
@@ -989,19 +992,19 @@ body {
     width: 97.5%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #SubjectName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #SubjectNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
   #MessageName {
@@ -1012,19 +1015,19 @@ body {
     width: 97.5%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #MessageName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #MessageNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
   #Submit {
@@ -1043,7 +1046,7 @@ body {
   #Submit:hover {
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   @keyframes blink {
@@ -1200,7 +1203,7 @@ body {
 
   #ClosePicOverlay {
     cursor: pointer;
-    top: 5%;
+    top: 6.8%;
     right: 5%;
     position: fixed;
     cursor: pointer;
@@ -1233,7 +1236,7 @@ body {
     left: 0px;
     border: 1px solid black;
     border-radius: 2px;
-    background-color: antiquewhite;
+    background-color: hsl(218, 28%, 13%);
     width: 100%;
     height: 10px;
     animation-name: Load;
@@ -1336,7 +1339,7 @@ body {
   }
 
   #AboutOverlay {
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     cursor: pointer;
   }
 
@@ -1344,7 +1347,7 @@ body {
     cursor: pointer;
     bottom: 1px;
     text-decoration: underline;
-    text-decoration-color: palevioletred;
+    text-decoration-color: hsl(236, 48%, 33%);
     text-decoration-thickness: 4px;
     text-underline-offset: 1px;
     animation-name: Underline;
@@ -1353,7 +1356,7 @@ body {
   } */
 
   #ProjectsOverlay {
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     cursor: pointer;
   }
 
@@ -1361,7 +1364,7 @@ body {
     cursor: pointer;
     bottom: 1px;
     text-decoration: underline;
-    text-decoration-color: palevioletred;
+    text-decoration-color: hsl(236, 48%, 33%);
     text-decoration-thickness: 4px;
     text-underline-offset: 1px;
     animation-name: Underline;
@@ -1370,7 +1373,7 @@ body {
   } */
 
   #ContactOverlay {
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     cursor: pointer;
   }
 
@@ -1378,7 +1381,7 @@ body {
     cursor: pointer;
     bottom: 1px;
     text-decoration: underline;
-    text-decoration-color: palevioletred;
+    text-decoration-color: hsl(236, 48%, 33%);
     text-decoration-thickness: 4px;
     text-underline-offset: 1px;
     animation-name: Underline;
@@ -1388,17 +1391,17 @@ body {
 
   @keyframes Underline {
     0% {
-      text-decoration-color: rgba(216, 112, 147, 0.185);
+      text-decoration-color: hsla(236, 48%, 33%, 0.123);
       text-decoration-thickness: 1px;
     }
 
     50% {
-      text-decoration-color: rgba(216, 112, 147, 0.473);
+      text-decoration-color: hsla(236, 48%, 33%, 0.493);
       text-decoration-thickness: 2px;
     }
 
     100% {
-      text-decoration-color: rgba(216, 112, 147, 0.856);
+      text-decoration-color: hsl(236, 48%, 33%);
       text-decoration-thickness: 3px;
     }
   }
@@ -1417,16 +1420,16 @@ body {
 
   #ContactMeLink {
     cursor: pointer;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
     text-decoration: underline;
   }
 
   #NavBar {
     display: none;
-    animation-name: FADEIN;
+    /* animation-name: FADEIN;
     animation-delay: 6s;
     animation-duration: 7s;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
   }
 
   #NavBarCont {
@@ -1453,7 +1456,7 @@ body {
     text-align: center;
     position: relative;
     top: 10px;
-    color: bisque;
+    color: black;
   }
 
   #Name2 {
@@ -1470,8 +1473,8 @@ body {
     text-align: center;
     position: relative;
     bottom: 150px;
-    color: palevioletred;
-    border-bottom: 0.1em solid palevioletred;
+    color: black;
+    border-bottom: 0.1em solid hsl(236, 48%, 33%);
     white-space: nowrap;
     letter-spacing: .10em;
     /* animation: blink .5s step-end infinite alternate; */
@@ -1481,7 +1484,7 @@ body {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #Aboutbody {
@@ -1489,14 +1492,14 @@ body {
     right: 0.5%;
     font-weight: 540;
     font-size: 150%;
-    color: bisque;
+    color: black;
   }
 
   #Skills {
     font-weight: bold;
     font-size: 150%;
     position: relative;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #SkillIcons {
@@ -1515,7 +1518,7 @@ body {
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: bisque;
+    color: black;
   }
 
   #Javascript {
@@ -1530,7 +1533,7 @@ body {
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: bisque;
+    color: black;
   }
 
   #CSharp {
@@ -1545,7 +1548,7 @@ body {
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: bisque;
+    color: black;
   }
 
 
@@ -1554,10 +1557,11 @@ body {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #Filter{
+    cursor: pointer;
     position: relative;
     top:20px;
     color: bisque;
@@ -1565,7 +1569,7 @@ body {
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
-    border: 2px solid bisque;
+    border: 2px solid hsl(236, 48%, 33%);
     width: 20%;
     height: 40px;
     border-radius: 3px;
@@ -1965,7 +1969,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VC{
@@ -1986,7 +1990,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VLS2{
@@ -2007,7 +2011,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VC2{
@@ -2028,7 +2032,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #ProjLink{
@@ -2063,7 +2067,7 @@ body {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #ContactName {
@@ -2074,19 +2078,19 @@ body {
     width: 47%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #ContactName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #ContactNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
   #EmailNameParent {
@@ -2103,19 +2107,19 @@ body {
     width: 47%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #EmailName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #EmailNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
 
@@ -2132,19 +2136,19 @@ body {
     width: 97.5%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #SubjectName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #SubjectNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
   #MessageName {
@@ -2155,19 +2159,19 @@ body {
     width: 97.5%;
     background-color: hsl(218, 28%, 13%);
     border-radius: 5px;
-    color: white;
+    color: bisque;
   }
 
   #MessageName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: white;
+    outline-color: hsl(236, 48%, 33%);
   }
 
   #MessageNameText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-    color: white;
+    color: black;
   }
 
   #Submit {
@@ -2186,7 +2190,7 @@ body {
   #Submit:hover {
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
 
@@ -2267,7 +2271,7 @@ body {
     cursor: pointer;
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #DownloadIcon{
@@ -2481,7 +2485,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VC{
@@ -2502,7 +2506,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VLS2{
@@ -2523,7 +2527,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #VC2{
@@ -2544,7 +2548,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: palevioletred;
+    color: hsl(236, 48%, 33%);
   }
 
   #Name {
@@ -2586,5 +2590,13 @@ body {
     left: 25%;
     height: 40px;
     width: 50%;
+  }
+
+  #Download {
+   white-space: nowrap;
+  }
+
+  #LOADING {
+    font-size: 300%;
   }
 }

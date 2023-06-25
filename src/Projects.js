@@ -703,7 +703,7 @@ export default function Projects() {
 
                     <div id="Proj7">
                         <div id="Proj7Overlay">
-                            <a id="ProjLink" href="https://calculator-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
+                            <a id="ProjLink" href="https://my-calc-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/Calculator-App">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj7Img" src={Proj7Img} alt="" />

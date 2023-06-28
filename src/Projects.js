@@ -8,6 +8,7 @@ import Proj4Img from './images/Proj4Img.png';
 import Proj5Img from './images/Proj5Img.png';
 import Proj6Img from './images/Proj6Img.png';
 import Proj7Img from './images/Proj7Img.png';
+import Proj8Img from './images/Proj8Img.png';
 export default function Projects() {
     const navigate = useNavigate();
     // var SetTimer;
@@ -136,6 +137,24 @@ export default function Projects() {
             }, 300);
         });
 
+
+
+
+        document.getElementById("Proj8Img").addEventListener('click', (e) => {
+            document.getElementById("Proj8Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj8Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj8Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj8Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj8Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj8Overlay").style.animationDuration = 1;
+                document.getElementById("Proj8Overlay").style.display = "none";
+            }, 300);
+        });
+
         // if (SetTimer === 1) {
         //     var TimeOUT = setTimeout(() => {
 
@@ -197,6 +216,9 @@ export default function Projects() {
                         document.getElementById("Proj7").style.display = "block";
                         document.getElementById("Proj7").style.top = "-600px";
                         document.getElementById("Proj7").style.left = "0%";
+                        document.getElementById("Proj8").style.display = "block";
+                        document.getElementById("Proj8").style.top = "-850px";
+                        document.getElementById("Proj8").style.left = "57%";
                     }
                     else
                         if (document.getElementById("Filter").value === "VanillaJS") {
@@ -207,6 +229,7 @@ export default function Projects() {
                             document.getElementById("Proj5").style.display = "none";
                             document.getElementById("Proj6").style.display = "none";
                             document.getElementById("Proj7").style.display = "none";
+                            document.getElementById("Proj8").style.display = "none";
                         }
                         else
                             if (document.getElementById("Filter").value === "ReactJS") {
@@ -226,6 +249,9 @@ export default function Projects() {
                                 document.getElementById("Proj7").style.display = "block";
                                 document.getElementById("Proj7").style.top = "-450px";
                                 document.getElementById("Proj7").style.left = "57%";
+                                document.getElementById("Proj8").style.display = "block";
+                                document.getElementById("Proj8").style.top = "-400px";
+                                document.getElementById("Proj8").style.left = "0%";
 
                             }
                             else
@@ -236,6 +262,7 @@ export default function Projects() {
                                     document.getElementById("Proj4").style.display = "none";
                                     document.getElementById("Proj5").style.display = "none";
                                     document.getElementById("Proj7").style.display = "none";
+                                    document.getElementById("Proj8").style.display = "none";
 
                                     document.getElementById("Proj6").style.display = "block";
                                     document.getElementById("Proj6").style.top = "0px";
@@ -263,6 +290,9 @@ export default function Projects() {
                         document.getElementById("Proj7").style.display = "block";
                         document.getElementById("Proj7").style.top = "-900px";
                         document.getElementById("Proj7").style.left = "0%";
+                        document.getElementById("Proj8").style.display = "block";
+                        document.getElementById("Proj8").style.top = "-1150px";
+                        document.getElementById("Proj8").style.left = "35%";
                     }
                     else
                         if (document.getElementById("Filter").value === "VanillaJS") {
@@ -273,6 +303,7 @@ export default function Projects() {
                             document.getElementById("Proj5").style.display = "none";
                             document.getElementById("Proj6").style.display = "none";
                             document.getElementById("Proj7").style.display = "none";
+                            document.getElementById("Proj8").style.display = "none";
                         }
                         else
                             if (document.getElementById("Filter").value === "ReactJS") {
@@ -292,6 +323,9 @@ export default function Projects() {
                                 document.getElementById("Proj7").style.display = "block";
                                 document.getElementById("Proj7").style.top = "-450px";
                                 document.getElementById("Proj7").style.left = "0%";
+                                document.getElementById("Proj8").style.display = "block";
+                                document.getElementById("Proj8").style.top = "-700px";
+                                document.getElementById("Proj8").style.left = "35%";
 
                             }
                             else
@@ -302,6 +336,7 @@ export default function Projects() {
                                     document.getElementById("Proj4").style.display = "none";
                                     document.getElementById("Proj5").style.display = "none";
                                     document.getElementById("Proj7").style.display = "none";
+                                    document.getElementById("Proj8").style.display = "none";
 
                                     document.getElementById("Proj6").style.display = "block";
                                     document.getElementById("Proj6").style.top = "0px";
@@ -327,6 +362,9 @@ export default function Projects() {
                     document.getElementById("Proj7").style.display = "block";
                     document.getElementById("Proj7").style.top = "300px";
                     document.getElementById("Proj7").style.left = "0%";
+                    document.getElementById("Proj8").style.display = "block";
+                    document.getElementById("Proj8").style.top = "350px";
+                    document.getElementById("Proj8").style.left = "0%";
                 }
                 else
                     if (document.getElementById("Filter").value === "VanillaJS") {
@@ -337,6 +375,7 @@ export default function Projects() {
                         document.getElementById("Proj5").style.display = "none";
                         document.getElementById("Proj6").style.display = "none";
                         document.getElementById("Proj7").style.display = "none";
+                        document.getElementById("Proj8").style.display = "none";
                     }
                     else
                         if (document.getElementById("Filter").value === "ReactJS") {
@@ -356,6 +395,9 @@ export default function Projects() {
                             document.getElementById("Proj7").style.display = "block";
                             document.getElementById("Proj7").style.top = "170px";
                             document.getElementById("Proj7").style.left = "0%";
+                            document.getElementById("Proj8").style.display = "block";
+                            document.getElementById("Proj8").style.top = "225px";
+                            document.getElementById("Proj8").style.left = "0%";
 
                         }
                         else
@@ -366,6 +408,7 @@ export default function Projects() {
                                 document.getElementById("Proj4").style.display = "none";
                                 document.getElementById("Proj5").style.display = "none";
                                 document.getElementById("Proj7").style.display = "none";
+                                document.getElementById("Proj8").style.display = "none";
 
                                 document.getElementById("Proj6").style.display = "block";
                                 document.getElementById("Proj6").style.top = "0px";
@@ -449,6 +492,9 @@ export default function Projects() {
                     document.getElementById("Proj7").style.display = "block";
                     document.getElementById("Proj7").style.top = "-600px";
                     document.getElementById("Proj7").style.left = "0%";
+                    document.getElementById("Proj8").style.display = "block";
+                    document.getElementById("Proj8").style.top = "-850px";
+                    document.getElementById("Proj8").style.left = "57%";
                 }
                 else
                     if (event.target.value === "VanillaJS") {
@@ -459,6 +505,7 @@ export default function Projects() {
                         document.getElementById("Proj5").style.display = "none";
                         document.getElementById("Proj6").style.display = "none";
                         document.getElementById("Proj7").style.display = "none";
+                        document.getElementById("Proj8").style.display = "none";
                     }
                     else
                         if (event.target.value === "ReactJS") {
@@ -478,6 +525,9 @@ export default function Projects() {
                             document.getElementById("Proj7").style.display = "block";
                             document.getElementById("Proj7").style.top = "-450px";
                             document.getElementById("Proj7").style.left = "57%";
+                            document.getElementById("Proj8").style.display = "block";
+                            document.getElementById("Proj8").style.top = "-400px";
+                            document.getElementById("Proj8").style.left = "0%";
 
                         }
                         else
@@ -488,9 +538,10 @@ export default function Projects() {
                                 document.getElementById("Proj4").style.display = "none";
                                 document.getElementById("Proj5").style.display = "none";
                                 document.getElementById("Proj7").style.display = "none";
+                                document.getElementById("Proj8").style.display = "none";
 
                                 document.getElementById("Proj6").style.display = "block";
-                                document.getElementById("Proj6").style.bottom = "0px";
+                                document.getElementById("Proj6").style.top = "0px";
                                 document.getElementById("Proj6").style.left = "0%";
                             }
             }
@@ -515,6 +566,9 @@ export default function Projects() {
                     document.getElementById("Proj7").style.display = "block";
                     document.getElementById("Proj7").style.top = "-900px";
                     document.getElementById("Proj7").style.left = "0%";
+                    document.getElementById("Proj8").style.display = "block";
+                    document.getElementById("Proj8").style.top = "-1150px";
+                    document.getElementById("Proj8").style.left = "35%";
                 }
                 else
                     if (event.target.value === "VanillaJS") {
@@ -525,6 +579,7 @@ export default function Projects() {
                         document.getElementById("Proj5").style.display = "none";
                         document.getElementById("Proj6").style.display = "none";
                         document.getElementById("Proj7").style.display = "none";
+                        document.getElementById("Proj8").style.display = "none";
                     }
                     else
                         if (event.target.value === "ReactJS") {
@@ -544,6 +599,9 @@ export default function Projects() {
                             document.getElementById("Proj7").style.display = "block";
                             document.getElementById("Proj7").style.top = "-450px";
                             document.getElementById("Proj7").style.left = "0%";
+                            document.getElementById("Proj8").style.display = "block";
+                            document.getElementById("Proj8").style.top = "-700px";
+                            document.getElementById("Proj8").style.left = "35%";
 
                         }
                         else
@@ -554,6 +612,7 @@ export default function Projects() {
                                 document.getElementById("Proj4").style.display = "none";
                                 document.getElementById("Proj5").style.display = "none";
                                 document.getElementById("Proj7").style.display = "none";
+                                document.getElementById("Proj8").style.display = "none";
 
                                 document.getElementById("Proj6").style.display = "block";
                                 document.getElementById("Proj6").style.top = "0px";
@@ -579,6 +638,9 @@ export default function Projects() {
                 document.getElementById("Proj7").style.display = "block";
                 document.getElementById("Proj7").style.top = "300px";
                 document.getElementById("Proj7").style.left = "0%";
+                document.getElementById("Proj8").style.display = "block";
+                document.getElementById("Proj8").style.top = "350px";
+                document.getElementById("Proj8").style.left = "0%";
             }
             else
                 if (event.target.value === "VanillaJS") {
@@ -589,6 +651,7 @@ export default function Projects() {
                     document.getElementById("Proj5").style.display = "none";
                     document.getElementById("Proj6").style.display = "none";
                     document.getElementById("Proj7").style.display = "none";
+                    document.getElementById("Proj8").style.display = "none";
                 }
                 else
                     if (event.target.value === "ReactJS") {
@@ -608,6 +671,9 @@ export default function Projects() {
                         document.getElementById("Proj7").style.display = "block";
                         document.getElementById("Proj7").style.top = "170px";
                         document.getElementById("Proj7").style.left = "0%";
+                        document.getElementById("Proj8").style.display = "block";
+                        document.getElementById("Proj8").style.top = "225px";
+                        document.getElementById("Proj8").style.left = "0%";
 
                     }
                     else
@@ -618,6 +684,7 @@ export default function Projects() {
                             document.getElementById("Proj4").style.display = "none";
                             document.getElementById("Proj5").style.display = "none";
                             document.getElementById("Proj7").style.display = "none";
+                            document.getElementById("Proj8").style.display = "none";
 
                             document.getElementById("Proj6").style.display = "block";
                             document.getElementById("Proj6").style.top = "0px";
@@ -709,6 +776,20 @@ export default function Projects() {
                         <img id="Proj7Img" src={Proj7Img} alt="" />
                         <div id="Proj7Text">CALCULATOR APP</div>
                         <div id="Proj7Info">ReactJS</div>
+                    </div>
+
+
+
+
+
+                    <div id="Proj8">
+                        <div id="Proj8Overlay">
+                            <a id="ProjLink" href="https://my-quiz-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/Quiz-App">  <div id="VC">View Code</div></a>
+                        </div>
+                        <img id="Proj8Img" src={Proj8Img} alt="" />
+                        <div id="Proj8Text">QUIZ APP</div>
+                        <div id="Proj8Info">ReactJS</div>
                     </div>
                 </div>
                 <img id="Profile" src={ProfilePic} alt="PROFILE PIC" />

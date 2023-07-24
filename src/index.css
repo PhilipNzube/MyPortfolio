@@ -938,6 +938,72 @@ body {
     animation-iteration-count: 1;
   }
 
+
+
+
+
+  #Proj9{
+    position: relative;
+    bottom: 1400px;
+    left:70%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj9Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj9Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj9Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj9Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
   #VLS{
     font-size: large;
     font-weight: bold;
@@ -2206,6 +2272,70 @@ body {
     animation-iteration-count: 1;
   }
 
+
+
+  #Proj9{
+    position: relative;
+    bottom: 800px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj9Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj9Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj9Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj9Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
   #VLS{
     font-size: large;
     font-weight: bold;
@@ -2763,6 +2893,30 @@ body {
   }
 
   #Proj8Info{
+    top:35px;
+    left:0%; 
+    padding:1%;
+    width: 50%;
+  }
+
+
+  #Proj9{
+    position: relative;
+    top: 460px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 97%;
+    height: 250px;
+  }
+  
+  #Proj9Text{
+    font-size: 150%;
+  }
+
+  #Proj9Info{
     top:35px;
     left:0%; 
     padding:1%;

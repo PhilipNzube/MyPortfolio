@@ -36,11 +36,13 @@ export default function Contact() {
     setTimeout(() => {
         window.addEventListener('resize', (e) => {
             if (window.innerWidth < 780) {
+                document.getElementById("HamBurger").style.display = "block";
                 document.getElementById("Profile").style.display = "block";
             }
             else
                 if (window.innerWidth > 780) {
                     if (document.getElementById("ContactContainer")) {
+                        document.getElementById("HamBurger").style.display = "none";
                         document.getElementById("Profile").style.display = "none";
                     }
                 }

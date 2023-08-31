@@ -7,6 +7,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import NavBar from './NavBar.js';
 import './index.css';
+import swDev from './swDev.js';
 
 
 function START() {
@@ -15,7 +16,7 @@ function START() {
       <NavBar/>
       <BrowserRouter>
       <Routes>
-            <Route path="/" element={<MainPage />}/>
+          <Route path="/" element={<MainPage />}/>
           <Route path="/About" element={<About />} />
           <Route path="/Projects" element={<Projects/>}/>
           <Route path="/Contact" element={<Contact/>}/>
@@ -26,6 +27,6 @@ function START() {
 
 }
 
-// swDev();
+swDev();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(< START />);

@@ -10,6 +10,8 @@ import Proj6Img from './images/Proj6Img.png';
 import Proj7Img from './images/Proj7Img.png';
 import Proj8Img from './images/Proj8Img.png';
 import Proj9Img from './images/Proj9Img.png';
+import Proj10Img from './images/Proj10Img.png';
+import Proj11Img from './images/Proj11Img.png';
 export default function Projects() {
     const navigate = useNavigate();
     // var SetTimer;
@@ -177,6 +179,47 @@ export default function Projects() {
             }, 300);
         });
 
+
+
+
+
+
+        document.getElementById("Proj10Img").addEventListener('click', (e) => {
+            document.getElementById("Proj10Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj10Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj10Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj10Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj10Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj10Overlay").style.animationDuration = 1;
+                document.getElementById("Proj10Overlay").style.display = "none";
+            }, 300);
+        });
+
+
+
+
+
+
+
+        document.getElementById("Proj11Img").addEventListener('click', (e) => {
+            document.getElementById("Proj11Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj11Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj11Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj11Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj11Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj11Overlay").style.animationDuration = 1;
+                document.getElementById("Proj11Overlay").style.display = "none";
+            }, 300);
+        });
+
         // if (SetTimer === 1) {
         //     var TimeOUT = setTimeout(() => {
 
@@ -246,6 +289,13 @@ export default function Projects() {
                         document.getElementById("Proj9").style.display = "block";
                         document.getElementById("Proj9").style.top = "-800px";
                         document.getElementById("Proj9").style.left = "0%";
+                        document.getElementById("Proj10").style.display = "block";
+                        document.getElementById("Proj10").style.top = "-1050px";
+                        document.getElementById("Proj10").style.left = "57%";
+                        document.getElementById("Proj11").style.display = "block";
+                        document.getElementById("Proj11").style.top = "-1000px";
+                        document.getElementById("Proj11").style.left = "0%";
+                        
                     }
                     else
                         if (document.getElementById("Filter").value === "VanillaJS") {
@@ -258,12 +308,16 @@ export default function Projects() {
                             document.getElementById("Proj7").style.display = "none";
                             document.getElementById("Proj8").style.display = "none";
                             document.getElementById("Proj9").style.display = "none";
+                            document.getElementById("Proj10").style.display = "none";
+                            document.getElementById("Proj11").style.display = "none";
                         }
                         else
                             if (document.getElementById("Filter").value === "ReactJS") {
                                 document.getElementById("Proj1").style.display = "none";
                                 document.getElementById("Proj2").style.display = "none";
                                 document.getElementById("Proj6").style.display = "none";
+                                document.getElementById("Proj10").style.display = "none";
+                                document.getElementById("Proj11").style.display = "none";
 
                                 document.getElementById("Proj3").style.display = "block";
                                 document.getElementById("Proj3").style.bottom = "0px";
@@ -283,7 +337,7 @@ export default function Projects() {
 
                             }
                             else
-                                if (document.getElementById("Filter").value === "Unity C#") {
+                                if (document.getElementById("Filter").value === "C#") {
                                     document.getElementById("Proj1").style.display = "none";
                                     document.getElementById("Proj2").style.display = "none";
                                     document.getElementById("Proj3").style.display = "none";
@@ -296,6 +350,12 @@ export default function Projects() {
                                     document.getElementById("Proj6").style.display = "block";
                                     document.getElementById("Proj6").style.top = "0px";
                                     document.getElementById("Proj6").style.left = "0%";
+                                    document.getElementById("Proj10").style.display = "block";
+                                    document.getElementById("Proj10").style.top = "-250px";
+                                    document.getElementById("Proj10").style.left = "57%";
+                                    document.getElementById("Proj11").style.display = "block";
+                                    document.getElementById("Proj11").style.top = "-200px";
+                                    document.getElementById("Proj11").style.left = "0%";
                                 }
                 }
             }
@@ -325,6 +385,12 @@ export default function Projects() {
                         document.getElementById("Proj9").style.display = "block";
                         document.getElementById("Proj9").style.top = "-1400px";
                         document.getElementById("Proj9").style.left = "70%";
+                        document.getElementById("Proj10").style.display = "block";
+                        document.getElementById("Proj10").style.top = "-1350px";
+                        document.getElementById("Proj10").style.left = "0%";
+                        document.getElementById("Proj11").style.display = "block";
+                        document.getElementById("Proj11").style.top = "-1600px";
+                        document.getElementById("Proj11").style.left = "35%";
                     }
                     else
                         if (document.getElementById("Filter").value === "VanillaJS") {
@@ -337,12 +403,16 @@ export default function Projects() {
                             document.getElementById("Proj7").style.display = "none";
                             document.getElementById("Proj8").style.display = "none";
                             document.getElementById("Proj9").style.display = "none";
+                            document.getElementById("Proj10").style.display = "none";
+                            document.getElementById("Proj11").style.display = "none";
                         }
                         else
                             if (document.getElementById("Filter").value === "ReactJS") {
                                 document.getElementById("Proj1").style.display = "none";
                                 document.getElementById("Proj2").style.display = "none";
                                 document.getElementById("Proj6").style.display = "none";
+                                document.getElementById("Proj10").style.display = "none";
+                                document.getElementById("Proj11").style.display = "none";
 
                                 document.getElementById("Proj3").style.display = "block";
                                 document.getElementById("Proj3").style.bottom = "0px";
@@ -365,7 +435,7 @@ export default function Projects() {
 
                             }
                             else
-                                if (document.getElementById("Filter").value === "Unity C#") {
+                                if (document.getElementById("Filter").value === "C#") {
                                     document.getElementById("Proj1").style.display = "none";
                                     document.getElementById("Proj2").style.display = "none";
                                     document.getElementById("Proj3").style.display = "none";
@@ -378,6 +448,12 @@ export default function Projects() {
                                     document.getElementById("Proj6").style.display = "block";
                                     document.getElementById("Proj6").style.top = "0px";
                                     document.getElementById("Proj6").style.left = "0%";
+                                    document.getElementById("Proj10").style.display = "block";
+                                    document.getElementById("Proj10").style.top = "-250px";
+                                    document.getElementById("Proj10").style.left = "35%";
+                                    document.getElementById("Proj11").style.display = "block";
+                                    document.getElementById("Proj11").style.top = "-500px";
+                                    document.getElementById("Proj11").style.left = "70%";
                                 }
                 }
             if (window.innerWidth < 600) {
@@ -405,6 +481,12 @@ export default function Projects() {
                     document.getElementById("Proj9").style.display = "block";
                     document.getElementById("Proj9").style.top = "400px";
                     document.getElementById("Proj9").style.left = "0%";
+                    document.getElementById("Proj10").style.display = "block";
+                    document.getElementById("Proj10").style.top = "450px";
+                    document.getElementById("Proj10").style.left = "0%";
+                    document.getElementById("Proj11").style.display = "block";
+                    document.getElementById("Proj11").style.top = "500px";
+                    document.getElementById("Proj11").style.left = "0%";
                 }
                 else
                     if (document.getElementById("Filter").value === "VanillaJS") {
@@ -417,12 +499,16 @@ export default function Projects() {
                         document.getElementById("Proj7").style.display = "none";
                         document.getElementById("Proj8").style.display = "none";
                         document.getElementById("Proj9").style.display = "none";
+                        document.getElementById("Proj10").style.display = "none";
+                        document.getElementById("Proj11").style.display = "none";
                     }
                     else
                         if (document.getElementById("Filter").value === "ReactJS") {
                             document.getElementById("Proj1").style.display = "none";
                             document.getElementById("Proj2").style.display = "none";
                             document.getElementById("Proj6").style.display = "none";
+                            document.getElementById("Proj10").style.display = "none";
+                            document.getElementById("Proj11").style.display = "none";
 
                             document.getElementById("Proj3").style.display = "block";
                             document.getElementById("Proj3").style.top = "0px";
@@ -445,7 +531,7 @@ export default function Projects() {
 
                         }
                         else
-                            if (document.getElementById("Filter").value === "Unity C#") {
+                            if (document.getElementById("Filter").value === "C#") {
                                 document.getElementById("Proj1").style.display = "none";
                                 document.getElementById("Proj2").style.display = "none";
                                 document.getElementById("Proj3").style.display = "none";
@@ -458,6 +544,12 @@ export default function Projects() {
                                 document.getElementById("Proj6").style.display = "block";
                                 document.getElementById("Proj6").style.top = "0px";
                                 document.getElementById("Proj6").style.left = "0%";
+                                document.getElementById("Proj10").style.display = "block";
+                                document.getElementById("Proj10").style.top = "55px";
+                                document.getElementById("Proj10").style.left = "0%";
+                                document.getElementById("Proj11").style.display = "block";
+                                document.getElementById("Proj11").style.top = "110px";
+                                document.getElementById("Proj11").style.left = "0%";
                             }
             }
         });
@@ -543,6 +635,12 @@ export default function Projects() {
                     document.getElementById("Proj9").style.display = "block";
                     document.getElementById("Proj9").style.top = "-800px";
                     document.getElementById("Proj9").style.left = "0%";
+                    document.getElementById("Proj10").style.display = "block";
+                    document.getElementById("Proj10").style.top = "-1050px";
+                    document.getElementById("Proj10").style.left = "57%";
+                    document.getElementById("Proj11").style.display = "block";
+                    document.getElementById("Proj11").style.top = "-1000px";
+                    document.getElementById("Proj11").style.left = "0%";
                 }
                 else
                     if (event.target.value === "VanillaJS") {
@@ -555,12 +653,16 @@ export default function Projects() {
                         document.getElementById("Proj7").style.display = "none";
                         document.getElementById("Proj8").style.display = "none";
                         document.getElementById("Proj9").style.display = "none";
+                        document.getElementById("Proj10").style.display = "none";
+                        document.getElementById("Proj11").style.display = "none";
                     }
                     else
                         if (event.target.value === "ReactJS") {
                             document.getElementById("Proj1").style.display = "none";
                             document.getElementById("Proj2").style.display = "none";
                             document.getElementById("Proj6").style.display = "none";
+                            document.getElementById("Proj10").style.display = "none";
+                            document.getElementById("Proj11").style.display = "none";
 
                             document.getElementById("Proj3").style.display = "block";
                             document.getElementById("Proj3").style.top = "0px";
@@ -583,7 +685,7 @@ export default function Projects() {
 
                         }
                         else
-                            if (event.target.value === "Unity C#") {
+                            if (event.target.value === "C#") {
                                 document.getElementById("Proj1").style.display = "none";
                                 document.getElementById("Proj2").style.display = "none";
                                 document.getElementById("Proj3").style.display = "none";
@@ -596,6 +698,12 @@ export default function Projects() {
                                 document.getElementById("Proj6").style.display = "block";
                                 document.getElementById("Proj6").style.top = "0px";
                                 document.getElementById("Proj6").style.left = "0%";
+                                document.getElementById("Proj10").style.display = "block";
+                                document.getElementById("Proj10").style.top = "-250px";
+                                document.getElementById("Proj10").style.left = "57%";
+                                document.getElementById("Proj11").style.display = "block";
+                                document.getElementById("Proj11").style.top = "-200px";
+                                document.getElementById("Proj11").style.left = "0%";
                             }
             }
         }
@@ -625,6 +733,12 @@ export default function Projects() {
                     document.getElementById("Proj9").style.display = "block";
                     document.getElementById("Proj9").style.top = "-1400px";
                     document.getElementById("Proj9").style.left = "70%";
+                    document.getElementById("Proj10").style.display = "block";
+                    document.getElementById("Proj10").style.top = "-1350px";
+                    document.getElementById("Proj10").style.left = "0%";
+                    document.getElementById("Proj11").style.display = "block";
+                    document.getElementById("Proj11").style.top = "-1600px";
+                    document.getElementById("Proj11").style.left = "35%";
                 }
                 else
                     if (event.target.value === "VanillaJS") {
@@ -642,6 +756,8 @@ export default function Projects() {
                             document.getElementById("Proj1").style.display = "none";
                             document.getElementById("Proj2").style.display = "none";
                             document.getElementById("Proj6").style.display = "none";
+                            document.getElementById("Proj10").style.display = "none";
+                            document.getElementById("Proj11").style.display = "none";
 
                             document.getElementById("Proj3").style.display = "block";
                             document.getElementById("Proj3").style.top = "0px";
@@ -664,7 +780,7 @@ export default function Projects() {
 
                         }
                         else
-                            if (event.target.value === "Unity C#") {
+                            if (event.target.value === "C#") {
                                 document.getElementById("Proj1").style.display = "none";
                                 document.getElementById("Proj2").style.display = "none";
                                 document.getElementById("Proj3").style.display = "none";
@@ -677,6 +793,12 @@ export default function Projects() {
                                 document.getElementById("Proj6").style.display = "block";
                                 document.getElementById("Proj6").style.top = "0px";
                                 document.getElementById("Proj6").style.left = "0%";
+                                document.getElementById("Proj10").style.display = "block";
+                                document.getElementById("Proj10").style.top = "-250px";
+                                document.getElementById("Proj10").style.left = "35%";
+                                document.getElementById("Proj11").style.display = "block";
+                                document.getElementById("Proj11").style.top = "-500px";
+                                document.getElementById("Proj11").style.left = "70%";
                             }
             }
         if (window.innerWidth < 600) {
@@ -704,6 +826,12 @@ export default function Projects() {
                 document.getElementById("Proj9").style.display = "block";
                 document.getElementById("Proj9").style.top = "400px";
                 document.getElementById("Proj9").style.left = "0%";
+                document.getElementById("Proj10").style.display = "block";
+                document.getElementById("Proj10").style.top = "450px";
+                document.getElementById("Proj10").style.left = "0%";
+                document.getElementById("Proj11").style.display = "block";
+                document.getElementById("Proj11").style.top = "500px";
+                document.getElementById("Proj11").style.left = "0%";
             }
             else
                 if (event.target.value === "VanillaJS") {
@@ -716,12 +844,16 @@ export default function Projects() {
                     document.getElementById("Proj7").style.display = "none";
                     document.getElementById("Proj8").style.display = "none";
                     document.getElementById("Proj9").style.display = "none";
+                    document.getElementById("Proj10").style.display = "none";
+                    document.getElementById("Proj11").style.display = "none";
                 }
                 else
                     if (event.target.value === "ReactJS") {
                         document.getElementById("Proj1").style.display = "none";
                         document.getElementById("Proj2").style.display = "none";
                         document.getElementById("Proj6").style.display = "none";
+                        document.getElementById("Proj10").style.display = "none";
+                        document.getElementById("Proj11").style.display = "none";
 
                         document.getElementById("Proj3").style.display = "block";
                         document.getElementById("Proj3").style.top = "0px";
@@ -744,7 +876,7 @@ export default function Projects() {
 
                     }
                     else
-                        if (event.target.value === "Unity C#") {
+                        if (event.target.value === "C#") {
                             document.getElementById("Proj1").style.display = "none";
                             document.getElementById("Proj2").style.display = "none";
                             document.getElementById("Proj3").style.display = "none";
@@ -757,6 +889,12 @@ export default function Projects() {
                             document.getElementById("Proj6").style.display = "block";
                             document.getElementById("Proj6").style.top = "0px";
                             document.getElementById("Proj6").style.left = "0%";
+                            document.getElementById("Proj10").style.display = "block";
+                            document.getElementById("Proj10").style.top = "55px";
+                            document.getElementById("Proj10").style.left = "0%";
+                            document.getElementById("Proj11").style.display = "block";
+                            document.getElementById("Proj11").style.top = "110px";
+                            document.getElementById("Proj11").style.left = "0%";
                         }
         }
     }
@@ -768,7 +906,7 @@ export default function Projects() {
                     <option>All</option>
                     <option>VanillaJS</option>
                     <option>ReactJS</option>
-                    <option>Unity C#</option>
+                    <option>C#</option>
                 </select>
                 <div id="ProjCards">
                     <div id="Proj1">
@@ -832,7 +970,7 @@ export default function Projects() {
                         </div>
                         <img id="Proj6Img" src={Proj6Img} alt="" />
                         <div id="Proj6Text">IMMUNOCALYPSE</div>
-                        <div id="Proj6Info">Unity C#</div>
+                        <div id="Proj6Info">C#</div>
                     </div>
 
 
@@ -870,6 +1008,31 @@ export default function Projects() {
                         <img id="Proj9Img" src={Proj9Img} alt="" />
                         <div id="Proj9Text">TICTACTOE APP</div>
                         <div id="Proj9Info">ReactJS</div>
+                    </div>
+
+
+
+                    <div id="Proj10">
+                        <div id="Proj10Overlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/Robot-Dodge">  <div id="VC">View Code</div></a>
+                        </div>
+                        <img id="Proj10Img" src={Proj10Img} alt="" />
+                        <div id="Proj10Text">ROBOT DODGE</div>
+                        <div id="Proj10Info">C#</div>
+                    </div>
+
+
+
+
+
+
+                    <div id="Proj11">
+                        <div id="Proj11Overlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/Anim-Scene">  <div id="VC">View Code</div></a>
+                        </div>
+                        <img id="Proj11Img" src={Proj11Img} alt="" />
+                        <div id="Proj11Text">ANIM SCENE</div>
+                        <div id="Proj11Info">C#</div>
                     </div>
                 </div>
                 <img id="Profile" src={ProfilePic} alt="PROFILE PIC" />

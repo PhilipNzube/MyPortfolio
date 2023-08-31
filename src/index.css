@@ -487,7 +487,7 @@ body {
     display: none;
     position: absolute;
     width: 25.1%;
-    height:10%;
+    height:5.7%;
     background-color: black; 
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -989,6 +989,142 @@ body {
   }
 
   #Proj9Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+
+
+
+
+  #Proj10{
+    position: relative;
+    bottom: 1350px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj10Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj10Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj10Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj10Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+
+
+
+
+
+
+  #Proj11{
+    position: relative;
+    bottom: 1600px;
+    left:35%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+  #Proj11Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj11Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj11Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj11Overlay{
     cursor: pointer;
     color: white;
     display: none;
@@ -1824,7 +1960,7 @@ body {
     display: none;
     position: absolute;
     width: 40.1%;
-    height:10%;
+    height:5.7%;
     background-color: black; 
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2321,6 +2457,142 @@ body {
   }
 
   #Proj9Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+
+
+
+
+
+  #Proj10{
+    position: relative;
+    bottom: 1050px;
+    left:57%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj10Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj10Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj10Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj10Overlay{
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+
+
+
+
+
+
+  #Proj11{
+    position: relative;
+    bottom: 1000px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+  #Proj11Img{
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%; 
+    height: 60%; 
+  }
+
+  #Proj11Text{
+    position: relative;
+    top:10px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #Proj11Info{
+    text-align: center;
+    position: relative;
+    top:35px;
+    left:2%; 
+    padding:1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #Proj11Overlay{
     cursor: pointer;
     color: white;
     display: none;
@@ -2922,6 +3194,65 @@ body {
     padding:1%;
     width: 50%;
   }
+
+
+
+
+
+
+
+  #Proj10{
+    position: relative;
+    top: 520px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 97%;
+    height: 250px;
+  }
+  
+  #Proj10Text{
+    font-size: 150%;
+  }
+
+  #Proj10Info{
+    top:35px;
+    left:0%; 
+    padding:1%;
+    width: 50%;
+  }
+
+
+
+
+
+  #Proj11{
+    position: relative;
+    top: 580px;
+    left:0%;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 97%;
+    height: 250px;
+  }
+  
+  #Proj11Text{
+    font-size: 150%;
+  }
+
+  #Proj11Info{
+    top:35px;
+    left:0%; 
+    padding:1%;
+    width: 50%;
+  }
+
+
+  /* Increment the "top" value by 60px for every "Proj" to come. This only works for the mobile view because the projects are aligned in a straight line */
 
   #VLS{
     font-size: large;

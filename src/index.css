@@ -1,7 +1,7 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   overflow-x: hidden;
-  background-color:bisque;
+  background-color: bisque;
   /* background-color: hsl(218, 28%, 13%); */
   width: 100%;
   height: 100%;
@@ -41,6 +41,11 @@ body {
   animation-duration: 0.8s;
   animation-iteration-count: 1;
   backdrop-filter: blur(0.2em);
+}
+
+.PlayButtonClass {
+  width: 20%;
+  height: 30px;
 }
 
 @media only screen and (min-width:781px) {
@@ -299,7 +304,7 @@ body {
     text-align: left;
     max-width: fit-content;
     /* color: hsl(236, 48%, 33%); */
-    color:black;
+    color: black;
     border-right: 0.1em solid hsl(236, 48%, 33%);
     white-space: nowrap;
     letter-spacing: .10em;
@@ -307,7 +312,7 @@ body {
   }
 
 
-  #Download{
+  #Download {
     text-decoration: none;
     text-align: center;
     position: relative;
@@ -332,10 +337,10 @@ body {
     color: hsl(236, 48%, 33%);
   }
 
-  #DownloadIcon{
+  #DownloadIcon {
     position: relative;
-    top: 10px; 
-    left:2%;
+    top: 10px;
+    left: 2%;
   }
 
 
@@ -418,13 +423,13 @@ body {
     color: hsl(236, 48%, 33%);
   }
 
-  #Filter{
+  #Filter {
     cursor: pointer;
     position: relative;
-    top:20px;
+    top: 20px;
     color: bisque;
     font-size: large;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
     border: 2px solid hsl(236, 48%, 33%);
@@ -433,12 +438,19 @@ body {
     border-radius: 3px;
   }
 
-  #ProjCards{
+  #ProjCards {
+    display: flex;
+    column-gap: 10%;
+    row-gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
     top: 60px;
   }
 
-  #Proj1{
+
+  .Proj {
+    position: relative;
     box-shadow: 0 0 5px;
     border: 1px solid black;
     border-radius: 5px;
@@ -446,7 +458,32 @@ body {
     width: 25%;
     height: 250px;
   }
-  #Proj1Img{
+
+  #ProjText {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  #ProjInfo {
+    text-align: center;
+    position: absolute;
+    top: 220px;
+    left: 2%;
+    padding: 1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+
+
+  #Proj1Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -455,60 +492,28 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
+    width: 100%;
     height: 60%;
   }
 
-  #Proj1Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj1Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj1Overlay{
+  #Proj1Overlay {
     cursor: pointer;
     color: white;
     display: none;
     position: absolute;
-    width: 25.1%;
-    height:5.7%;
-    background-color: black; 
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-
-  #Proj2{
-    position: relative;
-    bottom: 250px;
-    left:35%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj2Img{
+  #Proj2Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -518,32 +523,10 @@ body {
     border: 1px solid black;
     border-bottom: 2px solid black;
     width: 100%;
-    height: 60%; 
+    height: 60%;
   }
 
-  #Proj2Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj2Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj2Overlay{
+  #Proj2Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -551,27 +534,18 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
-  #Proj3{
-    position: relative;
-    bottom: 500px;
-    left:70%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj3Img{
+
+  #Proj3Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -580,33 +554,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj3Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj3Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj3Overlay{
+  #Proj3Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -614,26 +566,18 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #Proj4{
-    position: relative;
-    bottom: 450px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj4Img{
+
+
+  #Proj4Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -642,33 +586,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj4Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj4Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj4Overlay{
+  #Proj4Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -676,26 +598,20 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #Proj5{
-    position: relative;
-    bottom: 700px;
-    left:35%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj5Img{
+
+
+
+
+  #Proj5Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -704,34 +620,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj5Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    white-space: nowrap;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 125%;
-    color: bisque;
-  }
-
-  #Proj5Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj5Overlay{
+  #Proj5Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -739,26 +632,20 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #Proj6{
-    position: relative;
-    bottom: 950px;
-    left:70%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj6Img{
+
+
+
+
+  #Proj6Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -767,33 +654,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj6Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj6Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj6Overlay{
+  #Proj6Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -801,27 +666,20 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
-  #Proj7{
-    position: relative;
-    bottom: 900px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj7Img{
+
+
+
+  #Proj7Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -830,33 +688,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj7Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj7Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj7Overlay{
+  #Proj7Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -864,30 +700,19 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
 
 
-
-  #Proj8{
-    position: relative;
-    bottom: 1150px;
-    left:35%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj8Img{
+  #Proj8Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -896,33 +721,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj8Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj8Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj8Overlay{
+  #Proj8Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -930,30 +733,19 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
 
 
-
-  #Proj9{
-    position: relative;
-    bottom: 1400px;
-    left:70%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj9Img{
+  #Proj9Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -962,33 +754,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj9Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj9Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj9Overlay{
+  #Proj9Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -996,31 +766,17 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
-
-
-
-
-  #Proj10{
-    position: relative;
-    bottom: 1350px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj10Img{
+  #Proj10Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -1029,33 +785,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj10Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj10Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj10Overlay{
+  #Proj10Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -1063,33 +797,17 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
-
-
-
-
-
-
-  #Proj11{
-    position: relative;
-    bottom: 1600px;
-    left:35%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 25%;
-    height: 250px;
-  }
-  #Proj11Img{
+  #Proj11Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -1098,33 +816,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj11Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj11Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj11Overlay{
+  #Proj11Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -1132,120 +828,399 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #VLS{
+
+
+
+
+
+  #Proj12Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj12Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+
+
+  #Proj13Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj13Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+
+
+  #Proj14Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj14Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+
+
+  #Proj15Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj15Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+
+
+  #Proj16Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj16Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+  #VLS {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VLS:hover{
+  #VLS:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC{
+  #VC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VC:hover{
+  #VC:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VLS2{
+  #VLS2 {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VLS2:hover{
+  #VLS2:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC2{
+  #VC2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    height: 20px;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VC2:hover{
+  #VC2:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #ProjLink{
+  .PlayAndPause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .PlayAndPause:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: hsl(236, 48%, 33%);
+  }
+
+
+  #ProjVid {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+  #ProjVid2 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  #ProjVid3 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+  #ProjVid4 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+  #ProjVid5 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  #ProjLink {
     text-decoration: none;
     color: bisque;
   }
 
 
   @keyframes ProjOverlayAnim {
-    0%{
+    0% {
       height: 1px;
     }
 
-    100%{
+    100% {
       height: -150px;
     }
   }
 
   @keyframes ProjOverlayAnimOut {
-    0%{
+    0% {
       height: -150px;
     }
 
-    100%{
+    100% {
       height: 1px;
     }
   }
@@ -1891,13 +1866,13 @@ body {
     color: hsl(236, 48%, 33%);
   }
 
-  #Filter{
+  #Filter {
     cursor: pointer;
     position: relative;
-    top:20px;
+    top: 20px;
     color: bisque;
     font-size: large;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
     border: 2px solid hsl(236, 48%, 33%);
@@ -1906,12 +1881,18 @@ body {
     border-radius: 3px;
   }
 
-  #ProjCards{
+  #ProjCards {
     position: relative;
+    display: flex;
+    column-gap: 15%;
+    row-gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
     top: 60px;
   }
 
-  #Proj1{
+  .Proj {
+    position: relative;
     box-shadow: 0 0 5px;
     border: 1px solid black;
     border-radius: 5px;
@@ -1919,7 +1900,8 @@ body {
     width: 40%;
     height: 250px;
   }
-  #Proj1Img{
+
+  #Proj1Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -1928,60 +1910,50 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
+    width: 100%;
     height: 60%;
   }
 
-  #Proj1Text{
+  #ProjText {
     position: relative;
-    top:10px;
+    top: 10px;
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 130%;
     color: bisque;
   }
 
-  #Proj1Info{
+  #ProjInfo {
     text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
+    position: absolute;
+    top: 220px;
+    left: 2%;
+    padding: 1%;
     width: 50%;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #Proj1Overlay{
+  #Proj1Overlay {
     cursor: pointer;
     color: white;
     display: none;
     position: absolute;
-    width: 40.1%;
-    height:5.7%;
-    background-color: black; 
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-
-  #Proj2{
-    position: relative;
-    bottom: 250px;
-    left:57%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj2Img{
+  #Proj2Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -1991,32 +1963,10 @@ body {
     border: 1px solid black;
     border-bottom: 2px solid black;
     width: 100%;
-    height: 60%; 
+    height: 60%;
   }
 
-  #Proj2Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj2Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj2Overlay{
+  #Proj2Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2024,27 +1974,16 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-
-  #Proj3{
-    position: relative;
-    bottom: 200px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj3Img{
+  #Proj3Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2053,33 +1992,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj3Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj3Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj3Overlay{
+  #Proj3Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2087,26 +2004,16 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #Proj4{
-    position: relative;
-    bottom: 450px;
-    left:57%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj4Img{
+  #Proj4Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2115,33 +2022,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj4Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj4Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj4Overlay{
+  #Proj4Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2149,26 +2034,16 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #Proj5{
-    position: relative;
-    bottom: 400px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj5Img{
+  #Proj5Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2177,34 +2052,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj5Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    white-space: nowrap;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 125%;
-    color: bisque;
-  }
-
-  #Proj5Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj5Overlay{
+  #Proj5Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2212,26 +2064,16 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #Proj6{
-    position: relative;
-    bottom: 650px;
-    left:57%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj6Img{
+  #Proj6Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2240,33 +2082,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj6Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj6Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj6Overlay{
+  #Proj6Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2274,27 +2094,16 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-
-  #Proj7{
-    position: relative;
-    bottom: 600px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj7Img{
+  #Proj7Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2303,33 +2112,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj7Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj7Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj7Overlay{
+  #Proj7Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2337,27 +2124,16 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-
-  #Proj8{
-    position: relative;
-    bottom: 850px;
-    left:57%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj8Img{
+  #Proj8Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2366,33 +2142,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj8Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj8Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj8Overlay{
+  #Proj8Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2400,28 +2154,17 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
-
-  #Proj9{
-    position: relative;
-    bottom: 800px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj9Img{
+  #Proj9Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2430,33 +2173,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj9Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj9Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj9Overlay{
+  #Proj9Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2464,32 +2185,18 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
 
-
-
-
-
-  #Proj10{
-    position: relative;
-    bottom: 1050px;
-    left:57%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj10Img{
+  #Proj10Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2498,33 +2205,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj10Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj10Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj10Overlay{
+  #Proj10Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2532,32 +2217,18 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
 
 
-
-
-
-
-  #Proj11{
-    position: relative;
-    bottom: 1000px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 40%;
-    height: 250px;
-  }
-  #Proj11Img{
+  #Proj11Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2566,33 +2237,11 @@ body {
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
     border: 1px solid black;
     border-bottom: 2px solid black;
-    width: 100%; 
-    height: 60%; 
+    width: 100%;
+    height: 60%;
   }
 
-  #Proj11Text{
-    position: relative;
-    top:10px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 130%;
-    color: bisque;
-  }
-
-  #Proj11Info{
-    text-align: center;
-    position: relative;
-    top:35px;
-    left:2%; 
-    padding:1%;
-    width: 50%;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #Proj11Overlay{
+  #Proj11Overlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2600,120 +2249,380 @@ body {
     left: 0.3%;
     width: 100%;
     height: 61%;
-    background-color: black; 
+    background-color: black;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     animation-name: ProjOverlayAnim;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 1;
   }
 
-  #VLS{
+
+
+  #Proj12Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj12Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+  #Proj13Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj13Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+  #Proj14Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj14Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+  #Proj15Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj15Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+  #Proj16Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  #Proj16Overlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+  #VLS {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VLS:hover{
+  #VLS:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC{
+  #VC {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VC:hover{
+  #VC:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VLS2{
+  #VLS2 {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VLS2:hover{
+  #VLS2:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC2{
+  #VC2 {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15%; 
-    width:60%;
+    top: 20%;
+    left: 15%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VC2:hover{
+  #VC2:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #ProjLink{
+
+  .PlayAndPause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .PlayAndPause:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: hsl(236, 48%, 33%);
+  }
+
+
+  #ProjVid {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+  #ProjVid2 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  #ProjVid3 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+  #ProjVid4 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+
+  #ProjVid5 {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  #ProjLink {
     text-decoration: none;
     color: bisque;
   }
 
 
   @keyframes ProjOverlayAnim {
-    0%{
+    0% {
       height: 1px;
     }
 
-    100%{
+    100% {
       height: -150px;
     }
   }
 
   @keyframes ProjOverlayAnimOut {
-    0%{
+    0% {
       height: -150px;
     }
 
-    100%{
+    100% {
       height: 1px;
     }
   }
@@ -2931,10 +2840,10 @@ body {
     color: hsl(236, 48%, 33%);
   }
 
-  #DownloadIcon{
+  #DownloadIcon {
     position: relative;
-    top: 10px; 
-    left:2%;
+    top: 10px;
+    left: 2%;
   }
 
   #Twitter {
@@ -2997,341 +2906,113 @@ body {
     width: 100%;
   }
 
-  #Filter{
+  #Filter {
     width: 97%;
     height: 40px;
   }
 
-  #ProjCards{
+  #ProjCards {
     position: relative;
+    flex-direction: column;
     top: 60px;
   }
 
-  #Proj1{
+  .Proj {
     width: 97%;
     height: 250px;
   }
 
-  #Proj1Text{
+  #ProjText {
     font-size: 150%;
   }
 
-  #Proj1Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
+  #ProjInfo {
+    top: 220px;
+    left: 0%;
+    padding: 1%;
     width: 50%;
   }
-
-  #Proj1Overlay{
-    width: 97.1%;
-  }
-
-
-  #Proj2{
-    top: 55px;
-    left:0%;
-    width: 97%;
-    height: 250px;
-  }
-
-  #Proj2Text{
-    font-size: 150%;
-  }
-
-  #Proj2Info{
-    top:35px;
-    left:0%;  
-    padding:1%;
-    width: 50%;
-  }
-
-
-  #Proj3{
-    top: 105px;
-    left:0%;
-    width: 97%;
-    height: 250px;
-  }
-
-  #Proj3Text{
-    font-size: 150%;
-  }
-
-  #Proj3Info{
-    top:35px;
-    left:0%;  
-    padding:1%;
-    width: 50%;
-  }
-
-  #Proj4{
-    top: 160px;
-    left:0%;
-    width: 97%;
-    height: 250px;
-  }
-
-  #Proj4Text{
-    font-size: 150%;
-  }
-
-  #Proj4Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
-    width: 50%;
-  }
-
-  #Proj5{
-    top: 215px;
-    left:0%;
-    width: 97%;
-    height: 250px;
-  }
-
-  #Proj5Text{
-    font-size: 150%;
-  }
-
-  #Proj5Info{
-    top:35px;
-    left:0%;  
-    padding:1%;
-    width: 50%;
-  }
-
-  #Proj6{
-    position: relative;
-    top: 270px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 97%;
-    height: 250px;
-  }
-  
-  #Proj6Text{
-    font-size: 150%;
-  }
-
-  #Proj6Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
-    width: 50%;
-  }
-
-
-  #Proj7{
-    position: relative;
-    top: 330px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 97%;
-    height: 250px;
-  }
-  
-  #Proj7Text{
-    font-size: 150%;
-  }
-
-  #Proj7Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
-    width: 50%;
-  }
-
-  #Proj8{
-    position: relative;
-    top: 400px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 97%;
-    height: 250px;
-  }
-  
-  #Proj8Text{
-    font-size: 150%;
-  }
-
-  #Proj8Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
-    width: 50%;
-  }
-
-
-  #Proj9{
-    position: relative;
-    top: 460px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 97%;
-    height: 250px;
-  }
-  
-  #Proj9Text{
-    font-size: 150%;
-  }
-
-  #Proj9Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
-    width: 50%;
-  }
-
-
-
-
-
-
-
-  #Proj10{
-    position: relative;
-    top: 520px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 97%;
-    height: 250px;
-  }
-  
-  #Proj10Text{
-    font-size: 150%;
-  }
-
-  #Proj10Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
-    width: 50%;
-  }
-
-
-
-
-
-  #Proj11{
-    position: relative;
-    top: 580px;
-    left:0%;
-    box-shadow: 0 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: hsl(210, 13%, 6%);
-    width: 97%;
-    height: 250px;
-  }
-  
-  #Proj11Text{
-    font-size: 150%;
-  }
-
-  #Proj11Info{
-    top:35px;
-    left:0%; 
-    padding:1%;
-    width: 50%;
-  }
-
 
   /* Increment the "top" value by 60px for every "Proj" to come. This only works for the mobile view because the projects are aligned in a straight line */
 
-  #VLS{
+  #VLS {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15.7%; 
-    width:60%;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VLS:hover{
+  #VLS:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC{
+  #VC {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15.7%;
-    width:60%;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VC:hover{
+  #VC:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VLS2{
+  #VLS2 {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15.7%; 
-    width:60%;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VLS2:hover{
+  #VLS2:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC2{
+  #VC2 {
     font-size: large;
     font-weight: bold;
     text-align: center;
     position: relative;
-    top:20%;
-    left:15.7%;
-    width:60%;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
     padding: 10px;
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
   }
 
-  #VC2:hover{
+  #VC2:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
@@ -3380,7 +3061,7 @@ body {
   }
 
   #Download {
-   white-space: nowrap;
+    white-space: nowrap;
   }
 
   #LOADING {

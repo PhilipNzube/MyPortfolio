@@ -12,7 +12,20 @@ import Proj8Img from './images/Proj8Img.png';
 import Proj9Img from './images/Proj9Img.png';
 import Proj10Img from './images/Proj10Img.png';
 import Proj11Img from './images/Proj11Img.png';
+import Proj12Vid from './videos/Time Switch Ability Video.mp4';
+import Proj13Vid from './videos/UIManagement System Video.mp4';
+import Proj14Vid from './videos/Fight System Video.mp4';
+import Proj15Vid from './videos/Dialogue System Video.mp4';
+import Proj16Vid from './videos/InteractionSystem Video.mp4';
+//import Proj17Vid from './videos/
+import PlayButton from './images/Play Button.png';
+import PauseButton from './images/PauseButton.png';
 export default function Projects() {
+    var PlayVar = "True";
+    var PlayVar2 = "True";
+    var PlayVar3 = "True";
+    var PlayVar4 = "True";
+    var PlayVar5 = "True";
     const navigate = useNavigate();
     // var SetTimer;
     setTimeout(() => {
@@ -30,7 +43,6 @@ export default function Projects() {
         document.getElementById("Proj1Img").addEventListener('click', (e) => {
             document.getElementById("Proj1Overlay").style.animationName = "ProjOverlayAnim";
             document.getElementById("Proj1Overlay").style.display = "block";
-            // SetTimer = 0;
         });
 
 
@@ -41,7 +53,6 @@ export default function Projects() {
                 document.getElementById("Proj1Overlay").style.animationDuration = 1;
                 document.getElementById("Proj1Overlay").style.display = "none";
             }, 300);
-            // SetTimer = 1;
         });
 
 
@@ -220,16 +231,87 @@ export default function Projects() {
             }, 300);
         });
 
-        // if (SetTimer === 1) {
-        //     var TimeOUT = setTimeout(() => {
 
-        //     }, 1000);
-        // }
-        // else 
-        // if (SetTimer === 0) {
-        //     clearTimeout(TimeOUT);
-        // }
 
+
+        document.getElementById("ProjVid").addEventListener('click', (e) => {
+            document.getElementById("Proj12Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj12Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj12Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj12Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj12Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj12Overlay").style.animationDuration = 1;
+                document.getElementById("Proj12Overlay").style.display = "none";
+            }, 300);
+        });
+
+
+        document.getElementById("ProjVid2").addEventListener('click', (e) => {
+            document.getElementById("Proj13Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj13Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj13Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj13Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj13Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj13Overlay").style.animationDuration = 1;
+                document.getElementById("Proj13Overlay").style.display = "none";
+            }, 300);
+        });
+
+
+        document.getElementById("ProjVid3").addEventListener('click', (e) => {
+            document.getElementById("Proj14Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj14Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj14Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj14Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj14Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj14Overlay").style.animationDuration = 1;
+                document.getElementById("Proj14Overlay").style.display = "none";
+            }, 300);
+        });
+
+
+        document.getElementById("ProjVid4").addEventListener('click', (e) => {
+            document.getElementById("Proj15Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj15Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj15Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj15Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj15Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj15Overlay").style.animationDuration = 1;
+                document.getElementById("Proj15Overlay").style.display = "none";
+            }, 300);
+        });
+
+
+        document.getElementById("ProjVid5").addEventListener('click', (e) => {
+            document.getElementById("Proj16Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj16Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj16Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj16Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj16Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj16Overlay").style.animationDuration = 1;
+                document.getElementById("Proj16Overlay").style.display = "none";
+            }, 300);
+        });
 
         if (window.innerWidth < 780) {
             document.body.style.overflowY = "auto";
@@ -262,296 +344,6 @@ export default function Projects() {
                         document.getElementById("Profile").style.display = "none";
                     }
                 }
-
-            if (window.innerWidth < 780) {
-                if (window.innerWidth > 600) {
-                    if (document.getElementById("Filter").value === "All") {
-                        document.getElementById("Proj1").style.display = "block";
-                        document.getElementById("Proj2").style.display = "block";
-                        document.getElementById("Proj3").style.display = "block";
-                        document.getElementById("Proj3").style.top = "-200px";
-                        document.getElementById("Proj3").style.left = "0%";
-                        document.getElementById("Proj4").style.display = "block";
-                        document.getElementById("Proj4").style.top = "-450px";
-                        document.getElementById("Proj4").style.left = "57%";
-                        document.getElementById("Proj5").style.display = "block";
-                        document.getElementById("Proj5").style.top = "-400px";
-                        document.getElementById("Proj5").style.left = "0%";
-                        document.getElementById("Proj6").style.display = "block";
-                        document.getElementById("Proj6").style.top = "-650px";
-                        document.getElementById("Proj6").style.left = "57%";
-                        document.getElementById("Proj7").style.display = "block";
-                        document.getElementById("Proj7").style.top = "-600px";
-                        document.getElementById("Proj7").style.left = "0%";
-                        document.getElementById("Proj8").style.display = "block";
-                        document.getElementById("Proj8").style.top = "-850px";
-                        document.getElementById("Proj8").style.left = "57%";
-                        document.getElementById("Proj9").style.display = "block";
-                        document.getElementById("Proj9").style.top = "-800px";
-                        document.getElementById("Proj9").style.left = "0%";
-                        document.getElementById("Proj10").style.display = "block";
-                        document.getElementById("Proj10").style.top = "-1050px";
-                        document.getElementById("Proj10").style.left = "57%";
-                        document.getElementById("Proj11").style.display = "block";
-                        document.getElementById("Proj11").style.top = "-1000px";
-                        document.getElementById("Proj11").style.left = "0%";
-                        
-                    }
-                    else
-                        if (document.getElementById("Filter").value === "VanillaJS") {
-                            document.getElementById("Proj1").style.display = "block";
-                            document.getElementById("Proj2").style.display = "block";
-                            document.getElementById("Proj3").style.display = "none";
-                            document.getElementById("Proj4").style.display = "none";
-                            document.getElementById("Proj5").style.display = "none";
-                            document.getElementById("Proj6").style.display = "none";
-                            document.getElementById("Proj7").style.display = "none";
-                            document.getElementById("Proj8").style.display = "none";
-                            document.getElementById("Proj9").style.display = "none";
-                            document.getElementById("Proj10").style.display = "none";
-                            document.getElementById("Proj11").style.display = "none";
-                        }
-                        else
-                            if (document.getElementById("Filter").value === "ReactJS") {
-                                document.getElementById("Proj1").style.display = "none";
-                                document.getElementById("Proj2").style.display = "none";
-                                document.getElementById("Proj6").style.display = "none";
-                                document.getElementById("Proj10").style.display = "none";
-                                document.getElementById("Proj11").style.display = "none";
-
-                                document.getElementById("Proj3").style.display = "block";
-                                document.getElementById("Proj3").style.bottom = "0px";
-                                document.getElementById("Proj3").style.left = "0%";
-                                document.getElementById("Proj4").style.display = "block";
-                                document.getElementById("Proj4").style.top = "-250px";
-                                document.getElementById("Proj4").style.left = "57%";
-                                document.getElementById("Proj5").style.display = "block";
-                                document.getElementById("Proj5").style.top = "-200px";
-                                document.getElementById("Proj5").style.left = "0%";
-                                document.getElementById("Proj7").style.display = "block";
-                                document.getElementById("Proj7").style.top = "-450px";
-                                document.getElementById("Proj7").style.left = "57%";
-                                document.getElementById("Proj8").style.display = "block";
-                                document.getElementById("Proj8").style.top = "-400px";
-                                document.getElementById("Proj8").style.left = "0%";
-
-                            }
-                            else
-                                if (document.getElementById("Filter").value === "C#") {
-                                    document.getElementById("Proj1").style.display = "none";
-                                    document.getElementById("Proj2").style.display = "none";
-                                    document.getElementById("Proj3").style.display = "none";
-                                    document.getElementById("Proj4").style.display = "none";
-                                    document.getElementById("Proj5").style.display = "none";
-                                    document.getElementById("Proj7").style.display = "none";
-                                    document.getElementById("Proj8").style.display = "none";
-                                    document.getElementById("Proj9").style.display = "none";
-
-                                    document.getElementById("Proj6").style.display = "block";
-                                    document.getElementById("Proj6").style.top = "0px";
-                                    document.getElementById("Proj6").style.left = "0%";
-                                    document.getElementById("Proj10").style.display = "block";
-                                    document.getElementById("Proj10").style.top = "-250px";
-                                    document.getElementById("Proj10").style.left = "57%";
-                                    document.getElementById("Proj11").style.display = "block";
-                                    document.getElementById("Proj11").style.top = "-200px";
-                                    document.getElementById("Proj11").style.left = "0%";
-                                }
-                }
-            }
-            else
-                if (window.innerWidth > 780) {
-                    if (document.getElementById("Filter").value === "All") {
-                        document.getElementById("Proj1").style.display = "block";
-                        document.getElementById("Proj2").style.display = "block";
-                        document.getElementById("Proj3").style.display = "block";
-                        document.getElementById("Proj3").style.top = "-500px";
-                        document.getElementById("Proj3").style.left = "70%";
-                        document.getElementById("Proj4").style.display = "block";
-                        document.getElementById("Proj4").style.top = "-450px";
-                        document.getElementById("Proj4").style.left = "0%";
-                        document.getElementById("Proj5").style.display = "block";
-                        document.getElementById("Proj5").style.top = "-700px";
-                        document.getElementById("Proj5").style.left = "35%";
-                        document.getElementById("Proj6").style.display = "block";
-                        document.getElementById("Proj6").style.top = "-950px";
-                        document.getElementById("Proj6").style.left = "70%";
-                        document.getElementById("Proj7").style.display = "block";
-                        document.getElementById("Proj7").style.top = "-900px";
-                        document.getElementById("Proj7").style.left = "0%";
-                        document.getElementById("Proj8").style.display = "block";
-                        document.getElementById("Proj8").style.top = "-1150px";
-                        document.getElementById("Proj8").style.left = "35%";
-                        document.getElementById("Proj9").style.display = "block";
-                        document.getElementById("Proj9").style.top = "-1400px";
-                        document.getElementById("Proj9").style.left = "70%";
-                        document.getElementById("Proj10").style.display = "block";
-                        document.getElementById("Proj10").style.top = "-1350px";
-                        document.getElementById("Proj10").style.left = "0%";
-                        document.getElementById("Proj11").style.display = "block";
-                        document.getElementById("Proj11").style.top = "-1600px";
-                        document.getElementById("Proj11").style.left = "35%";
-                    }
-                    else
-                        if (document.getElementById("Filter").value === "VanillaJS") {
-                            document.getElementById("Proj1").style.display = "block";
-                            document.getElementById("Proj2").style.display = "block";
-                            document.getElementById("Proj3").style.display = "none";
-                            document.getElementById("Proj4").style.display = "none";
-                            document.getElementById("Proj5").style.display = "none";
-                            document.getElementById("Proj6").style.display = "none";
-                            document.getElementById("Proj7").style.display = "none";
-                            document.getElementById("Proj8").style.display = "none";
-                            document.getElementById("Proj9").style.display = "none";
-                            document.getElementById("Proj10").style.display = "none";
-                            document.getElementById("Proj11").style.display = "none";
-                        }
-                        else
-                            if (document.getElementById("Filter").value === "ReactJS") {
-                                document.getElementById("Proj1").style.display = "none";
-                                document.getElementById("Proj2").style.display = "none";
-                                document.getElementById("Proj6").style.display = "none";
-                                document.getElementById("Proj10").style.display = "none";
-                                document.getElementById("Proj11").style.display = "none";
-
-                                document.getElementById("Proj3").style.display = "block";
-                                document.getElementById("Proj3").style.bottom = "0px";
-                                document.getElementById("Proj3").style.left = "0%";
-                                document.getElementById("Proj4").style.display = "block";
-                                document.getElementById("Proj4").style.top = "-250px";
-                                document.getElementById("Proj4").style.left = "35%";
-                                document.getElementById("Proj5").style.display = "block";
-                                document.getElementById("Proj5").style.top = "-500px";
-                                document.getElementById("Proj5").style.left = "70%";
-                                document.getElementById("Proj7").style.display = "block";
-                                document.getElementById("Proj7").style.top = "-450px";
-                                document.getElementById("Proj7").style.left = "0%";
-                                document.getElementById("Proj8").style.display = "block";
-                                document.getElementById("Proj8").style.top = "-700px";
-                                document.getElementById("Proj8").style.left = "35%";
-                                document.getElementById("Proj9").style.display = "block";
-                                document.getElementById("Proj9").style.top = "-950px";
-                                document.getElementById("Proj9").style.left = "70%";
-
-                            }
-                            else
-                                if (document.getElementById("Filter").value === "C#") {
-                                    document.getElementById("Proj1").style.display = "none";
-                                    document.getElementById("Proj2").style.display = "none";
-                                    document.getElementById("Proj3").style.display = "none";
-                                    document.getElementById("Proj4").style.display = "none";
-                                    document.getElementById("Proj5").style.display = "none";
-                                    document.getElementById("Proj7").style.display = "none";
-                                    document.getElementById("Proj8").style.display = "none";
-                                    document.getElementById("Proj9").style.display = "none";
-
-                                    document.getElementById("Proj6").style.display = "block";
-                                    document.getElementById("Proj6").style.top = "0px";
-                                    document.getElementById("Proj6").style.left = "0%";
-                                    document.getElementById("Proj10").style.display = "block";
-                                    document.getElementById("Proj10").style.top = "-250px";
-                                    document.getElementById("Proj10").style.left = "35%";
-                                    document.getElementById("Proj11").style.display = "block";
-                                    document.getElementById("Proj11").style.top = "-500px";
-                                    document.getElementById("Proj11").style.left = "70%";
-                                }
-                }
-            if (window.innerWidth < 600) {
-                if (document.getElementById("Filter").value === "All") {
-                    document.getElementById("Proj1").style.display = "block";
-                    document.getElementById("Proj2").style.display = "block";
-                    document.getElementById("Proj3").style.display = "block";
-                    document.getElementById("Proj3").style.top = "100px";
-                    document.getElementById("Proj3").style.left = "0%";
-                    document.getElementById("Proj4").style.display = "block";
-                    document.getElementById("Proj4").style.top = "150px";
-                    document.getElementById("Proj4").style.left = "0%";
-                    document.getElementById("Proj5").style.display = "block";
-                    document.getElementById("Proj5").style.top = "200px";
-                    document.getElementById("Proj5").style.left = "0%";
-                    document.getElementById("Proj6").style.display = "block";
-                    document.getElementById("Proj6").style.top = "250px";
-                    document.getElementById("Proj6").style.left = "0%";
-                    document.getElementById("Proj7").style.display = "block";
-                    document.getElementById("Proj7").style.top = "300px";
-                    document.getElementById("Proj7").style.left = "0%";
-                    document.getElementById("Proj8").style.display = "block";
-                    document.getElementById("Proj8").style.top = "350px";
-                    document.getElementById("Proj8").style.left = "0%";
-                    document.getElementById("Proj9").style.display = "block";
-                    document.getElementById("Proj9").style.top = "400px";
-                    document.getElementById("Proj9").style.left = "0%";
-                    document.getElementById("Proj10").style.display = "block";
-                    document.getElementById("Proj10").style.top = "450px";
-                    document.getElementById("Proj10").style.left = "0%";
-                    document.getElementById("Proj11").style.display = "block";
-                    document.getElementById("Proj11").style.top = "500px";
-                    document.getElementById("Proj11").style.left = "0%";
-                }
-                else
-                    if (document.getElementById("Filter").value === "VanillaJS") {
-                        document.getElementById("Proj1").style.display = "block";
-                        document.getElementById("Proj2").style.display = "block";
-                        document.getElementById("Proj3").style.display = "none";
-                        document.getElementById("Proj4").style.display = "none";
-                        document.getElementById("Proj5").style.display = "none";
-                        document.getElementById("Proj6").style.display = "none";
-                        document.getElementById("Proj7").style.display = "none";
-                        document.getElementById("Proj8").style.display = "none";
-                        document.getElementById("Proj9").style.display = "none";
-                        document.getElementById("Proj10").style.display = "none";
-                        document.getElementById("Proj11").style.display = "none";
-                    }
-                    else
-                        if (document.getElementById("Filter").value === "ReactJS") {
-                            document.getElementById("Proj1").style.display = "none";
-                            document.getElementById("Proj2").style.display = "none";
-                            document.getElementById("Proj6").style.display = "none";
-                            document.getElementById("Proj10").style.display = "none";
-                            document.getElementById("Proj11").style.display = "none";
-
-                            document.getElementById("Proj3").style.display = "block";
-                            document.getElementById("Proj3").style.top = "0px";
-                            document.getElementById("Proj3").style.left = "0%";
-                            document.getElementById("Proj4").style.display = "block";
-                            document.getElementById("Proj4").style.top = "55px";
-                            document.getElementById("Proj4").style.left = "0%";
-                            document.getElementById("Proj5").style.display = "block";
-                            document.getElementById("Proj5").style.top = "110px";
-                            document.getElementById("Proj5").style.left = "0%";
-                            document.getElementById("Proj7").style.display = "block";
-                            document.getElementById("Proj7").style.top = "170px";
-                            document.getElementById("Proj7").style.left = "0%";
-                            document.getElementById("Proj8").style.display = "block";
-                            document.getElementById("Proj8").style.top = "225px";
-                            document.getElementById("Proj8").style.left = "0%";
-                            document.getElementById("Proj9").style.display = "block";
-                            document.getElementById("Proj9").style.top = "285px";
-                            document.getElementById("Proj9").style.left = "0%";
-
-                        }
-                        else
-                            if (document.getElementById("Filter").value === "C#") {
-                                document.getElementById("Proj1").style.display = "none";
-                                document.getElementById("Proj2").style.display = "none";
-                                document.getElementById("Proj3").style.display = "none";
-                                document.getElementById("Proj4").style.display = "none";
-                                document.getElementById("Proj5").style.display = "none";
-                                document.getElementById("Proj7").style.display = "none";
-                                document.getElementById("Proj8").style.display = "none";
-                                document.getElementById("Proj9").style.display = "none";
-
-                                document.getElementById("Proj6").style.display = "block";
-                                document.getElementById("Proj6").style.top = "0px";
-                                document.getElementById("Proj6").style.left = "0%";
-                                document.getElementById("Proj10").style.display = "block";
-                                document.getElementById("Proj10").style.top = "55px";
-                                document.getElementById("Proj10").style.left = "0%";
-                                document.getElementById("Proj11").style.display = "block";
-                                document.getElementById("Proj11").style.top = "110px";
-                                document.getElementById("Proj11").style.left = "0%";
-                            }
-            }
         });
 
         document.getElementById("About").addEventListener('click', (e) => {
@@ -609,294 +401,179 @@ export default function Projects() {
 
 
     const FilterWords = (event) => {
-        if (window.innerWidth < 780) {
-            if (window.innerWidth > 600) {
-                if (event.target.value === "All") {
-                    document.getElementById("Proj1").style.display = "block";
-                    document.getElementById("Proj2").style.display = "block";
+        if (event.target.value === "All") {
+            document.getElementById("Proj1").style.display = "block";
+            document.getElementById("Proj2").style.display = "block";
+            document.getElementById("Proj3").style.display = "block";
+            document.getElementById("Proj4").style.display = "block";
+            document.getElementById("Proj5").style.display = "block";
+            document.getElementById("Proj6").style.display = "block";
+            document.getElementById("Proj7").style.display = "block";
+            document.getElementById("Proj8").style.display = "block";
+            document.getElementById("Proj9").style.display = "block";
+            document.getElementById("Proj10").style.display = "block";
+            document.getElementById("Proj11").style.display = "block";
+            document.getElementById("Proj12").style.display = "block";
+            document.getElementById("Proj13").style.display = "block";
+            document.getElementById("Proj14").style.display = "block";
+            document.getElementById("Proj15").style.display = "block";
+            document.getElementById("Proj16").style.display = "block";
+            // document.getElementById("Proj17").style.display = "block";
+        }
+        else
+            if (event.target.value === "VanillaJS") {
+                document.getElementById("Proj1").style.display = "block";
+                document.getElementById("Proj2").style.display = "block";
+                document.getElementById("Proj3").style.display = "none";
+                document.getElementById("Proj4").style.display = "none";
+                document.getElementById("Proj5").style.display = "none";
+                document.getElementById("Proj6").style.display = "none";
+                document.getElementById("Proj7").style.display = "none";
+                document.getElementById("Proj8").style.display = "none";
+                document.getElementById("Proj9").style.display = "none";
+                document.getElementById("Proj10").style.display = "none";
+                document.getElementById("Proj11").style.display = "none";
+                document.getElementById("Proj12").style.display = "none";
+                document.getElementById("Proj13").style.display = "none";
+                document.getElementById("Proj14").style.display = "none";
+                document.getElementById("Proj15").style.display = "none";
+                document.getElementById("Proj16").style.display = "none";
+                // document.getElementById("Proj17").style.display = "none";
+            }
+            else
+                if (event.target.value === "ReactJS") {
+                    document.getElementById("Proj1").style.display = "none";
+                    document.getElementById("Proj2").style.display = "none";
+                    document.getElementById("Proj6").style.display = "none";
+                    document.getElementById("Proj10").style.display = "none";
+                    document.getElementById("Proj11").style.display = "none";
+                    document.getElementById("Proj12").style.display = "none";
+                    document.getElementById("Proj13").style.display = "none";
+                    document.getElementById("Proj14").style.display = "none";
+                    document.getElementById("Proj15").style.display = "none";
+                    document.getElementById("Proj16").style.display = "none";
+                    // document.getElementById("Proj17").style.display = "none";
+
                     document.getElementById("Proj3").style.display = "block";
-                    document.getElementById("Proj3").style.top = "-200px";
-                    document.getElementById("Proj3").style.left = "0%";
                     document.getElementById("Proj4").style.display = "block";
-                    document.getElementById("Proj4").style.top = "-450px";
-                    document.getElementById("Proj4").style.left = "57%";
                     document.getElementById("Proj5").style.display = "block";
-                    document.getElementById("Proj5").style.top = "-400px";
-                    document.getElementById("Proj5").style.left = "0%";
-                    document.getElementById("Proj6").style.display = "block";
-                    document.getElementById("Proj6").style.top = "-650px";
-                    document.getElementById("Proj6").style.left = "57%";
                     document.getElementById("Proj7").style.display = "block";
-                    document.getElementById("Proj7").style.top = "-600px";
-                    document.getElementById("Proj7").style.left = "0%";
                     document.getElementById("Proj8").style.display = "block";
-                    document.getElementById("Proj8").style.top = "-850px";
-                    document.getElementById("Proj8").style.left = "57%";
                     document.getElementById("Proj9").style.display = "block";
-                    document.getElementById("Proj9").style.top = "-800px";
-                    document.getElementById("Proj9").style.left = "0%";
-                    document.getElementById("Proj10").style.display = "block";
-                    document.getElementById("Proj10").style.top = "-1050px";
-                    document.getElementById("Proj10").style.left = "57%";
-                    document.getElementById("Proj11").style.display = "block";
-                    document.getElementById("Proj11").style.top = "-1000px";
-                    document.getElementById("Proj11").style.left = "0%";
+
                 }
                 else
-                    if (event.target.value === "VanillaJS") {
-                        document.getElementById("Proj1").style.display = "block";
-                        document.getElementById("Proj2").style.display = "block";
+                    if (event.target.value === "C#") {
+                        document.getElementById("Proj1").style.display = "none";
+                        document.getElementById("Proj2").style.display = "none";
                         document.getElementById("Proj3").style.display = "none";
                         document.getElementById("Proj4").style.display = "none";
                         document.getElementById("Proj5").style.display = "none";
-                        document.getElementById("Proj6").style.display = "none";
                         document.getElementById("Proj7").style.display = "none";
                         document.getElementById("Proj8").style.display = "none";
                         document.getElementById("Proj9").style.display = "none";
-                        document.getElementById("Proj10").style.display = "none";
-                        document.getElementById("Proj11").style.display = "none";
+
+                        document.getElementById("Proj6").style.display = "block";
+                        document.getElementById("Proj10").style.display = "block";
+                        document.getElementById("Proj11").style.display = "block";
+                        document.getElementById("Proj12").style.display = "block";
+                        document.getElementById("Proj13").style.display = "block";
+                        document.getElementById("Proj14").style.display = "block";
+                        document.getElementById("Proj15").style.display = "block";
+                        document.getElementById("Proj16").style.display = "block";
+                        // document.getElementById("Proj17").style.display = "block";
                     }
-                    else
-                        if (event.target.value === "ReactJS") {
-                            document.getElementById("Proj1").style.display = "none";
-                            document.getElementById("Proj2").style.display = "none";
-                            document.getElementById("Proj6").style.display = "none";
-                            document.getElementById("Proj10").style.display = "none";
-                            document.getElementById("Proj11").style.display = "none";
+    }
 
-                            document.getElementById("Proj3").style.display = "block";
-                            document.getElementById("Proj3").style.top = "0px";
-                            document.getElementById("Proj3").style.left = "0%";
-                            document.getElementById("Proj4").style.display = "block";
-                            document.getElementById("Proj4").style.top = "-250px";
-                            document.getElementById("Proj4").style.left = "57%";
-                            document.getElementById("Proj5").style.display = "block";
-                            document.getElementById("Proj5").style.top = "-200px";
-                            document.getElementById("Proj5").style.left = "0%";
-                            document.getElementById("Proj7").style.display = "block";
-                            document.getElementById("Proj7").style.top = "-450px";
-                            document.getElementById("Proj7").style.left = "57%";
-                            document.getElementById("Proj8").style.display = "block";
-                            document.getElementById("Proj8").style.top = "-400px";
-                            document.getElementById("Proj8").style.left = "0%";
-                            document.getElementById("Proj9").style.display = "block";
-                            document.getElementById("Proj9").style.top = "-650px";
-                            document.getElementById("Proj9").style.left = "57%";
-
-                        }
-                        else
-                            if (event.target.value === "C#") {
-                                document.getElementById("Proj1").style.display = "none";
-                                document.getElementById("Proj2").style.display = "none";
-                                document.getElementById("Proj3").style.display = "none";
-                                document.getElementById("Proj4").style.display = "none";
-                                document.getElementById("Proj5").style.display = "none";
-                                document.getElementById("Proj7").style.display = "none";
-                                document.getElementById("Proj8").style.display = "none";
-                                document.getElementById("Proj9").style.display = "none";
-
-                                document.getElementById("Proj6").style.display = "block";
-                                document.getElementById("Proj6").style.top = "0px";
-                                document.getElementById("Proj6").style.left = "0%";
-                                document.getElementById("Proj10").style.display = "block";
-                                document.getElementById("Proj10").style.top = "-250px";
-                                document.getElementById("Proj10").style.left = "57%";
-                                document.getElementById("Proj11").style.display = "block";
-                                document.getElementById("Proj11").style.top = "-200px";
-                                document.getElementById("Proj11").style.left = "0%";
-                            }
-            }
+    const Play = () => {
+        if (PlayVar == "True") {
+            document.getElementById("ProjVid").play();
+            document.getElementById("PlayText").innerHTML = "PAUSE VIDEO";
+            document.getElementById("PlayButton").src = "/static/media/PauseButton.42129923311106b8d457.png";
+            PlayVar = "False";
         }
         else
-            if (window.innerWidth > 780) {
-                if (event.target.value === "All") {
-                    document.getElementById("Proj1").style.display = "block";
-                    document.getElementById("Proj2").style.display = "block";
-                    document.getElementById("Proj3").style.display = "block";
-                    document.getElementById("Proj3").style.top = "-500px";
-                    document.getElementById("Proj3").style.left = "70%";
-                    document.getElementById("Proj4").style.display = "block";
-                    document.getElementById("Proj4").style.top = "-450px";
-                    document.getElementById("Proj4").style.left = "0%";
-                    document.getElementById("Proj5").style.display = "block";
-                    document.getElementById("Proj5").style.top = "-700px";
-                    document.getElementById("Proj5").style.left = "35%";
-                    document.getElementById("Proj6").style.display = "block";
-                    document.getElementById("Proj6").style.top = "-950px";
-                    document.getElementById("Proj6").style.left = "70%";
-                    document.getElementById("Proj7").style.display = "block";
-                    document.getElementById("Proj7").style.top = "-900px";
-                    document.getElementById("Proj7").style.left = "0%";
-                    document.getElementById("Proj8").style.display = "block";
-                    document.getElementById("Proj8").style.top = "-1150px";
-                    document.getElementById("Proj8").style.left = "35%";
-                    document.getElementById("Proj9").style.display = "block";
-                    document.getElementById("Proj9").style.top = "-1400px";
-                    document.getElementById("Proj9").style.left = "70%";
-                    document.getElementById("Proj10").style.display = "block";
-                    document.getElementById("Proj10").style.top = "-1350px";
-                    document.getElementById("Proj10").style.left = "0%";
-                    document.getElementById("Proj11").style.display = "block";
-                    document.getElementById("Proj11").style.top = "-1600px";
-                    document.getElementById("Proj11").style.left = "35%";
-                }
-                else
-                    if (event.target.value === "VanillaJS") {
-                        document.getElementById("Proj1").style.display = "block";
-                        document.getElementById("Proj2").style.display = "block";
-                        document.getElementById("Proj3").style.display = "none";
-                        document.getElementById("Proj4").style.display = "none";
-                        document.getElementById("Proj5").style.display = "none";
-                        document.getElementById("Proj6").style.display = "none";
-                        document.getElementById("Proj7").style.display = "none";
-                        document.getElementById("Proj8").style.display = "none";
-                    }
-                    else
-                        if (event.target.value === "ReactJS") {
-                            document.getElementById("Proj1").style.display = "none";
-                            document.getElementById("Proj2").style.display = "none";
-                            document.getElementById("Proj6").style.display = "none";
-                            document.getElementById("Proj10").style.display = "none";
-                            document.getElementById("Proj11").style.display = "none";
-
-                            document.getElementById("Proj3").style.display = "block";
-                            document.getElementById("Proj3").style.top = "0px";
-                            document.getElementById("Proj3").style.left = "0%";
-                            document.getElementById("Proj4").style.display = "block";
-                            document.getElementById("Proj4").style.top = "-250px";
-                            document.getElementById("Proj4").style.left = "35%";
-                            document.getElementById("Proj5").style.display = "block";
-                            document.getElementById("Proj5").style.top = "-500px";
-                            document.getElementById("Proj5").style.left = "70%";
-                            document.getElementById("Proj7").style.display = "block";
-                            document.getElementById("Proj7").style.top = "-450px";
-                            document.getElementById("Proj7").style.left = "0%";
-                            document.getElementById("Proj8").style.display = "block";
-                            document.getElementById("Proj8").style.top = "-700px";
-                            document.getElementById("Proj8").style.left = "35%";
-                            document.getElementById("Proj9").style.display = "block";
-                            document.getElementById("Proj9").style.top = "-950px";
-                            document.getElementById("Proj9").style.left = "70%";
-
-                        }
-                        else
-                            if (event.target.value === "C#") {
-                                document.getElementById("Proj1").style.display = "none";
-                                document.getElementById("Proj2").style.display = "none";
-                                document.getElementById("Proj3").style.display = "none";
-                                document.getElementById("Proj4").style.display = "none";
-                                document.getElementById("Proj5").style.display = "none";
-                                document.getElementById("Proj7").style.display = "none";
-                                document.getElementById("Proj8").style.display = "none";
-                                document.getElementById("Proj9").style.display = "none";
-
-                                document.getElementById("Proj6").style.display = "block";
-                                document.getElementById("Proj6").style.top = "0px";
-                                document.getElementById("Proj6").style.left = "0%";
-                                document.getElementById("Proj10").style.display = "block";
-                                document.getElementById("Proj10").style.top = "-250px";
-                                document.getElementById("Proj10").style.left = "35%";
-                                document.getElementById("Proj11").style.display = "block";
-                                document.getElementById("Proj11").style.top = "-500px";
-                                document.getElementById("Proj11").style.left = "70%";
-                            }
+            if (PlayVar == "False") {
+                document.getElementById("ProjVid").pause();
+                document.getElementById("PlayText").innerHTML = "PLAY VIDEO";
+                document.getElementById("PlayButton").src = "/static/media/Play%20Button.e1520f1658df7ec681df.png";
+                PlayVar = "True";
             }
-        if (window.innerWidth < 600) {
-            if (event.target.value === "All") {
-                document.getElementById("Proj1").style.display = "block";
-                document.getElementById("Proj2").style.display = "block";
-                document.getElementById("Proj3").style.display = "block";
-                document.getElementById("Proj3").style.top = "100px";
-                document.getElementById("Proj3").style.left = "0%";
-                document.getElementById("Proj4").style.display = "block";
-                document.getElementById("Proj4").style.top = "150px";
-                document.getElementById("Proj4").style.left = "0%";
-                document.getElementById("Proj5").style.display = "block";
-                document.getElementById("Proj5").style.top = "200px";
-                document.getElementById("Proj5").style.left = "0%";
-                document.getElementById("Proj6").style.display = "block";
-                document.getElementById("Proj6").style.top = "250px";
-                document.getElementById("Proj6").style.left = "0%";
-                document.getElementById("Proj7").style.display = "block";
-                document.getElementById("Proj7").style.top = "300px";
-                document.getElementById("Proj7").style.left = "0%";
-                document.getElementById("Proj8").style.display = "block";
-                document.getElementById("Proj8").style.top = "350px";
-                document.getElementById("Proj8").style.left = "0%";
-                document.getElementById("Proj9").style.display = "block";
-                document.getElementById("Proj9").style.top = "400px";
-                document.getElementById("Proj9").style.left = "0%";
-                document.getElementById("Proj10").style.display = "block";
-                document.getElementById("Proj10").style.top = "450px";
-                document.getElementById("Proj10").style.left = "0%";
-                document.getElementById("Proj11").style.display = "block";
-                document.getElementById("Proj11").style.top = "500px";
-                document.getElementById("Proj11").style.left = "0%";
-            }
-            else
-                if (event.target.value === "VanillaJS") {
-                    document.getElementById("Proj1").style.display = "block";
-                    document.getElementById("Proj2").style.display = "block";
-                    document.getElementById("Proj3").style.display = "none";
-                    document.getElementById("Proj4").style.display = "none";
-                    document.getElementById("Proj5").style.display = "none";
-                    document.getElementById("Proj6").style.display = "none";
-                    document.getElementById("Proj7").style.display = "none";
-                    document.getElementById("Proj8").style.display = "none";
-                    document.getElementById("Proj9").style.display = "none";
-                    document.getElementById("Proj10").style.display = "none";
-                    document.getElementById("Proj11").style.display = "none";
-                }
-                else
-                    if (event.target.value === "ReactJS") {
-                        document.getElementById("Proj1").style.display = "none";
-                        document.getElementById("Proj2").style.display = "none";
-                        document.getElementById("Proj6").style.display = "none";
-                        document.getElementById("Proj10").style.display = "none";
-                        document.getElementById("Proj11").style.display = "none";
+    }
 
-                        document.getElementById("Proj3").style.display = "block";
-                        document.getElementById("Proj3").style.top = "0px";
-                        document.getElementById("Proj3").style.left = "0%";
-                        document.getElementById("Proj4").style.display = "block";
-                        document.getElementById("Proj4").style.top = "55px";
-                        document.getElementById("Proj4").style.left = "0%";
-                        document.getElementById("Proj5").style.display = "block";
-                        document.getElementById("Proj5").style.top = "110px";
-                        document.getElementById("Proj5").style.left = "0%";
-                        document.getElementById("Proj7").style.display = "block";
-                        document.getElementById("Proj7").style.top = "170px";
-                        document.getElementById("Proj7").style.left = "0%";
-                        document.getElementById("Proj8").style.display = "block";
-                        document.getElementById("Proj8").style.top = "225px";
-                        document.getElementById("Proj8").style.left = "0%";
-                        document.getElementById("Proj9").style.display = "block";
-                        document.getElementById("Proj9").style.top = "285px";
-                        document.getElementById("Proj9").style.left = "0%";
 
-                    }
-                    else
-                        if (event.target.value === "C#") {
-                            document.getElementById("Proj1").style.display = "none";
-                            document.getElementById("Proj2").style.display = "none";
-                            document.getElementById("Proj3").style.display = "none";
-                            document.getElementById("Proj4").style.display = "none";
-                            document.getElementById("Proj5").style.display = "none";
-                            document.getElementById("Proj7").style.display = "none";
-                            document.getElementById("Proj8").style.display = "none";
-                            document.getElementById("Proj9").style.display = "none";
 
-                            document.getElementById("Proj6").style.display = "block";
-                            document.getElementById("Proj6").style.top = "0px";
-                            document.getElementById("Proj6").style.left = "0%";
-                            document.getElementById("Proj10").style.display = "block";
-                            document.getElementById("Proj10").style.top = "55px";
-                            document.getElementById("Proj10").style.left = "0%";
-                            document.getElementById("Proj11").style.display = "block";
-                            document.getElementById("Proj11").style.top = "110px";
-                            document.getElementById("Proj11").style.left = "0%";
-                        }
+
+    const Play2 = () => {
+        if (PlayVar2 == "True") {
+            document.getElementById("ProjVid2").play();
+            document.getElementById("PlayText2").innerHTML = "PAUSE VIDEO";
+            document.getElementById("PlayButton2").src = "/static/media/PauseButton.42129923311106b8d457.png";
+            PlayVar2 = "False";
         }
+        else
+            if (PlayVar2 == "False") {
+                document.getElementById("ProjVid2").pause();
+                document.getElementById("PlayText2").innerHTML = "PLAY VIDEO";
+                document.getElementById("PlayButton2").src = "/static/media/Play%20Button.e1520f1658df7ec681df.png";
+                PlayVar2 = "True";
+            }
+    }
+
+
+
+
+    const Play3 = () => {
+        if (PlayVar3 == "True") {
+            document.getElementById("ProjVid3").play();
+            document.getElementById("PlayText3").innerHTML = "PAUSE VIDEO";
+            document.getElementById("PlayButton3").src = "/static/media/PauseButton.42129923311106b8d457.png";
+            PlayVar3 = "False";
+        }
+        else
+            if (PlayVar3 == "False") {
+                document.getElementById("ProjVid3").pause();
+                document.getElementById("PlayText3").innerHTML = "PLAY VIDEO";
+                document.getElementById("PlayButton3").src = "/static/media/Play%20Button.e1520f1658df7ec681df.png";
+                PlayVar3 = "True";
+            }
+    }
+
+
+
+    const Play4 = () => {
+        if (PlayVar4 == "True") {
+            document.getElementById("ProjVid4").play();
+            document.getElementById("PlayText4").innerHTML = "PAUSE VIDEO";
+            document.getElementById("PlayButton4").src = "/static/media/PauseButton.42129923311106b8d457.png";
+            PlayVar4 = "False";
+        }
+        else
+            if (PlayVar4 == "False") {
+                document.getElementById("ProjVid4").pause();
+                document.getElementById("PlayText4").innerHTML = "PLAY VIDEO";
+                document.getElementById("PlayButton4").src = "/static/media/Play%20Button.e1520f1658df7ec681df.png";
+                PlayVar4 = "True";
+            }
+    }
+
+
+
+
+    const Play5 = () => {
+        if (PlayVar5 == "True") {
+            document.getElementById("ProjVid5").play();
+            document.getElementById("PlayText5").innerHTML = "PAUSE VIDEO";
+            document.getElementById("PlayButton5").src = "/static/media/PauseButton.42129923311106b8d457.png";
+            PlayVar5 = "False";
+        }
+        else
+            if (PlayVar5 == "False") {
+                document.getElementById("ProjVid5").pause();
+                document.getElementById("PlayText5").innerHTML = "PLAY VIDEO";
+                document.getElementById("PlayButton5").src = "/static/media/Play%20Button.e1520f1658df7ec681df.png";
+                PlayVar5 = "True";
+            }
     }
     return (
         <>
@@ -909,116 +586,116 @@ export default function Projects() {
                     <option>C#</option>
                 </select>
                 <div id="ProjCards">
-                    <div id="Proj1">
+                    <div className="Proj" id="Proj1">
                         <div id="Proj1Overlay">
                             <a id="ProjLink" href="https://philcrypto.netlify.app"><div id="VLS2">View Live Site</div></a><br />
-                            <a id="ProjLink" href="https://github.com/PhilipNzube/MyRepo"> <div id="VC2">View Code</div></a>
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/MyRepo"> <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj1Img" src={Proj1Img} alt="" />
-                        <div id="Proj1Text">BIT-WEB</div>
-                        <div id="Proj1Info">VanillaJS</div>
+                        <div id="ProjText">BIT-WEB</div>
+                        <div id="ProjInfo">VanillaJS</div>
                     </div>
 
-                    <div id="Proj2">
+                    <div className="Proj" id="Proj2">
                         <div id="Proj2Overlay">
                             <a id="ProjLink" href="https://newzurisite.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/NewSite">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj2Img" src={Proj2Img} alt="" />
-                        <div id="Proj2Text">GLORY</div>
-                        <div id="Proj2Info">VanillaJS</div>
+                        <div id="ProjText">GLORY</div>
+                        <div id="ProjInfo">VanillaJS</div>
                     </div>
 
 
 
-                    <div id="Proj3">
+                    <div className="Proj" id="Proj3">
                         <div id="Proj3Overlay">
                             <a id="ProjLink" href="https://immunowrld-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/IMMUNOWRLD-PWA">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj3Img" src={Proj3Img} alt="" />
-                        <div id="Proj3Text">IMMUNOWRLD</div>
-                        <div id="Proj3Info">ReactJS</div>
+                        <div id="ProjText">IMMUNOWRLD</div>
+                        <div id="ProjInfo">ReactJS</div>
                     </div>
 
 
-                    <div id="Proj4">
+                    <div className="Proj" id="Proj4">
                         <div id="Proj4Overlay">
                             <a id="ProjLink" href="https://phil-music-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/Music-App">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj4Img" src={Proj4Img} alt="" />
-                        <div id="Proj4Text">MY MUSIC APP</div>
-                        <div id="Proj4Info">ReactJS</div>
+                        <div id="ProjText">MY MUSIC APP</div>
+                        <div id="ProjInfo">ReactJS</div>
                     </div>
 
 
-                    <div id="Proj5">
+                    <div className="Proj" id="Proj5">
                         <div id="Proj5Overlay">
                             <a id="ProjLink" href="https://recipe-webapp-pwa.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/Recipie-App-PWA">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj5Img" src={Proj5Img} alt="" />
-                        <div id="Proj5Text">FOOD RECIPE APP</div>
-                        <div id="Proj5Info">ReactJS</div>
+                        <div id="ProjText">FOOD RECIPE APP</div>
+                        <div id="ProjInfo">ReactJS</div>
                     </div>
 
-                    <div id="Proj6">
+                    <div className="Proj" id="Proj6">
                         <div id="Proj6Overlay">
                             <a id="ProjLink" href="https://play.google.com/store/apps/details?id=com.DefaultCompany.IMMUNOCALYPSETheDeadlyTour"> <div id="VLS">Google Play Store</div></a><br />
                             {/* <a id="ProjLink" href='www.google.com'>  <div id="VC">View Code</div></a> */}
                         </div>
                         <img id="Proj6Img" src={Proj6Img} alt="" />
-                        <div id="Proj6Text">IMMUNOCALYPSE</div>
-                        <div id="Proj6Info">C#</div>
+                        <div id="ProjText">IMMUNOCALYPSE</div>
+                        <div id="ProjInfo">C#</div>
                     </div>
 
 
-                    <div id="Proj7">
+                    <div className="Proj" id="Proj7">
                         <div id="Proj7Overlay">
                             <a id="ProjLink" href="https://my-calc-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/Calculator-App">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj7Img" src={Proj7Img} alt="" />
-                        <div id="Proj7Text">CALCULATOR APP</div>
-                        <div id="Proj7Info">ReactJS</div>
+                        <div id="ProjText">CALCULATOR APP</div>
+                        <div id="ProjInfo">ReactJS</div>
                     </div>
 
 
 
 
 
-                    <div id="Proj8">
+                    <div className="Proj" id="Proj8">
                         <div id="Proj8Overlay">
                             <a id="ProjLink" href="https://my-quiz-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/Quiz-App">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj8Img" src={Proj8Img} alt="" />
-                        <div id="Proj8Text">QUIZ APP</div>
-                        <div id="Proj8Info">ReactJS</div>
+                        <div id="ProjText">QUIZ APP</div>
+                        <div id="ProjInfo">ReactJS</div>
                     </div>
 
 
 
-                    <div id="Proj9">
+                    <div className="Proj" id="Proj9">
                         <div id="Proj9Overlay">
                             <a id="ProjLink" href="https://my-tictactoe-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
                             <a id="ProjLink" href="https://github.com/PhilipNzube/TicTacToe-App">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj9Img" src={Proj9Img} alt="" />
-                        <div id="Proj9Text">TICTACTOE APP</div>
-                        <div id="Proj9Info">ReactJS</div>
+                        <div id="ProjText">TICTACTOE APP</div>
+                        <div id="ProjInfo">ReactJS</div>
                     </div>
 
 
 
-                    <div id="Proj10">
+                    <div className="Proj" id="Proj10">
                         <div id="Proj10Overlay">
                             <a id="ProjLink" href="https://github.com/PhilipNzube/Robot-Dodge">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj10Img" src={Proj10Img} alt="" />
-                        <div id="Proj10Text">ROBOT DODGE</div>
-                        <div id="Proj10Info">C#</div>
+                        <div id="ProjText">ROBOT DODGE</div>
+                        <div id="ProjInfo">C#</div>
                     </div>
 
 
@@ -1026,14 +703,91 @@ export default function Projects() {
 
 
 
-                    <div id="Proj11">
+                    <div className="Proj" id="Proj11">
                         <div id="Proj11Overlay">
                             <a id="ProjLink" href="https://github.com/PhilipNzube/Anim-Scene">  <div id="VC">View Code</div></a>
                         </div>
                         <img id="Proj11Img" src={Proj11Img} alt="" />
-                        <div id="Proj11Text">ANIM SCENE</div>
-                        <div id="Proj11Info">C#</div>
+                        <div id="ProjText">ANIM SCENE</div>
+                        <div id="ProjInfo">C#</div>
                     </div>
+
+
+
+
+                    <div className="Proj" id="Proj12">
+                        <div id="Proj12Overlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/TimeSwitchAbility">  <div id="VC">View Code</div></a><br />
+                            <div id="PlayDiv" className="PlayAndPause" onClick={Play}><img className="PlayButtonClass" id="PlayButton" src={PlayButton} alt="Play" /><p id="PlayText">PLAY VIDEO</p></div>
+                        </div>
+                        <video id="ProjVid" src={Proj12Vid}></video>
+                        <div id="ProjText">TIME SWITCH SYSTEM</div>
+                        <div id="ProjInfo">C#</div>
+                    </div>
+
+
+                    <div className="Proj" id="Proj13">
+                        <div id="Proj13Overlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/UIManagementSystem">  <div id="VC">View Code</div></a><br />
+                            <div id="PlayDiv" className="PlayAndPause" onClick={Play2}><img className="PlayButtonClass" id="PlayButton2" src={PlayButton} alt="Play" /><p id="PlayText2">PLAY VIDEO</p></div>
+                        </div>
+                        <video id="ProjVid2" src={Proj13Vid}></video>
+                        <div id="ProjText">UI MANAGEMENT SYSTEM</div>
+                        <div id="ProjInfo">C#</div>
+                    </div>
+
+
+
+
+                    <div className="Proj" id="Proj14">
+                        <div id="Proj14Overlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/FightingSystem">  <div id="VC">View Code</div></a><br />
+                            <div id="PlayDiv" className="PlayAndPause" onClick={Play3}><img className="PlayButtonClass" id="PlayButton3" src={PlayButton} alt="Play" /><p id="PlayText3">PLAY VIDEO</p></div>
+                        </div>
+                        <video id="ProjVid3" src={Proj14Vid}></video>
+                        <div id="ProjText">FIGHT SYSTEM</div>
+                        <div id="ProjInfo">C#</div>
+                    </div>
+
+
+
+
+
+                    <div className="Proj" id="Proj15">
+                        <div id="Proj15Overlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/DialogueSystem">  <div id="VC">View Code</div></a><br />
+                            <div id="PlayDiv" className="PlayAndPause" onClick={Play4}><img className="PlayButtonClass" id="PlayButton4" src={PlayButton} alt="Play" /><p id="PlayText4">PLAY VIDEO</p></div>
+                        </div>
+                        <video id="ProjVid4" src={Proj15Vid}></video>
+                        <div id="ProjText">DIALOGUE SYSTEM</div>
+                        <div id="ProjInfo">C#</div>
+                    </div>
+
+
+
+
+
+                    <div className="Proj" id="Proj16">
+                        <div id="Proj16Overlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/InteractionSystem">  <div id="VC">View Code</div></a><br />
+                            <div id="PlayDiv" className="PlayAndPause" onClick={Play5}><img className="PlayButtonClass" id="PlayButton5" src={PlayButton} alt="Play" /><p id="PlayText5">PLAY VIDEO</p></div>
+                        </div>
+                        <video id="ProjVid5" src={Proj16Vid}></video>
+                        <div id="ProjText">INTERACTION SYSTEM</div>
+                        <div id="ProjInfo">C#</div>
+                    </div>
+
+
+
+                    {/* <div id="Proj">
+                        <div id="ProjOverlay">
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/InventorySystem">  <div id="VC">View Code</div></a><br />
+                            <div id="PlayDiv" className="PlayAndPause" onClick={Play}><img id="PlayButton" src={PlayButton} alt="Play" /><p id="PlayText">PLAY VIDEO</p></div>
+                        </div>
+                        <video id="ProjVid" src={Proj17Vid}></video>
+                        <div id="ProjText">Time Switch Ability</div>
+                        <div id="ProjInfo">C#</div>
+                    </div> */}
                 </div>
                 <img id="Profile" src={ProfilePic} alt="PROFILE PIC" />
 

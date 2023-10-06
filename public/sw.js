@@ -3,8 +3,8 @@ this.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(cacheData).then((cache) => {
             cache.addAll([
-                '/static/js/main.721d7040.js',
-                '/static/css/main.fd6f82c3.css',
+                '/static/js/main.8e4ae7f2.js',
+                '/static/css/main.3e51895f.css',
                 '/static/media/GitHub.1ff6d9646165b7f34af9.png',
                 '/static/media/LinkedIn.ba884e1f9ad4362348c1.png',
                 '/static/media/ProfilePic.d9c1b25b530df458388c.jpg',
@@ -22,6 +22,8 @@ this.addEventListener("install", (event) => {
                 '/static/media/Proj9Img.81213894169409b9e708.png',
                 '/static/media/Proj10Img.9c626918806424086fd1.png',
                 '/static/media/Proj11Img.13fc0a0ea80c8fe85411.png',
+                '/static/media/Play%20Button.e1520f1658df7ec681df.png',
+                '/static/media/PauseButton.42129923311106b8d457.png',
                 '/manifest.json',
                 '/Icon.png',
                 '/Icon192.png',

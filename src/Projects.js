@@ -17,6 +17,8 @@ import Proj13Vid from './videos/UIManagement System Video.mp4';
 import Proj14Vid from './videos/Fight System Video.mp4';
 import Proj15Vid from './videos/Dialogue System Video.mp4';
 import Proj16Vid from './videos/InteractionSystem Video.mp4';
+import Proj17Img from './images/Proj17Img.png';
+import Proj18Img from './images/Proj18Img.png';
 //import Proj17Vid from './videos/
 import PlayButton from './images/Play Button.png';
 import PauseButton from './images/PauseButton.png';
@@ -313,6 +315,44 @@ export default function Projects() {
             }, 300);
         });
 
+
+
+
+        document.getElementById("Proj17Img").addEventListener('click', (e) => {
+            document.getElementById("Proj17Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj17Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj17Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj17Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj17Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj17Overlay").style.animationDuration = 1;
+                document.getElementById("Proj17Overlay").style.display = "none";
+            }, 300);
+        });
+
+
+
+
+
+
+        document.getElementById("Proj18Img").addEventListener('click', (e) => {
+            document.getElementById("Proj18Overlay").style.animationName = "ProjOverlayAnim";
+            document.getElementById("Proj18Overlay").style.display = "block";
+        });
+
+
+        document.getElementById("Proj18Overlay").addEventListener('click', (e) => {
+            document.getElementById("Proj18Overlay").style.animationDuration = 0.3;
+            document.getElementById("Proj18Overlay").style.animationName = "ProjOverlayAnimOut";
+            setTimeout(() => {
+                document.getElementById("Proj18Overlay").style.animationDuration = 1;
+                document.getElementById("Proj18Overlay").style.display = "none";
+            }, 300);
+        });
+
         if (window.innerWidth < 780) {
             document.body.style.overflowY = "auto";
             document.getElementById("HamBurger").style.display = "block";
@@ -418,7 +458,8 @@ export default function Projects() {
             document.getElementById("Proj14").style.display = "block";
             document.getElementById("Proj15").style.display = "block";
             document.getElementById("Proj16").style.display = "block";
-            // document.getElementById("Proj17").style.display = "block";
+            document.getElementById("Proj17").style.display = "block";
+            document.getElementById("Proj18").style.display = "block";
         }
         else
             if (event.target.value === "VanillaJS") {
@@ -438,7 +479,8 @@ export default function Projects() {
                 document.getElementById("Proj14").style.display = "none";
                 document.getElementById("Proj15").style.display = "none";
                 document.getElementById("Proj16").style.display = "none";
-                // document.getElementById("Proj17").style.display = "none";
+                document.getElementById("Proj17").style.display = "none";
+                document.getElementById("Proj18").style.display = "none";
             }
             else
                 if (event.target.value === "ReactJS") {
@@ -452,7 +494,6 @@ export default function Projects() {
                     document.getElementById("Proj14").style.display = "none";
                     document.getElementById("Proj15").style.display = "none";
                     document.getElementById("Proj16").style.display = "none";
-                    // document.getElementById("Proj17").style.display = "none";
 
                     document.getElementById("Proj3").style.display = "block";
                     document.getElementById("Proj4").style.display = "block";
@@ -460,6 +501,8 @@ export default function Projects() {
                     document.getElementById("Proj7").style.display = "block";
                     document.getElementById("Proj8").style.display = "block";
                     document.getElementById("Proj9").style.display = "block";
+                    document.getElementById("Proj17").style.display = "block";
+                    document.getElementById("Proj18").style.display = "block";
 
                 }
                 else
@@ -472,6 +515,8 @@ export default function Projects() {
                         document.getElementById("Proj7").style.display = "none";
                         document.getElementById("Proj8").style.display = "none";
                         document.getElementById("Proj9").style.display = "none";
+                        document.getElementById("Proj17").style.display = "none";
+                        document.getElementById("Proj18").style.display = "none";
 
                         document.getElementById("Proj6").style.display = "block";
                         document.getElementById("Proj10").style.display = "block";
@@ -481,7 +526,6 @@ export default function Projects() {
                         document.getElementById("Proj14").style.display = "block";
                         document.getElementById("Proj15").style.display = "block";
                         document.getElementById("Proj16").style.display = "block";
-                        // document.getElementById("Proj17").style.display = "block";
                     }
     }
 
@@ -720,7 +764,7 @@ export default function Projects() {
                             <a id="ProjLink" href="https://github.com/PhilipNzube/TimeSwitchAbility">  <div id="VC">View Code</div></a><br />
                             <div id="PlayDiv" className="PlayAndPause" onClick={Play}><img className="PlayButtonClass" id="PlayButton" src={PlayButton} alt="Play" /><p id="PlayText">PLAY VIDEO</p></div>
                         </div>
-                        <video id="ProjVid" src={Proj12Vid}></video>
+                        <video id="ProjVid" src={Proj12Vid}> loop</video>
                         <div id="ProjText">TIME SWITCH SYSTEM</div>
                         <div id="ProjInfo">C#</div>
                     </div>
@@ -731,7 +775,7 @@ export default function Projects() {
                             <a id="ProjLink" href="https://github.com/PhilipNzube/UIManagementSystem">  <div id="VC">View Code</div></a><br />
                             <div id="PlayDiv" className="PlayAndPause" onClick={Play2}><img className="PlayButtonClass" id="PlayButton2" src={PlayButton} alt="Play" /><p id="PlayText2">PLAY VIDEO</p></div>
                         </div>
-                        <video id="ProjVid2" src={Proj13Vid}></video>
+                        <video id="ProjVid2" src={Proj13Vid} loop></video>
                         <div id="ProjText">UI MANAGEMENT SYSTEM</div>
                         <div id="ProjInfo">C#</div>
                     </div>
@@ -744,7 +788,7 @@ export default function Projects() {
                             <a id="ProjLink" href="https://github.com/PhilipNzube/FightingSystem">  <div id="VC">View Code</div></a><br />
                             <div id="PlayDiv" className="PlayAndPause" onClick={Play3}><img className="PlayButtonClass" id="PlayButton3" src={PlayButton} alt="Play" /><p id="PlayText3">PLAY VIDEO</p></div>
                         </div>
-                        <video id="ProjVid3" src={Proj14Vid}></video>
+                        <video id="ProjVid3" src={Proj14Vid} loop></video>
                         <div id="ProjText">FIGHT SYSTEM</div>
                         <div id="ProjInfo">C#</div>
                     </div>
@@ -758,7 +802,7 @@ export default function Projects() {
                             <a id="ProjLink" href="https://github.com/PhilipNzube/DialogueSystem">  <div id="VC">View Code</div></a><br />
                             <div id="PlayDiv" className="PlayAndPause" onClick={Play4}><img className="PlayButtonClass" id="PlayButton4" src={PlayButton} alt="Play" /><p id="PlayText4">PLAY VIDEO</p></div>
                         </div>
-                        <video id="ProjVid4" src={Proj15Vid}></video>
+                        <video id="ProjVid4" src={Proj15Vid} loop></video>
                         <div id="ProjText">DIALOGUE SYSTEM</div>
                         <div id="ProjInfo">C#</div>
                     </div>
@@ -772,11 +816,34 @@ export default function Projects() {
                             <a id="ProjLink" href="https://github.com/PhilipNzube/InteractionSystem">  <div id="VC">View Code</div></a><br />
                             <div id="PlayDiv" className="PlayAndPause" onClick={Play5}><img className="PlayButtonClass" id="PlayButton5" src={PlayButton} alt="Play" /><p id="PlayText5">PLAY VIDEO</p></div>
                         </div>
-                        <video id="ProjVid5" src={Proj16Vid}></video>
+                        <video id="ProjVid5" src={Proj16Vid} loop></video>
                         <div id="ProjText">INTERACTION SYSTEM</div>
                         <div id="ProjInfo">C#</div>
                     </div>
 
+
+                    <div className="Proj" id="Proj17">
+                        <div id="Proj17Overlay">
+                            <a id="ProjLink" href="https://gofer-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/Gofer-App">  <div id="VC">View Code</div></a>
+                        </div>
+                        <img id="Proj17Img" src={Proj17Img} alt="" />
+                        <div id="ProjText">GOFER</div>
+                        <div id="ProjInfo">ReactJS</div>
+                    </div>
+
+
+
+
+                    <div className="Proj" id="Proj18">
+                        <div id="Proj18Overlay">
+                            <a id="ProjLink" href="https://paylect-web-app.netlify.app"> <div id="VLS">View Live Site</div></a><br />
+                            <a id="ProjLink" href="https://github.com/PhilipNzube/PayLect-App">  <div id="VC">View Code</div></a>
+                        </div>
+                        <img id="Proj18Img" src={Proj18Img} alt="" />
+                        <div id="ProjText">PAYLECT</div>
+                        <div id="ProjInfo">ReactJS</div>
+                    </div>
 
 
                     {/* <div id="Proj">
@@ -784,7 +851,7 @@ export default function Projects() {
                             <a id="ProjLink" href="https://github.com/PhilipNzube/InventorySystem">  <div id="VC">View Code</div></a><br />
                             <div id="PlayDiv" className="PlayAndPause" onClick={Play}><img id="PlayButton" src={PlayButton} alt="Play" /><p id="PlayText">PLAY VIDEO</p></div>
                         </div>
-                        <video id="ProjVid" src={Proj17Vid}></video>
+                        <video id="ProjVid" src={Proj17Vid}> loop</video>
                         <div id="ProjText">Time Switch Ability</div>
                         <div id="ProjInfo">C#</div>
                     </div> */}

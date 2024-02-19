@@ -459,7 +459,7 @@ body {
     height: 250px;
   }
 
-  #ProjText {
+  .ProjText {
     position: relative;
     top: 10px;
     text-align: center;
@@ -469,7 +469,7 @@ body {
     color: bisque;
   }
 
-  #ProjInfo {
+  .ProjInfo {
     text-align: center;
     position: absolute;
     top: 220px;
@@ -483,7 +483,12 @@ body {
 
 
 
-  #Proj1Img {
+
+
+
+
+
+  .ProjImg {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -496,37 +501,7 @@ body {
     height: 60%;
   }
 
-  #Proj1Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #Proj2Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj2Overlay {
+  .ProjOverlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -545,536 +520,7 @@ body {
 
 
 
-  #Proj3Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj3Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-  #Proj4Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj4Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-  #Proj5Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj5Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-  #Proj6Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj6Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-  #Proj7Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj7Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-  #Proj8Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj8Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-  #Proj9Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj9Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-  #Proj10Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj10Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-  #Proj11Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj11Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-
-  #Proj12Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj12Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-  #Proj13Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj13Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-  #Proj14Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj14Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-  #Proj15Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj15Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-
-  #Proj16Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj16Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-  #Proj17Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj17Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-
-  #Proj18Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj18Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-  #VLS {
+  .VLS {
     font-size: large;
     font-weight: bold;
     text-align: center;
@@ -1088,14 +534,14 @@ body {
     color: bisque;
   }
 
-  #VLS:hover {
+  .VLS:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC {
+  .VC {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1112,58 +558,13 @@ body {
     color: bisque;
   }
 
-  #VC:hover {
+  .VC:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VLS2 {
-    font-size: large;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    top: 20%;
-    left: 15%;
-    width: 60%;
-    padding: 10px;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #VLS2:hover {
-    cursor: pointer;
-    box-shadow: 0 0 5px;
-    background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
-  }
-
-  #VC2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    top: 20%;
-    left: 15%;
-    width: 60%;
-    height: 20px;
-    padding: 10px;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #VC2:hover {
-    cursor: pointer;
-    box-shadow: 0 0 5px;
-    background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
-  }
 
   .PlayAndPause {
     display: flex;
@@ -1191,7 +592,7 @@ body {
   }
 
 
-  #ProjVid {
+  .ProjVid {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -1205,66 +606,7 @@ body {
     object-fit: cover;
   }
 
-
-  #ProjVid2 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-  #ProjVid3 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-
-  #ProjVid4 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-
-  #ProjVid5 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-  #ProjLink {
+  .ProjLink {
     text-decoration: none;
     color: bisque;
   }
@@ -1966,20 +1308,8 @@ body {
     height: 250px;
   }
 
-  #Proj1Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
 
-  #ProjText {
+  .ProjText {
     position: relative;
     top: 10px;
     text-align: center;
@@ -1989,7 +1319,7 @@ body {
     color: bisque;
   }
 
-  #ProjInfo {
+  .ProjInfo {
     text-align: center;
     position: absolute;
     top: 220px;
@@ -2001,24 +1331,9 @@ body {
     color: bisque;
   }
 
-  #Proj1Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
 
-  #Proj2Img {
+
+  .ProjImg {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2031,7 +1346,7 @@ body {
     height: 60%;
   }
 
-  #Proj2Overlay {
+  .ProjOverlay {
     cursor: pointer;
     color: white;
     display: none;
@@ -2048,7 +1363,17 @@ body {
     z-index: 1;
   }
 
-  #Proj3Img {
+
+
+
+
+
+
+
+
+
+
+Proj12Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2061,490 +1386,23 @@ body {
     height: 60%;
   }
 
-  #Proj3Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #Proj4Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj4Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #Proj5Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj5Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #Proj6Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj6Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #Proj7Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj7Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #Proj8Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj8Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-  #Proj9Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj9Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
 
 
 
-  #Proj10Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj10Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
 
 
 
-  #Proj11Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj11Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
 
 
 
-  #Proj12Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj12Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-  #Proj13Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj13Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
 
 
 
-  #Proj14Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
 
-  #Proj14Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
+  
 
 
-
-  #Proj15Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj15Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-  #Proj16Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj16Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #Proj17Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj17Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-
-
-  #Proj18Img {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-  }
-
-  #Proj18Overlay {
-    cursor: pointer;
-    color: white;
-    display: none;
-    position: absolute;
-    left: 0.3%;
-    width: 100%;
-    height: 61%;
-    background-color: black;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    animation-name: ProjOverlayAnim;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    z-index: 1;
-  }
-
-  #VLS {
+  .VLS {
     font-size: large;
     font-weight: bold;
     text-align: center;
@@ -2558,14 +1416,14 @@ body {
     color: bisque;
   }
 
-  #VLS:hover {
+  .VLS:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC {
+  .VC {
     font-size: large;
     font-weight: bold;
     text-align: center;
@@ -2579,33 +1437,13 @@ body {
     color: bisque;
   }
 
-  #VC:hover {
+  .VC:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VLS2 {
-    font-size: large;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    top: 20%;
-    left: 15%;
-    width: 60%;
-    padding: 10px;
-    border: 1px solid bisque;
-    border-radius: 5px;
-    color: bisque;
-  }
-
-  #VLS2:hover {
-    cursor: pointer;
-    box-shadow: 0 0 5px;
-    background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
-  }
 
   #VC2 {
     font-size: large;
@@ -2619,13 +1457,6 @@ body {
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
-  }
-
-  #VC2:hover {
-    cursor: pointer;
-    box-shadow: 0 0 5px;
-    background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
   }
 
 
@@ -2655,7 +1486,7 @@ body {
   }
 
 
-  #ProjVid {
+  .ProjVid {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -2669,66 +1500,7 @@ body {
     object-fit: cover;
   }
 
-
-  #ProjVid2 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-  #ProjVid3 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-
-  #ProjVid4 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-
-  #ProjVid5 {
-    cursor: pointer;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-
-  #ProjLink {
+  .ProjLink {
     text-decoration: none;
     color: bisque;
   }
@@ -3049,11 +1821,11 @@ body {
     height: 250px;
   }
 
-  #ProjText {
+  .ProjText {
     font-size: 150%;
   }
 
-  #ProjInfo {
+  .ProjInfo {
     top: 220px;
     left: 0%;
     padding: 1%;
@@ -3062,7 +1834,7 @@ body {
 
   /* Increment the "top" value by 60px for every "Proj" to come. This only works for the mobile view because the projects are aligned in a straight line */
 
-  #VLS {
+  .VLS {
     font-size: large;
     font-weight: bold;
     text-align: center;
@@ -3076,14 +1848,14 @@ body {
     color: bisque;
   }
 
-  #VLS:hover {
+  .VLS:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
     color: hsl(236, 48%, 33%);
   }
 
-  #VC {
+  .VC {
     font-size: large;
     font-weight: bold;
     text-align: center;
@@ -3097,7 +1869,7 @@ body {
     color: bisque;
   }
 
-  #VC:hover {
+  .VC:hover {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
@@ -3118,13 +1890,6 @@ body {
     color: bisque;
   }
 
-  #VLS2:hover {
-    cursor: pointer;
-    box-shadow: 0 0 5px;
-    background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
-  }
-
   #VC2 {
     font-size: large;
     font-weight: bold;
@@ -3137,13 +1902,6 @@ body {
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
-  }
-
-  #VC2:hover {
-    cursor: pointer;
-    box-shadow: 0 0 5px;
-    background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
   }
 
   #Name {

@@ -1,5 +1,5 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Bai Jamjuree', sans-serif;
   overflow-x: hidden;
   background-color: bisque;
   /* background-color: hsl(218, 28%, 13%); */
@@ -83,6 +83,7 @@ body {
   }
 
   #LOADING {
+    font-family: 'Montserrat', sans-serif;
     opacity: 0;
     font-size: 500%;
     position: fixed;
@@ -319,7 +320,7 @@ body {
     top: 20px;
     box-shadow: 0 0 15px black;
     font-size: larger;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
     padding: 20px;
     padding-right: 50px;
     height: 45px;
@@ -429,7 +430,7 @@ body {
     top: 20px;
     color: bisque;
     font-size: large;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
     border: 2px solid hsl(236, 48%, 33%);
@@ -463,7 +464,7 @@ body {
     position: relative;
     top: 10px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
     font-size: 130%;
     color: bisque;
@@ -972,6 +973,7 @@ body {
   }
 
   #LOADING {
+    font-family: 'Montserrat', sans-serif;
     opacity: 0;
     font-size: 400%;
     position: fixed;
@@ -1279,7 +1281,7 @@ body {
     top: 20px;
     color: bisque;
     font-size: large;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
     border: 2px solid hsl(236, 48%, 33%);
@@ -1313,7 +1315,7 @@ body {
     position: relative;
     top: 10px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
     font-size: 130%;
     color: bisque;
@@ -1721,7 +1723,7 @@ Proj12Img {
     top: 10px;
     box-shadow: 0 0 15px black;
     font-size: larger;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
     padding: 20px;
     padding-right: 50px;
     height: 45px;
@@ -1950,6 +1952,7 @@ Proj12Img {
   }
 
   #LOADING {
+    font-family: 'Montserrat', sans-serif;
     font-size: 300%;
   }
 }

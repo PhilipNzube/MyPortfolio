@@ -3,6 +3,8 @@ this.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(cacheData).then((cache) => {
             cache.addAll([
+                'https://fonts.googleapis.com/css2?family=Bai%20Jamjuree:wght@400;700&display=swap',
+                'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap',
                 '/static/js/main.3be39749.js',
                 '/static/css/main.1465ebe6.css',
                 '/static/media/GitHub.1ff6d9646165b7f34af9.png',

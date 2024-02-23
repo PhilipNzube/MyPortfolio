@@ -6,6 +6,7 @@ import DownloadIcon from '../images/Download.png';
 import { useNavigate } from 'react-router-dom';
 import OverlayNav from '../Components/OverlayNav';
 import PicOverlay from '../Components/PicOverlay';
+import { useEffect } from 'react';
 
 export default function MainPage() {
     // var AboutActive = 0;
@@ -36,172 +37,176 @@ export default function MainPage() {
                 document.getElementById("HamBurger").style.display = "block";
             }
     });
-    setTimeout(() => {
 
-        if (window.innerWidth < 780) {
-            const Container = document.getElementById("SocialIcons");
-            const Child = document.getElementById("Download");
-            const Centralizer = document.createElement('center');
-            Container.appendChild(Centralizer);
-            Centralizer.id = "Centralizer";
-            Centralizer.appendChild(Child);
-        }
-
-
-        document.getElementById("About").addEventListener('click', (e) => {
-            Unmount();
-            if (document.getElementById("Prof").innerHTML !== "") {
-                navigate("/About");
-            }
-        });
-        document.getElementById("AboutOverlay").addEventListener('click', (e) => {
-            navigate("/About");
-        });
-
-        document.getElementById("Projects").addEventListener('click', (e) => {
-            navigate("/Projects");
-        });
-
-        document.getElementById("ProjectsOverlay").addEventListener('click', (e) => {
-            navigate("/Projects");
-        });
-
-        document.getElementById("Contact").addEventListener('click', (e) => {
-            navigate("/Contact");
-        });
-
-        document.getElementById("ContactOverlay").addEventListener('click', (e) => {
-            navigate("/Contact");
-        });
-
-        document.getElementById("HamBurger").addEventListener('click', (e) => {
-            document.body.style.overflowY = "hidden";
-            document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
-            document.getElementById("Overlay").style.display = "block";
-            document.getElementById("HamBurger").style.display = "none";
-        });
-
-
-        document.getElementById("Close").addEventListener('click', (e) => {
-            document.getElementById("Overlay").style.animationDuration = 0.3;
-            document.getElementById("Overlay").style.animationName = "OverlaySlideOut";
-            setTimeout(() => {
-                document.getElementById("Overlay").style.animationDuration = 0.8;
-                document.body.style.overflowY = "auto";
-                if (window.innerWidth < 780) {
-                    document.getElementById("HamBurger").style.display = "block";
-                }
-                document.getElementById("Overlay").style.display = "none";
-            }, 300);
-        });
-
-
-        document.getElementById("ClosePicOverlay").addEventListener('click', (e) => {
-            document.getElementById("NavBar").style.display = "block";
-            if (window.innerWidth < 780) {
-                document.getElementById("PicOverlay").style.animationName = "PicOverlaySlideOut";
-                setTimeout(() => {
-                    document.body.style.overflowY = "auto";
-                    document.getElementById("PicOverlay").style.display = "none";
-                    if (document.getElementById("Overlay").style.display !== "block") {
-                        if (window.innerWidth < 780) {
-                            document.getElementById("HamBurger").style.display = "block";
-                        }
-                    }
-                }, 790);
-            }
-        });
-
-        document.getElementById("LOADINGTOP").style.display = "none";
+    useEffect(() => {
         setTimeout(() => {
-            var h1 = document.getElementById("Prof");
-            var text = h1.innerHTML;
-            h1.innerHTML = "";
-            const TypingEffect = (element, speed) => {
-                var i = 0;
-                var timer = setInterval(() => {
-                    if (i < text.length) {
-                        element.append(text.charAt(i));
-                        i++;
-                    }
-                    else {
-                        clearInterval(timer);
-                        text = "FRONTEND WEB DEVELOPER";
-                        setTimeout(() => {
-                            h1.innerHTML = "";
-                            TypingEffect2(h1, 150);
-                        }, 1000);
-                    }
-                }, speed);
+
+            if (window.innerWidth < 780) {
+                const Container = document.getElementById("SocialIcons");
+                const Child = document.getElementById("Download");
+                const Centralizer = document.createElement('center');
+                Container.appendChild(Centralizer);
+                Centralizer.id = "Centralizer";
+                Centralizer.appendChild(Child);
             }
 
-            const TypingEffect2 = (element, speed) => {
-                var i = 0;
-                var timer = setInterval(() => {
-                    if (i < text.length) {
-                        element.append(text.charAt(i));
-                        i++;
-                    }
-                    else {
-                        clearInterval(timer);
-                        text = "INDIE GAME DEVELOPER";
-                        setTimeout(() => {
-                            h1.innerHTML = "";
-                            TypingEffect3(h1, 150);
-                        }, 1000);
-                    }
-                }, speed);
-            }
 
-            const TypingEffect3 = (element, speed) => {
-                var i = 0;
-                var timer = setInterval(() => {
-                    if (i < text.length) {
-                        element.append(text.charAt(i));
-                        i++;
-                    }
-                    else {
-                        clearInterval(timer);
-                        text = "TECH ENTHUSIAST";
-                        setTimeout(() => {
-                            h1.innerHTML = "";
-                            TypingEffect4(h1, 150);
-                        }, 1000);
-                    }
-                }, speed);
-            }
-
-            const TypingEffect4 = (element, speed) => {
-                var i = 0;
-                var timer = setInterval(() => {
-                    if (i < text.length) {
-                        element.append(text.charAt(i));
-                        i++;
-                    }
-                    else {
-                        clearInterval(timer);
-                        text = "STUDENT";
-                        setTimeout(() => {
-                            h1.innerHTML = "";
-                            TypingEffect(h1, 150);
-                        }, 1000);
-                    }
-                }, speed);
-            }
-
-            setTimeout(() => {
-                // AboutActive = 1;
-                var LoadLimiter = 0;
-                LoadLimiter++;
-                document.getElementById("LOADING").style.display = "none";
-                document.getElementById("Container").style.opacity = 1;
-                document.getElementById("NavBar").style.display = "block";
-                if (LoadLimiter === 1) {
-                    TypingEffect(h1, 150);
+            document.getElementById("About").addEventListener('click', (e) => {
+                Unmount();
+                if (document.getElementById("Prof").innerHTML !== "") {
+                    navigate("/About");
                 }
-            }, 4500);
-        }, 1000);
-    }, 5000);
+            });
+            document.getElementById("AboutOverlay").addEventListener('click', (e) => {
+                navigate("/About");
+            });
+
+            document.getElementById("Projects").addEventListener('click', (e) => {
+                navigate("/Projects");
+            });
+
+            document.getElementById("ProjectsOverlay").addEventListener('click', (e) => {
+                navigate("/Projects");
+            });
+
+            document.getElementById("Contact").addEventListener('click', (e) => {
+                navigate("/Contact");
+            });
+
+            document.getElementById("ContactOverlay").addEventListener('click', (e) => {
+                navigate("/Contact");
+            });
+
+            document.getElementById("HamBurger").addEventListener('click', (e) => {
+                document.body.style.overflowY = "hidden";
+                document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
+                document.getElementById("Overlay").style.display = "block";
+                document.getElementById("HamBurger").style.display = "none";
+            });
+
+
+            document.getElementById("Close").addEventListener('click', (e) => {
+                document.getElementById("Overlay").style.animationDuration = 0.3;
+                document.getElementById("Overlay").style.animationName = "OverlaySlideOut";
+                setTimeout(() => {
+                    document.getElementById("Overlay").style.animationDuration = 0.8;
+                    document.body.style.overflowY = "auto";
+                    if (window.innerWidth < 780) {
+                        document.getElementById("HamBurger").style.display = "block";
+                    }
+                    document.getElementById("Overlay").style.display = "none";
+                }, 300);
+            });
+
+
+            document.getElementById("ClosePicOverlay").addEventListener('click', (e) => {
+                document.getElementById("NavBar").style.display = "block";
+                if (window.innerWidth < 780) {
+                    document.getElementById("PicOverlay").style.animationName = "PicOverlaySlideOut";
+                    setTimeout(() => {
+                        document.body.style.overflowY = "auto";
+                        document.getElementById("PicOverlay").style.display = "none";
+                        if (document.getElementById("Overlay").style.display !== "block") {
+                            if (window.innerWidth < 780) {
+                                document.getElementById("HamBurger").style.display = "block";
+                            }
+                        }
+                    }, 790);
+                }
+            });
+
+            document.getElementById("LOADINGTOP").style.display = "none";
+            setTimeout(() => {
+                var h1 = document.getElementById("Prof");
+                var text = h1.innerHTML;
+                h1.innerHTML = "";
+                const TypingEffect = (element, speed) => {
+                    var i = 0;
+                    var timer = setInterval(() => {
+                        if (i < text.length) {
+                            element.append(text.charAt(i));
+                            i++;
+                        }
+                        else {
+                            clearInterval(timer);
+                            text = "FRONTEND WEB DEVELOPER";
+                            setTimeout(() => {
+                                h1.innerHTML = "";
+                                TypingEffect2(h1, 150);
+                            }, 1000);
+                        }
+                    }, speed);
+                }
+
+                const TypingEffect2 = (element, speed) => {
+                    var i = 0;
+                    var timer = setInterval(() => {
+                        if (i < text.length) {
+                            element.append(text.charAt(i));
+                            i++;
+                        }
+                        else {
+                            clearInterval(timer);
+                            text = "INDIE GAME DEVELOPER";
+                            setTimeout(() => {
+                                h1.innerHTML = "";
+                                TypingEffect3(h1, 150);
+                            }, 1000);
+                        }
+                    }, speed);
+                }
+
+                const TypingEffect3 = (element, speed) => {
+                    var i = 0;
+                    var timer = setInterval(() => {
+                        if (i < text.length) {
+                            element.append(text.charAt(i));
+                            i++;
+                        }
+                        else {
+                            clearInterval(timer);
+                            text = "TECH ENTHUSIAST";
+                            setTimeout(() => {
+                                h1.innerHTML = "";
+                                TypingEffect4(h1, 150);
+                            }, 1000);
+                        }
+                    }, speed);
+                }
+
+                const TypingEffect4 = (element, speed) => {
+                    var i = 0;
+                    var timer = setInterval(() => {
+                        if (i < text.length) {
+                            element.append(text.charAt(i));
+                            i++;
+                        }
+                        else {
+                            clearInterval(timer);
+                            text = "STUDENT";
+                            setTimeout(() => {
+                                h1.innerHTML = "";
+                                TypingEffect(h1, 150);
+                            }, 1000);
+                        }
+                    }, speed);
+                }
+
+                setTimeout(() => {
+                    // AboutActive = 1;
+                    var LoadLimiter = 0;
+                    LoadLimiter++;
+                    document.getElementById("LOADING").style.display = "none";
+                    document.getElementById("Container").style.opacity = 1;
+                    document.getElementById("NavBar").style.display = "block";
+                    if (LoadLimiter === 1) {
+                        TypingEffect(h1, 150);
+                    }
+                }, 4500);
+            }, 1000);
+        }, 5000);
+    }, []);
+
     return (
         <>
             <div id="LOADINGTOP"></div>
@@ -224,9 +229,9 @@ export default function MainPage() {
                 <img id="Profile" src={ProfilePic} alt="PROFILE PIC" />
             </div>
 
-            <OverlayNav/>
+            <OverlayNav />
 
-            <PicOverlay/>
+            <PicOverlay />
         </>
     )
 }

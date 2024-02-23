@@ -2,9 +2,17 @@ body {
   font-family: 'Bai Jamjuree', sans-serif;
   overflow-x: hidden;
   background-color: #fcfcfc;
-  /* background-color: hsl(218, 28%, 13%); */
   width: 100%;
   height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(236, 48%, 33%);
+  border-radius: 5px;
 }
 
 #Overlay {
@@ -361,6 +369,8 @@ body {
   }
 
   #Skills {
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     font-size: 150%;
     position: relative;
@@ -368,53 +378,32 @@ body {
   }
 
   #SkillIcons {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
   }
 
-  #ReactJS {
-    width: 6%;
+  #SkillImage {
+    width: 20%;
   }
 
-  /* #ReactJSParent{
 
-  } */
-
-  #ReactJSText {
+  #SkillText {
+    display: flex;
+    justify-content: center;
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     color: black;
   }
 
-  #Javascript {
-    width: 6%;
-  }
-
-
-  #JavascriptParent {
-    left: 31%;
-  }
-
-  #JavascriptText {
-    font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    color: black;
-  }
-
-  #CSharp {
-    width: 6%;
-  }
-
-  #CSharpParent {
-    left: 31%;
-  }
-
-  #CSharpText {
-    font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    color: black;
+  #SkillParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #MyProjects {
@@ -1211,6 +1200,8 @@ body {
   }
 
   #Skills {
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     font-size: 150%;
     position: relative;
@@ -1218,54 +1209,33 @@ body {
   }
 
   #SkillIcons {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
   }
 
-  #ReactJS {
-    width: 10%;
+  #SkillImage {
+    width: 20%;
   }
 
-  /* #ReactJSParent{
 
-  } */
-
-  #ReactJSText {
+  #SkillText {
+    display: flex;
+    justify-content: center;
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     color: black;
   }
 
-  #Javascript {
-    width: 10%;
+  #SkillParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
-  #JavascriptParent {
-    left: 10%;
-  }
-
-  #JavascriptText {
-    font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    color: black;
-  }
-
-  #CSharp {
-    width: 10%;
-  }
-
-  #CSharpParent {
-    left: 10%;
-  }
-
-  #CSharpText {
-    font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    color: black;
-  }
-
 
 
   #MyProjects {
@@ -1375,7 +1345,7 @@ body {
 
 
 
-Proj12Img {
+  Proj12Img {
     cursor: pointer;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -1401,7 +1371,7 @@ Proj12Img {
 
 
 
-  
+
 
 
   .VLS {

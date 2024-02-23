@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router-dom';
-import ReactJS from '../images/reactJs.svg';
-import Javascript from '../images/javascript.svg';
-import CSharp from '../images/csharp.svg';
+import ReactJS from '../images/reactJs.png';
+import Javascript from '../images/javascript.png';
+import CSharp from '../images/csharp.png';
 import OverlayNav from '../Components/OverlayNav';
+import { useEffect } from 'react';
+import SkillImage from '../Components/SkillImage';
 
 export default function About() {
     const navigate = useNavigate();
-    setTimeout(() => {
+    useEffect(() => {
         window.addEventListener("popstate", e => {
             document.getElementById("About").style.textDecoration = "none";
             document.getElementById("About").style.bottom = "-1px";
@@ -36,8 +38,7 @@ export default function About() {
                 document.getElementById("Projects").style.animationName = "none";
                 document.getElementById("Projects").style.cursor = "pointer";
             }
-    }, 100);
-    setTimeout(() => {
+
         document.getElementById("Contact").addEventListener('click', (e) => {
             navigate("/Contact");
         });
@@ -93,7 +94,8 @@ export default function About() {
                 navigate("/");
             }
         });
-    }, 1000);
+    }, []);
+
     return (
         <>
             <div id="AboutContainer">
@@ -102,27 +104,28 @@ export default function About() {
                     My passion lies in the fields of Web Development and Game Development, and I am constantly seeking new opportunities to explore and deepen my understanding of these areas.<br />
                     I am currently available for collaboration regarding projects related to Web Development or Game Development. Feel free to <span id="ContactMeLink">contact me</span>.<br /><br />
                     Apart from my academic pursuits, I am an avid learner and spend my free time learning more about tech.<br /><br />
-                    <center><span id="Skills">Skills</span></center>
+                    <span id="Skills">Skills</span>
                 </p>
-                <center>
-                    <div id="SkillIcons">
-                        <div id="ReactJSParent">
-                            <img id="ReactJS" src={ReactJS} alt="ReactJS" />
-                            <p id="ReactJSText">ReactJS</p>
-                        </div>
-                        <div id="JavascriptParent">
-                            <img id="Javascript" src={Javascript} alt="JavaScript" />
-                            <p id="JavascriptText">JavaScript</p>
-                        </div>
-                        <div id="CSharpParent">
-                            <img id="CSharp" src={CSharp} alt="C#" />
-                            <p id="CSharpText">C#</p>
-                        </div>
-                    </div>
-                </center>
+                <div id="SkillIcons">
+                    <SkillImage
+                        Image={ReactJS}
+                        SkillText="ReactJS"
+                    />
+
+                    <SkillImage
+                        Image={Javascript}
+                        SkillText="JavaScript"
+                    />
+
+
+                    <SkillImage
+                        Image={CSharp}
+                        SkillText="C#"
+                    />
+                </div>
             </div>
 
-            <OverlayNav/>
+            <OverlayNav />
         </>
     )
 }

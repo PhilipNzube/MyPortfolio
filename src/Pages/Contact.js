@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import OverlayNav from '../Components/OverlayNav';
+import { useEffect } from 'react';
 
 export default function Contact() {
     const navigate = useNavigate();
-    setTimeout(() => {
+    useEffect(() => {
         window.addEventListener("popstate", e => {
             document.getElementById("Contact").style.textDecoration = "none";
             document.getElementById("Contact").style.bottom = "-1px";
@@ -31,8 +32,7 @@ export default function Contact() {
                 document.getElementById("Projects").style.animationName = "none";
                 document.getElementById("Projects").style.cursor = "pointer";
             }
-    }, 100);
-    setTimeout(() => {
+
         window.addEventListener('resize', (e) => {
             if (window.innerWidth < 780) {
                 document.getElementById("HamBurger").style.display = "block";
@@ -97,7 +97,7 @@ export default function Contact() {
                 navigate("/");
             }
         });
-    }, 1000);
+    }, []);
 
     return (
         <>

@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import HamBurger from '../images/HamBurger.png';
 export default function NavBar() {
-    setTimeout(() => {
+    useEffect(() => {
         var AboutActive;
         var ContactActive;
         var ProjectsActive;
@@ -251,7 +252,8 @@ export default function NavBar() {
                 }
         });
 
-    }, 1000);
+    }, []);
+    
     return (
         <>
             <div id="NavBar">

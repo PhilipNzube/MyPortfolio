@@ -3,7 +3,7 @@ this.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(cacheData).then((cache) => {
             cache.addAll([
-                '/static/js/main.f6a07d55.js',
+                '/static/js/main.042deb42.js',
                 '/static/css/main.067d1f5c.css',
                 '/static/media/GitHub.1ff6d9646165b7f34af9.png',
                 '/static/media/LinkedIn.ba884e1f9ad4362348c1.png',

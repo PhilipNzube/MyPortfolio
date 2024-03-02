@@ -10,12 +10,10 @@ export default function Card(props) {
         let parentElement = document.querySelector('.Proj');
         if (e.target.parentElement.className == "Proj") {
             childElement = e.target.parentElement.querySelector('.ProjOverlay');
+            vid = e.target.parentElement.querySelector('.ProjVid');
+            childElement.style.display = "block";
         }
-        else {
-            childElement = e.target.parentElement;
-        }
-        vid = e.target.parentElement.querySelector('.ProjVid');
-        childElement.style.display = "block";
+
     }
 
 

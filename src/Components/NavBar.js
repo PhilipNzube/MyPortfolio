@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import HamBurger from '../images/HamBurger.png';
+import Logo from "../images/Logo.png";
 export default function NavBar() {
     useEffect(() => {
         var AboutActive;
@@ -52,21 +53,15 @@ export default function NavBar() {
             if (document.getElementById("AboutContainer")) {
                 AboutActive = 0;
                 if (window.innerWidth > 780) {
-                    document.getElementById("About").style.bottom = "1px";
-                    document.getElementById("About").style.textDecorationLine = "underline";
-                    document.getElementById("About").style.textDecorationSkipInk = "none";
-                    document.getElementById("About").style.textDecorationThickness = "4px";
-                    document.getElementById("About").style.textUnderlineOffset = "1px";
-                    document.getElementById("About").style.cursor = "default";
+                    document.getElementById("About").style.textDecoration = "underline";
+                    document.getElementById("About").style.textUnderlineOffset = "10px";
+                    document.getElementById("About").style.textDecorationThickness = "2px";
                 }
                 else
                     if (window.innerWidth < 780) {
-                        document.getElementById("AboutOverlay").style.bottom = "1px";
-                        document.getElementById("AboutOverlay").style.textDecorationLine = "underline";
-                        document.getElementById("AboutOverlay").style.textDecorationSkipInk = "none";
-                        document.getElementById("AboutOverlay").style.textDecorationThickness = "4px";
-                        document.getElementById("AboutOverlay").style.textUnderlineOffset = "1px";
-                        document.getElementById("AboutOverlay").style.cursor = "default";
+                        document.getElementById("AboutOverlay").style.textDecoration = "underline";
+                        document.getElementById("AboutOverlay").style.textUnderlineOffset = "10px";
+                        document.getElementById("AboutOverlay").style.textDecorationThickness = "2px";
                     }
             }
 
@@ -74,44 +69,21 @@ export default function NavBar() {
             if (document.getElementById("ProjectsContainer")) {
                 ProjectsActive = 0;
                 if (window.innerWidth > 780) {
-                    document.getElementById("Projects").style.bottom = "1px";
-                    document.getElementById("Projects").style.textDecorationLine = "underline";
-                    document.getElementById("Projects").style.textDecorationSkipInk = "none";
-                    document.getElementById("Projects").style.textDecorationThickness = "4px";
-                    document.getElementById("Projects").style.textUnderlineOffset = "1px";
-                    document.getElementById("Projects").style.cursor = "default";
+                    document.getElementById("Projects").style.textDecoration = "underline";
+                    document.getElementById("Projects").style.textUnderlineOffset = "10px";
+                    document.getElementById("Projects").style.textDecorationThickness = "2px";
                 }
                 else
                     if (window.innerWidth < 780) {
-                        document.getElementById("ProjectsOverlay").style.bottom = "1px";
-                        document.getElementById("ProjectsOverlay").style.textDecorationLine = "underline";
-                        document.getElementById("ProjectsOverlay").style.textDecorationThickness = "4px";
-                        document.getElementById("ProjectsOverlay").style.textDecorationSkipInk = "none";
-                        document.getElementById("ProjectsOverlay").style.textUnderlineOffset = "1px";
-                        document.getElementById("ProjectsOverlay").style.cursor = "default";
+                        document.getElementById("ProjectsOverlay").style.textDecoration = "underline";
+                        document.getElementById("ProjectsOverlay").style.textUnderlineOffset = "10px";
+                        document.getElementById("ProjectsOverlay").style.textDecorationThickness = "2px";
                     }
             }
 
 
             if (document.getElementById("ContactContainer")) {
                 ContactActive = 0;
-                if (window.innerWidth > 780) {
-                    document.getElementById("Contact").style.bottom = "1px";
-                    document.getElementById("Contact").style.textDecorationLine = "underline";
-                    document.getElementById("Contact").style.textDecorationThickness = "4px";
-                    document.getElementById("Contact").style.textDecorationSkipInk = "none";
-                    document.getElementById("Contact").style.textUnderlineOffset = "1px";
-                    document.getElementById("Contact").style.cursor = "default";
-                }
-                else
-                    if (window.innerWidth < 780) {
-                        document.getElementById("ContactOverlay").style.bottom = "1px";
-                        document.getElementById("ContactOverlay").style.textDecorationLine = "underline";
-                        document.getElementById("ContactOverlay").style.textDecorationThickness = "4px";
-                        document.getElementById("ContactOverlay").style.textDecorationSkipInk = "none";
-                        document.getElementById("ContactOverlay").style.textUnderlineOffset = "1px";
-                        document.getElementById("ContactOverlay").style.cursor = "default";
-                    }
             }
         });
 
@@ -120,66 +92,28 @@ export default function NavBar() {
             if (window.innerWidth > 780) {
                 document.getElementById("About").addEventListener('mouseover', (e) => {
                     if (AboutActive !== 0) {
-                        document.getElementById("About").style.bottom = "1px";
-                        document.getElementById("About").style.textDecorationLine = "underline";
-                        document.getElementById("About").style.textDecorationThickness = "4px";
-                        document.getElementById("About").style.textDecorationSkipInk = "none";
-                        document.getElementById("About").style.textUnderlineOffset = "1px";
-                        document.getElementById("About").style.animationPlayState = "play";
-                        document.getElementById("About").style.animationName = "Underline";
-                        document.getElementById("About").style.animationDuration = "0.5s";
-                        document.getElementById("About").style.animationIterationCount = "1";
+                        document.getElementById("About").style.textDecoration = "underline";
+                        document.getElementById("About").style.textUnderlineOffset = "10px";
+                        document.getElementById("About").style.textDecorationThickness = "2px";
                     }
                 });
                 document.getElementById("About").addEventListener('mouseleave', (e) => {
                     if (AboutActive !== 0) {
                         document.getElementById("About").style.textDecoration = "none";
-                        document.getElementById("About").style.bottom = "-1px";
-                        document.getElementById("About").style.animationName = "none";
                     }
                 });
 
 
                 document.getElementById("Projects").addEventListener('mouseover', (e) => {
                     if (ProjectsActive !== 0) {
-                        document.getElementById("Projects").style.bottom = "1px";
-                        document.getElementById("Projects").style.textDecorationLine = "underline";
-                        document.getElementById("Projects").style.textDecorationThickness = "4px";
-                        document.getElementById("Projects").style.textDecorationSkipInk = "none";
-                        document.getElementById("Projects").style.textUnderlineOffset = "1px";
-                        document.getElementById("Projects").style.animationPlayState = "play";
-                        document.getElementById("Projects").style.animationName = "Underline";
-                        document.getElementById("Projects").style.animationDuration = "0.5s";
-                        document.getElementById("Projects").style.animationIterationCount = "1";
+                        document.getElementById("Projects").style.textDecoration = "underline";
+                        document.getElementById("Projects").style.textUnderlineOffset = "10px";
+                        document.getElementById("Projects").style.textDecorationThickness = "2px";
                     }
                 });
                 document.getElementById("Projects").addEventListener('mouseleave', (e) => {
                     if (ProjectsActive !== 0) {
                         document.getElementById("Projects").style.textDecoration = "none";
-                        document.getElementById("Projects").style.bottom = "-1px";
-                        document.getElementById("Projects").style.animationName = "none";
-                    }
-                });
-
-
-                document.getElementById("Contact").addEventListener('mouseover', (e) => {
-                    if (ContactActive !== 0) {
-                        document.getElementById("Contact").style.bottom = "1px";
-                        document.getElementById("Contact").style.textDecorationLine = "underline";
-                        document.getElementById("Contact").style.textDecorationThickness = "4px";
-                        document.getElementById("Contact").style.textDecorationSkipInk = "none";
-                        document.getElementById("Contact").style.textUnderlineOffset = "1px";
-                        document.getElementById("Contact").style.animationPlayState = "play";
-                        document.getElementById("Contact").style.animationName = "Underline";
-                        document.getElementById("Contact").style.animationDuration = "0.5s";
-                        document.getElementById("Contact").style.animationIterationCount = "1";
-                    }
-                });
-                document.getElementById("Contact").addEventListener('mouseleave', (e) => {
-                    if (ContactActive !== 0) {
-                        document.getElementById("Contact").style.textDecoration = "none";
-                        document.getElementById("Contact").style.bottom = "-1px";
-                        document.getElementById("Contact").style.animationName = "none";
                     }
                 });
             }
@@ -187,81 +121,45 @@ export default function NavBar() {
                 if (window.innerWidth < 780) {
                     document.getElementById("AboutOverlay").addEventListener('mouseover', (e) => {
                         if (AboutActive !== 0) {
-                            document.getElementById("AboutOverlay").style.bottom = "1px";
-                            document.getElementById("AboutOverlay").style.textDecorationLine = "underline";
-                            document.getElementById("AboutOverlay").style.textDecorationThickness = "4px";
-                            document.getElementById("AboutOverlay").style.textDecorationSkipInk = "none";
-                            document.getElementById("AboutOverlay").style.textUnderlineOffset = "1px";
-                            document.getElementById("AboutOverlay").style.animationPlayState = "play";
-                            document.getElementById("AboutOverlay").style.animationName = "Underline";
-                            document.getElementById("AboutOverlay").style.animationDuration = "0.5s";
-                            document.getElementById("AboutOverlay").style.animationIterationCount = "1";
+                            document.getElementById("AboutOverlay").style.textDecoration = "underline";
+                            document.getElementById("AboutOverlay").style.textUnderlineOffset = "10px";
+                            document.getElementById("AboutOverlay").style.textDecorationThickness = "2px";
                         }
                     });
                     document.getElementById("AboutOverlay").addEventListener('mouseleave', (e) => {
                         if (AboutActive !== 0) {
                             document.getElementById("AboutOverlay").style.textDecoration = "none";
-                            document.getElementById("AboutOverlay").style.bottom = "-1px";
-                            document.getElementById("AboutOverlay").style.animationName = "none";
                         }
                     });
 
 
                     document.getElementById("ProjectsOverlay").addEventListener('mouseover', (e) => {
                         if (ProjectsActive !== 0) {
-                            document.getElementById("ProjectsOverlay").style.bottom = "1px";
-                            document.getElementById("ProjectsOverlay").style.textDecorationLine = "underline";
-                            document.getElementById("ProjectsOverlay").style.textDecorationThickness = "4px";
-                            document.getElementById("ProjectsOverlay").style.textDecorationSkipInk = "none";
-                            document.getElementById("ProjectsOverlay").style.textUnderlineOffset = "1px";
-                            document.getElementById("ProjectsOverlay").style.animationPlayState = "play";
-                            document.getElementById("ProjectsOverlay").style.animationName = "Underline";
-                            document.getElementById("ProjectsOverlay").style.animationDuration = "0.5s";
-                            document.getElementById("ProjectsOverlay").style.animationIterationCount = "1";
+                            document.getElementById("ProjectsOverlay").style.textDecoration = "underline";
+                            document.getElementById("ProjectsOverlay").style.textUnderlineOffset = "10px";
+                            document.getElementById("ProjectsOverlay").style.textDecorationThickness = "2px";
                         }
                     });
                     document.getElementById("ProjectsOverlay").addEventListener('mouseleave', (e) => {
                         if (ProjectsActive !== 0) {
                             document.getElementById("ProjectsOverlay").style.textDecoration = "none";
-                            document.getElementById("ProjectsOverlay").style.bottom = "-1px";
-                            document.getElementById("ProjectsOverlay").style.animationName = "none";
-                        }
-                    });
-
-
-                    document.getElementById("ContactOverlay").addEventListener('mouseover', (e) => {
-                        if (ContactActive !== 0) {
-                            document.getElementById("ContactOverlay").style.bottom = "1px";
-                            document.getElementById("ContactOverlay").style.textDecorationLine = "underline";
-                            document.getElementById("ContactOverlay").style.textDecorationThickness = "4px";
-                            document.getElementById("ContactOverlay").style.textDecorationSkipInk = "none";
-                            document.getElementById("ContactOverlay").style.textUnderlineOffset = "1px";
-                            document.getElementById("ContactOverlay").style.animationPlayState = "play";
-                            document.getElementById("ContactOverlay").style.animationName = "Underline";
-                            document.getElementById("ContactOverlay").style.animationDuration = "0.5s";
-                            document.getElementById("ContactOverlay").style.animationIterationCount = "1";
-                        }
-                    });
-                    document.getElementById("ContactOverlay").addEventListener('mouseleave', (e) => {
-                        if (ContactActive !== 0) {
-                            document.getElementById("ContactOverlay").style.textDecoration = "none";
-                            document.getElementById("ContactOverlay").style.bottom = "-1px";
-                            document.getElementById("ContactOverlay").style.animationName = "none";
                         }
                     });
                 }
         });
 
     }, []);
-    
+
     return (
         <>
-            <div id="NavBar">
-                <span id="About">ABOUT</span>
-                <span id="Projects">PROJECTS</span>
-                <span id="Contact">CONTACT</span>
+            <div id="MainNavBar">
+            <img id="Name" src={Logo} alt="Logo" />
+                <div id="NavBar">
+                    <div id="About">ABOUT</div>
+                    <div id="Projects">PROJECTS</div>
+                    <div id="Contact">CONTACT</div>
+                </div>
                 <img id="HamBurger" src={HamBurger} alt="HamBurger" />
-                <h1 id="Name">PN</h1>
             </div>
         </>
     )

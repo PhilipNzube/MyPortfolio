@@ -2,7 +2,6 @@ import ProfilePic from '../images/ProfilePic.jpg';
 import Twitter from '../images/Twitter.png';
 import GitHub from '../images/GitHub.png';
 import LinkedIn from '../images/LinkedIn.png';
-import DownloadIcon from '../images/Download.png';
 import { useNavigate } from 'react-router-dom';
 import OverlayNav from '../Components/OverlayNav';
 import PicOverlay from '../Components/PicOverlay';
@@ -17,23 +16,23 @@ export default function MainPage() {
     }
     window.addEventListener('resize', (e) => {
         if (window.innerWidth > 780) {
-            const Container = document.getElementById("SocialIcons");
-            const Child = document.getElementById("Download");
-            const Centralizer = document.getElementById("Centralizer");
-            Container.appendChild(Child);
-            Container.removeChild(Centralizer);
+            // const Container = document.getElementById("SocialIcons");
+            // const Child = document.getElementById("Download");
+            // const Centralizer = document.getElementById("Centralizer");
+            // Container.appendChild(Child);
+            // Container.removeChild(Centralizer);
             document.getElementById("HamBurger").style.display = "none";
             document.getElementById("Overlay").style.display = "none";
             document.getElementById("PicOverlay").style.display = "none";
         }
         else
             if (window.innerWidth < 780) {
-                const Container = document.getElementById("SocialIcons");
-                const Child = document.getElementById("Download");
-                const Centralizer = document.createElement('center');
-                Container.appendChild(Centralizer);
-                Centralizer.id = "Centralizer";
-                Centralizer.appendChild(Child);
+                // const Container = document.getElementById("SocialIcons");
+                // const Child = document.getElementById("Download");
+                // const Centralizer = document.createElement('center');
+                // Container.appendChild(Centralizer);
+                // Centralizer.id = "Centralizer";
+                // Centralizer.appendChild(Child);
                 document.getElementById("HamBurger").style.display = "block";
             }
     });
@@ -41,14 +40,14 @@ export default function MainPage() {
     useEffect(() => {
         setTimeout(() => {
 
-            if (window.innerWidth < 780) {
-                const Container = document.getElementById("SocialIcons");
-                const Child = document.getElementById("Download");
-                const Centralizer = document.createElement('center');
-                Container.appendChild(Centralizer);
-                Centralizer.id = "Centralizer";
-                Centralizer.appendChild(Child);
-            }
+            // if (window.innerWidth < 780) {
+            //     const Container = document.getElementById("SocialIcons");
+            //     const Child = document.getElementById("Download");
+            //     const Centralizer = document.createElement('center');
+            //     Container.appendChild(Centralizer);
+            //     Centralizer.id = "Centralizer";
+            //     Centralizer.appendChild(Child);
+            // }
 
 
             document.getElementById("About").addEventListener('click', (e) => {
@@ -80,7 +79,7 @@ export default function MainPage() {
             document.getElementById("HamBurger").addEventListener('click', (e) => {
                 document.body.style.overflowY = "hidden";
                 document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
-                document.getElementById("Overlay").style.display = "block";
+                document.getElementById("Overlay").style.display = "flex";
                 document.getElementById("HamBurger").style.display = "none";
             });
 
@@ -100,7 +99,7 @@ export default function MainPage() {
 
 
             document.getElementById("ClosePicOverlay").addEventListener('click', (e) => {
-                document.getElementById("NavBar").style.display = "block";
+                document.getElementById("MainNavBar").style.display = "flex";
                 if (window.innerWidth < 780) {
                     document.getElementById("PicOverlay").style.animationName = "PicOverlaySlideOut";
                     setTimeout(() => {
@@ -119,7 +118,7 @@ export default function MainPage() {
             setTimeout(() => {
                 var h1 = document.getElementById("Prof");
                 var text = h1.innerHTML;
-                h1.innerHTML = "";
+                h1.innerHTML = "-";
                 const TypingEffect = (element, speed) => {
                     var i = 0;
                     var timer = setInterval(() => {
@@ -131,7 +130,7 @@ export default function MainPage() {
                             clearInterval(timer);
                             text = "FRONTEND WEB DEVELOPER";
                             setTimeout(() => {
-                                h1.innerHTML = "";
+                                h1.innerHTML = "-";
                                 TypingEffect2(h1, 150);
                             }, 1000);
                         }
@@ -149,7 +148,7 @@ export default function MainPage() {
                             clearInterval(timer);
                             text = "INDIE GAME DEVELOPER";
                             setTimeout(() => {
-                                h1.innerHTML = "";
+                                h1.innerHTML = "-";
                                 TypingEffect3(h1, 150);
                             }, 1000);
                         }
@@ -167,7 +166,7 @@ export default function MainPage() {
                             clearInterval(timer);
                             text = "TECH ENTHUSIAST";
                             setTimeout(() => {
-                                h1.innerHTML = "";
+                                h1.innerHTML = "-";
                                 TypingEffect4(h1, 150);
                             }, 1000);
                         }
@@ -185,7 +184,7 @@ export default function MainPage() {
                             clearInterval(timer);
                             text = "STUDENT";
                             setTimeout(() => {
-                                h1.innerHTML = "";
+                                h1.innerHTML = "-";
                                 TypingEffect(h1, 150);
                             }, 1000);
                         }
@@ -198,7 +197,7 @@ export default function MainPage() {
                     LoadLimiter++;
                     document.getElementById("LOADING").style.display = "none";
                     document.getElementById("Container").style.opacity = 1;
-                    document.getElementById("NavBar").style.display = "block";
+                    document.getElementById("MainNavBar").style.display = "flex";
                     if (LoadLimiter === 1) {
                         TypingEffect(h1, 150);
                     }
@@ -217,14 +216,14 @@ export default function MainPage() {
                 <div id="ContainerCont">
                     <h1 id="Hi">Hi I'm</h1>
                     <h1 id="Name2">Philip Nzube</h1>
+                    <h1 id="Prof">INDIE GAME DEVELOPER</h1>
                     <div id="SocialIcons">
                         <a href="https://twitter.com/Philip_nzube"><img id="Twitter" src={Twitter} alt="TWITTER" /></a>
                         <a href="https://github.com/PhilipNzube"><img id="GitHub" src={GitHub} alt="GITHUB" /></a>
                         <a href="https://www.linkedin.com/in/philip-onwubalili-54049823a"><img id="LinkedIn" src={LinkedIn} alt="LINKEDIN" /></a>
-                        <div><a id="Download" href="https://drive.google.com/file/d/1Xh5HzHFd9m9CttI2hBbm8ACVuqfvyj2w/view?usp=sharing
-">DOWNLOAD RESUME<img id="DownloadIcon" src={DownloadIcon} alt="Download Icon" /></a></div>
                     </div>
-                    <h1 id="Prof">INDIE GAME DEVELOPER</h1>
+                    <a id="Download" href="https://drive.google.com/file/d/1Xh5HzHFd9m9CttI2hBbm8ACVuqfvyj2w/view?usp=sharing
+">View CV</a>
                 </div>
                 <img id="Profile" src={ProfilePic} alt="PROFILE PIC" />
             </div>

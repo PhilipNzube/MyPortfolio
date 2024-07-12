@@ -28,9 +28,9 @@ export default function Projects() {
             document.getElementById("Projects").style.bottom = "-1px";
             document.getElementById("Projects").style.animationName = "none";
             document.getElementById("Projects").style.cursor = "pointer";
-            document.getElementById("NavBar").style.display = "none";
+            document.getElementById("MainNavBar").style.display = "none";
         });
-        document.getElementById("NavBar").style.display = "block";
+        document.getElementById("MainNavBar").style.display = "flex";
         if (window.innerWidth > 780) {
             document.getElementById("HamBurger").style.display = "none";
         }
@@ -86,7 +86,7 @@ export default function Projects() {
         document.getElementById("HamBurger").addEventListener('click', (e) => {
             document.body.style.overflowY = "hidden";
             document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
-            document.getElementById("Overlay").style.display = "block";
+            document.getElementById("Overlay").style.display = "flex";
             document.getElementById("HamBurger").style.display = "none";
         });
 
@@ -114,7 +114,7 @@ export default function Projects() {
                 document.getElementById("HamBurger").style.display = "block";
             }
             if (document.getElementById("ProjectsContainer")) {
-                document.getElementById("NavBar").style.display = "none";
+                document.getElementById("MainNavBar").style.display = "none";
                 navigate("/");
             }
         });
@@ -148,7 +148,7 @@ export default function Projects() {
                     <option>C#</option>
                 </select>
                 <div id="ProjCards">
-                    {CSharpActive && <Card
+                    {/* {CSharpActive && <Card
                         vid={""}
                         image={ProjImg}
                         hasVLS="True"
@@ -163,7 +163,7 @@ export default function Projects() {
                         ProjText="IMMUNOCALYPSE"
                         ProjInfo="C#"
                         hasImage="True"
-                    />}
+                    />} */}
 
 
                     {CSharpActive && <Card
@@ -344,7 +344,7 @@ export default function Projects() {
 
 
 
-                    {ReactJSActive && <Card
+                    {/* {ReactJSActive && <Card
                         vid={""}
                         image={Proj11Img}
                         hasVLS="True"
@@ -359,7 +359,7 @@ export default function Projects() {
                         ProjText="SOCCER KINGDOM"
                         ProjInfo="ReactJS"
                         hasImage="True"
-                    />}
+                    />} */}
 
                 </div>
 

@@ -5,11 +5,9 @@ export default function OverlayNav() {
         <>
             <div id="Overlay">
                 <img id="Close" src={CloseBut} alt="CLOSE" />
-                <p id="OverlayNavBarCont">
-                    <span id="AboutOverlay">ABOUT</span><br />
-                    <span id="ProjectsOverlay">PROJECTS</span><br />
-                    <span id="ContactOverlay">CONTACT</span>
-                </p>
+                <div id="AboutOverlay">ABOUT</div>
+                <div id="ProjectsOverlay">PROJECTS</div>
+                <div id="ContactOverlay">CONTACT</div>
             </div>
         </>
     )

@@ -1,9 +1,11 @@
 body {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  background-color: #fcfcfc;
+  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body::-webkit-scrollbar {
@@ -11,24 +13,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: hsl(236, 48%, 33%);
+  background-color: #000000;
   border-radius: 5px;
-}
-
-#Overlay {
-  display: none;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.514);
-  animation-name: OverlaySlideIn;
-  animation-duration: 0.8s;
-  animation-iteration-count: 1;
-  backdrop-filter: blur(0.2em);
 }
 
 #PicOverlay {
@@ -56,8 +42,13 @@ body::-webkit-scrollbar-thumb {
   height: 30px;
 }
 
+
 @media only screen and (min-width:781px) {
   #HamBurger {
+    display: none;
+  }
+
+  #Overlay {
     display: none;
   }
 
@@ -68,7 +59,7 @@ body::-webkit-scrollbar-thumb {
     left: 0px;
     border: 1px solid black;
     border-radius: 2px;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     width: 100%;
     height: 10px;
     animation-name: Load;
@@ -126,36 +117,46 @@ body::-webkit-scrollbar-thumb {
   }
 
   #Container {
-    position: relative;
-    top: 25px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+    row-gap: 30px;
     opacity: 0;
     animation-name: FADEIN;
     animation-delay: 6s;
     animation-duration: 7s;
     animation-iteration-count: 1;
+    height: 100%;
+  }
+
+  #ContainerCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    height: 100%;
   }
 
   #AboutContainer {
-    position: relative;
-    top: 25px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
   }
 
   #ProjectsContainer {
-    position: relative;
-    top: 25px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
   }
 
   #ContactContainer {
-    position: relative;
-    top: 25px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
   }
 
   @keyframes FADEIN {
@@ -169,81 +170,34 @@ body::-webkit-scrollbar-thumb {
   }
 
   #About {
-    height: 5%;
     cursor: pointer;
-    color: hsl(236, 48%, 33%);
-    backdrop-filter: blur(0.2em);
-    font-size: xx-large;
-    position: fixed;
-    top: 6%;
-    right: 375px;
-    z-index: 1;
   }
 
-  /* #About:hover {
-    bottom: 1px;
-    text-decoration: underline;
-    text-decoration-color: hsl(236, 48%, 33%);
-    text-decoration-thickness: 4px;
-    text-underline-offset: 1px;
-    animation-name: Underline;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-  } */
 
   #Projects {
-    height: 5%;
     cursor: pointer;
-    color: hsl(236, 48%, 33%);
-    backdrop-filter: blur(0.2em);
-    font-size: xx-large;
-    position: fixed;
-    top: 6%;
-    right: 200px;
-    z-index: 1;
   }
 
-  /* #Projects:hover {
-    cursor: pointer;
-    bottom: 1px;
-    text-decoration: underline;
-    text-decoration-color: hsl(236, 48%, 33%);
-    text-decoration-thickness: 4px;
-    text-underline-offset: 1px;
-    animation-name: Underline;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-  } */
 
   #Contact {
-    height: 5%;
     cursor: pointer;
-    color: hsl(236, 48%, 33%);
-    backdrop-filter: blur(0.2em);
-    font-size: xx-large;
-    position: fixed;
-    top: 6%;
-    right: 45px;
-    z-index: 1;
+    box-shadow: 2px 2px #000000;
+    border: 1px solid #FCF9F8;
+    padding: 5%;
   }
 
   #ContactMeLink {
     cursor: pointer;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
     text-decoration: underline;
   }
 
-  /* #Contact:hover {
-    cursor: pointer;
-    bottom: 1px;
-    text-decoration: underline;
-    text-decoration-color: hsl(236, 48%, 33%);
-    text-decoration-thickness: 4px;
-    text-underline-offset: 1px;
-    animation-name: Underline;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-  } */
+  #Contact:hover {
+    box-shadow: 0px 0px #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    background: #000000;
+  }
 
   @keyframes Underline {
     0% {
@@ -257,18 +211,33 @@ body::-webkit-scrollbar-thumb {
     }
 
     100% {
-      text-decoration-color: hsl(236, 48%, 33%);
+      text-decoration-color: #000000;
       text-decoration-thickness: 3px;
     }
   }
 
   #NavBar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+    text-wrap: nowrap;
+    position: fixed;
+    right: 5%;
+    height: 100px;
+  }
+
+  #MainNavBar {
     display: none;
-    margin-right: 3.5%;
-    /* animation-name: FADEIN;
-    animation-delay: 6s;
-    animation-duration: 7s;
-    animation-iteration-count: 1; */
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: #FCF9F8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
 
   #NavBarCont {
@@ -282,39 +251,27 @@ body::-webkit-scrollbar-thumb {
   }
 
   #Name {
-    width: 5%;
     cursor: pointer;
-    position: relative;
-    font-weight: 540;
-    font-size: 300%;
-    color: hsl(236, 48%, 33%);
-    left: 3%;
+    height: 100px;
   }
 
   #Hi {
-    position: relative;
-    top: 10px;
     color: black;
   }
 
   #Name2 {
-    max-width: 60%;
-    word-wrap: break-word;
-    position: relative;
-    right: 0.5%;
-    font-weight: 540;
-    font-size: 600%;
-    color: hsl(236, 48%, 33%);
+    text-wrap: nowrap;
+    font-weight: bold;
+    font-size: 60px;
+    color: #000000;
   }
 
   #Prof {
-    position: relative;
-    bottom: 150px;
+    font-size: 25px;
     text-align: left;
     max-width: fit-content;
-    /* color: hsl(236, 48%, 33%); */
     color: black;
-    border-right: 0.1em solid hsl(236, 48%, 33%);
+    border-right: 0.1em solid #000000;
     white-space: nowrap;
     letter-spacing: .10em;
     animation: blink .5s step-end infinite alternate;
@@ -322,18 +279,19 @@ body::-webkit-scrollbar-thumb {
 
 
   #Download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
     text-decoration: none;
-    text-align: center;
-    position: relative;
-    top: 20px;
+    text-wrap: nowrap;
     box-shadow: 0 0 15px black;
     font-size: larger;
     font-family: 'Montserrat', sans-serif;
     padding: 20px;
-    padding-right: 50px;
-    height: 45px;
     width: 220px;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border: 1px solid black;
     border-radius: 5px;
     color: white;
@@ -343,28 +301,24 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
+    background-color: #FFFFFF;
   }
 
-  #DownloadIcon {
-    position: relative;
-    top: 10px;
-    left: 2%;
-  }
 
 
   #Aboutme {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #Aboutbody {
     position: relative;
     right: 0.5%;
     font-weight: 540;
-    font-size: 200%;
+    font-size: 30px;
     color: black;
   }
 
@@ -374,7 +328,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
     font-size: 150%;
     position: relative;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #SkillIcons {
@@ -410,7 +364,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #Filter {
@@ -422,7 +376,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
-    border: 2px solid hsl(236, 48%, 33%);
+    border: 2px solid #000000;
     width: 20%;
     height: 40px;
     border-radius: 3px;
@@ -430,7 +384,7 @@ body::-webkit-scrollbar-thumb {
 
   #ProjCards {
     display: flex;
-    column-gap: 10%;
+    justify-content: space-between;
     row-gap: 20px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -528,7 +482,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   .VC {
@@ -552,7 +506,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
 
@@ -578,7 +532,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
 
@@ -626,7 +580,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #ContactName {
@@ -635,7 +589,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 30px;
     width: 47%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -643,7 +597,7 @@ body::-webkit-scrollbar-thumb {
   #ContactName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #ContactNameText {
@@ -664,7 +618,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 30px;
     width: 47%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -672,7 +626,7 @@ body::-webkit-scrollbar-thumb {
   #EmailName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #EmailNameText {
@@ -693,7 +647,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 30px;
     width: 97.5%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -701,7 +655,7 @@ body::-webkit-scrollbar-thumb {
   #SubjectName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #SubjectNameText {
@@ -716,7 +670,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 120px;
     width: 97.5%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -724,7 +678,7 @@ body::-webkit-scrollbar-thumb {
   #MessageName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #MessageNameText {
@@ -734,6 +688,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   #Submit {
+    cursor: pointer;
     position: relative;
     top: 40px;
     box-shadow: 0 0 5px black;
@@ -741,7 +696,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 40px;
     width: 15%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: white;
   }
@@ -749,7 +704,8 @@ body::-webkit-scrollbar-thumb {
   #Submit:hover {
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
+    background-color: #FFFFFF;
   }
 
   @keyframes blink {
@@ -800,13 +756,12 @@ body::-webkit-scrollbar-thumb {
   }
 
   #SocialIcons {
-    position: relative;
-    top: 50px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
   }
 
   #Twitter {
-    position: relative;
-    right: 1%;
     cursor: pointer;
     height: 80px;
   }
@@ -817,19 +772,14 @@ body::-webkit-scrollbar-thumb {
   }
 
   #LinkedIn {
-    position: relative;
     cursor: pointer;
     height: 80px;
-    left: 1%;
   }
 
   #Profile {
     object-fit: cover;
     width: 300px;
     height: 300px;
-    right: 10%;
-    position: fixed;
-    bottom: 200px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.767);
     border: 1px solid rgba(255, 255, 255, 0.767);
@@ -837,30 +787,44 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width:780px) {
-  #OverlayNavBarCont {
-    position: relative;
-    top: 10%;
-    text-align: center;
-    font-size: 300%;
+
+  #Overlay {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FCF9F8;
+    animation-name: OverlaySlideIn;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    backdrop-filter: blur(0.2em);
+    z-index: 1;
   }
+
 
   @keyframes OverlaySlideIn {
     0% {
-      transform: translateX(-100%);
+      transform: translateY(100%);
     }
 
     100% {
-      transform: translateX(0%);
+      transform: translateY(0%);
     }
   }
 
   @keyframes OverlaySlideOut {
     0% {
-      transform: translateX(0%);
+      transform: translateY(0%);
     }
 
     100% {
-      transform: translateX(-100%);
+      transform: translateY(100%);
     }
   }
 
@@ -899,9 +863,6 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     height: 30px;
     display: block;
-    background-color: rgba(255, 255, 255, 0.637);
-    box-shadow: 0 0 5px white;
-    border-radius: 10%;
   }
 
   #ClosePicOverlay {
@@ -918,8 +879,9 @@ body::-webkit-scrollbar-thumb {
   }
 
   #ContainerCont {
-    position: relative;
-    top: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
   }
 
   #HamBurger {
@@ -939,7 +901,7 @@ body::-webkit-scrollbar-thumb {
     left: 0px;
     border: 1px solid black;
     border-radius: 2px;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     width: 100%;
     height: 10px;
     animation-name: Load;
@@ -997,11 +959,14 @@ body::-webkit-scrollbar-thumb {
   }
 
   #Container {
-    z-index: -1;
-    position: relative;
-    top: 25px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+    row-gap: 30px;
     opacity: 0;
     animation-name: FADEIN;
     animation-delay: 6s;
@@ -1009,27 +974,30 @@ body::-webkit-scrollbar-thumb {
     animation-iteration-count: 1;
   }
 
+  #ContainerCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   #AboutContainer {
-    z-index: 0;
-    position: relative;
-    top: 80px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
   }
 
   #ProjectsContainer {
-    z-index: 0;
-    position: relative;
-    top: 80px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
   }
 
   #ContactContainer {
-    position: relative;
-    top: 80px;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
   }
 
   @keyframes FADEIN {
@@ -1043,55 +1011,38 @@ body::-webkit-scrollbar-thumb {
   }
 
   #AboutOverlay {
-    color: hsl(236, 48%, 33%);
+    font-size: 40px;
+    color: #000000;
     cursor: pointer;
   }
-
-  /* #AboutOverlay:hover {
-    cursor: pointer;
-    bottom: 1px;
-    text-decoration: underline;
-    text-decoration-color: hsl(236, 48%, 33%);
-    text-decoration-thickness: 4px;
-    text-underline-offset: 1px;
-    animation-name: Underline;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-  } */
 
   #ProjectsOverlay {
-    color: hsl(236, 48%, 33%);
+    font-size: 40px;
+    color: #000000;
     cursor: pointer;
   }
-
-  /* #ProjectsOverlay:hover {
-    cursor: pointer;
-    bottom: 1px;
-    text-decoration: underline;
-    text-decoration-color: hsl(236, 48%, 33%);
-    text-decoration-thickness: 4px;
-    text-underline-offset: 1px;
-    animation-name: Underline;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-  } */
 
   #ContactOverlay {
-    color: hsl(236, 48%, 33%);
+    position: fixed;
+    bottom: 50px;
     cursor: pointer;
+    box-shadow: 2px 2px #000000;
+    border: 1px solid #000000;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 20px;
   }
 
-  /* #ContactOverlay:hover {
+  #ContactOverlay:hover {
     cursor: pointer;
-    bottom: 1px;
-    text-decoration: underline;
-    text-decoration-color: hsl(236, 48%, 33%);
-    text-decoration-thickness: 4px;
-    text-underline-offset: 1px;
-    animation-name: Underline;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-  } */
+    box-shadow: 0px 0px #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    background: #000000;
+  }
+
 
   @keyframes Underline {
     0% {
@@ -1105,7 +1056,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     100% {
-      text-decoration-color: hsl(236, 48%, 33%);
+      text-decoration-color: #000000;
       text-decoration-thickness: 3px;
     }
   }
@@ -1124,71 +1075,64 @@ body::-webkit-scrollbar-thumb {
 
   #ContactMeLink {
     cursor: pointer;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
     text-decoration: underline;
   }
 
   #NavBar {
     display: none;
-    /* animation-name: FADEIN;
-    animation-delay: 6s;
-    animation-duration: 7s;
-    animation-iteration-count: 1; */
   }
 
-  #NavBarCont {
-    font-size: xx-large;
+  #MainNavBar {
+    display: none;
+    flex-direction: row;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: #FCF9F8;
     position: fixed;
-    top: 2%;
-    right: 5%;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
+
+
 
   #Name {
-    z-index: 1;
-    backdrop-filter: blur(0.2em);
-    width: 11%;
     cursor: pointer;
-    position: fixed;
-    font-weight: 540;
-    font-size: 300%;
-    color: hsl(236, 48%, 33%);
-    left: 58px;
-    top: 0%;
+    height: 100px;
   }
 
   #Hi {
-    text-align: center;
-    position: relative;
-    top: 10px;
     color: black;
   }
 
   #Name2 {
-    text-align: center;
-    position: relative;
-    right: 0.5%;
-    font-weight: 540;
-    font-size: 400%;
-    color: hsl(236, 48%, 33%);
+    text-wrap: nowrap;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
   }
 
+
   #Prof {
-    /* max-width: fit-content; */
-    text-align: center;
-    position: relative;
-    bottom: 150px;
+    text-wrap: nowrap;
+    font-size: 25px;
+    text-align: left;
+    max-width: fit-content;
     color: black;
-    border-bottom: 0.1em solid hsl(236, 48%, 33%);
+    border-right: 0.1em solid #000000;
     white-space: nowrap;
     letter-spacing: .10em;
-    /* animation: blink .5s step-end infinite alternate; */
+    animation: blink .5s step-end infinite alternate;
   }
+
+
 
   #Aboutme {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #Aboutbody {
@@ -1205,7 +1149,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
     font-size: 150%;
     position: relative;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #SkillIcons {
@@ -1242,7 +1186,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #Filter {
@@ -1254,7 +1198,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
     background-color: hsl(210, 13%, 6%);
-    border: 2px solid hsl(236, 48%, 33%);
+    border: 2px solid #000000;
     width: 20%;
     height: 40px;
     border-radius: 3px;
@@ -1263,7 +1207,7 @@ body::-webkit-scrollbar-thumb {
   #ProjCards {
     position: relative;
     display: flex;
-    column-gap: 15%;
+    justify-content: space-between;
     row-gap: 20px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1392,7 +1336,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   .VC {
@@ -1413,7 +1357,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
 
@@ -1454,7 +1398,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
 
@@ -1504,7 +1448,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 250%;
     position: relative;
     top: 10px;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #ContactName {
@@ -1513,7 +1457,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 30px;
     width: 47%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -1521,7 +1465,7 @@ body::-webkit-scrollbar-thumb {
   #ContactName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #ContactNameText {
@@ -1542,7 +1486,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 30px;
     width: 47%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -1550,7 +1494,7 @@ body::-webkit-scrollbar-thumb {
   #EmailName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #EmailNameText {
@@ -1571,7 +1515,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 30px;
     width: 97.5%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -1579,7 +1523,7 @@ body::-webkit-scrollbar-thumb {
   #SubjectName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #SubjectNameText {
@@ -1594,7 +1538,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 120px;
     width: 97.5%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: bisque;
   }
@@ -1602,7 +1546,7 @@ body::-webkit-scrollbar-thumb {
   #MessageName:focus {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(236, 48%, 33%);
+    outline-color: #000000;
   }
 
   #MessageNameText {
@@ -1612,6 +1556,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   #Submit {
+    cursor: pointer;
     position: relative;
     top: 40px;
     box-shadow: 0 0 5px black;
@@ -1619,7 +1564,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Courier New', Courier, monospace;
     height: 40px;
     width: 15%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border-radius: 5px;
     color: white;
   }
@@ -1627,7 +1572,8 @@ body::-webkit-scrollbar-thumb {
   #Submit:hover {
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
+    background-color: #FFFFFF;
   }
 
 
@@ -1679,26 +1625,26 @@ body::-webkit-scrollbar-thumb {
   }
 
   #SocialIcons {
-    text-align: center;
-    position: relative;
-    top: 100px;
-    /* left: 25%;
-    right:0%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
   }
 
   #Download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
     text-decoration: none;
-    text-align: center;
-    position: relative;
-    top: 10px;
+    text-wrap: nowrap;
     box-shadow: 0 0 15px black;
     font-size: larger;
     font-family: 'Montserrat', sans-serif;
     padding: 20px;
-    padding-right: 50px;
-    height: 45px;
     width: 220px;
-    background-color: hsl(218, 28%, 13%);
+    background-color: #000000;
     border: 1px solid black;
     border-radius: 5px;
     color: white;
@@ -1708,18 +1654,12 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     border-width: 1px;
     box-shadow: 0 0 0px black;
-    color: hsl(236, 48%, 33%);
+    color: #000000;
+    background-color: #FFFFFF;
   }
 
-  #DownloadIcon {
-    position: relative;
-    top: 10px;
-    left: 2%;
-  }
 
   #Twitter {
-    position: relative;
-    right: 1%;
     cursor: pointer;
     height: 80px;
   }
@@ -1730,49 +1670,26 @@ body::-webkit-scrollbar-thumb {
   }
 
   #LinkedIn {
-    position: relative;
     cursor: pointer;
     height: 80px;
-    left: 1%;
   }
 
   #Profile {
-    object-fit: cover;
-    width: 50px;
-    height: 50px;
-    left: 0%;
-    top: 5%;
-    position: fixed;
-    bottom: 200px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.767);
-    border: 1px solid rgba(255, 255, 255, 0.767);
+    display: none;
   }
-
-  /* #ProfileOverlay{
-    text-align: center;
-  } */
-
-  /* #ProfileOverlay2{
-    position: relative;
-    bottom:30px; */
-  /* border-radius: 50%; */
-  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.767);
-    border: 1px solid rgba(255, 255, 255, 0.767); */
-  /* } */
 }
 
 @media only screen and (max-width:600px) {
-  #SocialIcons {
-    height: 50px;
-    width: 90%;
+
+  #Hi {
+    font-size: 25px;
   }
 
   #Prof {
     white-space: normal;
     overflow: hidden;
     bottom: 40px;
-    font-size: 150%;
+    font-size: 15px;
     text-align: center;
     width: 100%;
   }
@@ -1824,7 +1741,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   .VC {
@@ -1845,7 +1762,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 0 0 5px;
     background-color: hsl(210, 13%, 6%);
-    color: hsl(236, 48%, 33%);
+    color: #000000;
   }
 
   #VLS2 {
@@ -1874,14 +1791,6 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid bisque;
     border-radius: 5px;
     color: bisque;
-  }
-
-  #Name {
-    width: 15%;
-  }
-
-  #Name2 {
-    top: 50px
   }
 
   #ContactName {

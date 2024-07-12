@@ -10,9 +10,9 @@ export default function Contact() {
             document.getElementById("Contact").style.bottom = "-1px";
             document.getElementById("Contact").style.animationName = "none";
             document.getElementById("Contact").style.cursor = "pointer";
-            document.getElementById("NavBar").style.display = "none";
+            document.getElementById("MainNavBar").style.display = "none";
         });
-        document.getElementById("NavBar").style.display = "block";
+        document.getElementById("MainNavBar").style.display = "flex";
         if (window.innerWidth > 780) {
             document.getElementById("HamBurger").style.display = "none";
         }
@@ -65,7 +65,7 @@ export default function Contact() {
         document.getElementById("HamBurger").addEventListener('click', (e) => {
             document.body.style.overflowY = "hidden";
             document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
-            document.getElementById("Overlay").style.display = "block";
+            document.getElementById("Overlay").style.display = "flex";
             document.getElementById("HamBurger").style.display = "none";
         });
 
@@ -93,7 +93,7 @@ export default function Contact() {
                 document.getElementById("HamBurger").style.display = "block";
             }
             if (document.getElementById("ContactContainer")) {
-                document.getElementById("NavBar").style.display = "none";
+                document.getElementById("MainNavBar").style.display = "none";
                 navigate("/");
             }
         });

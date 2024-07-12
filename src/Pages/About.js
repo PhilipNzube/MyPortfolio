@@ -14,9 +14,9 @@ export default function About() {
             document.getElementById("About").style.bottom = "-1px";
             document.getElementById("About").style.animationName = "none";
             document.getElementById("About").style.cursor = "pointer";
-            document.getElementById("NavBar").style.display = "none";
+            document.getElementById("MainNavBar").style.display = "none";
         });
-        document.getElementById("NavBar").style.display = "block";
+        document.getElementById("MainNavBar").style.display = "flex";
         if (window.innerWidth > 780) {
             document.getElementById("HamBurger").style.display = "none";
         }
@@ -62,7 +62,7 @@ export default function About() {
         document.getElementById("HamBurger").addEventListener('click', (e) => {
             document.body.style.overflowY = "hidden";
             document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
-            document.getElementById("Overlay").style.display = "block";
+            document.getElementById("Overlay").style.display = "flex";
             document.getElementById("HamBurger").style.display = "none";
         });
 
@@ -90,7 +90,7 @@ export default function About() {
                 document.getElementById("HamBurger").style.display = "block";
             }
             if (document.getElementById("AboutContainer")) {
-                document.getElementById("NavBar").style.display = "none";
+                document.getElementById("MainNavBar").style.display = "none";
                 navigate("/");
             }
         });

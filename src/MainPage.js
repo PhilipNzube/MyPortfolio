@@ -215,7 +215,7 @@ export default function MainPage() {
                         <a href="https://twitter.com/Philip_nzube"><img id="Twitter" src={Twitter} alt="TWITTER" /></a>
                         <a href="https://github.com/PhilipNzube"><img id="GitHub" src={GitHub} alt="GITHUB" /></a>
                         <a href="https://www.linkedin.com/in/philip-onwubalili-54049823a"><img id="LinkedIn" src={LinkedIn} alt="LINKEDIN" /></a>
-                        <div><a  id="Download" href="https://drive.google.com/file/d/1Xh5HzHFd9m9CttI2hBbm8ACVuqfvyj2w/view?usp=sharing
+                        <div><a  id="Download" href="https://drive.google.com/file/d/1jmRBKeP_v-smwdSB-HA04yGDW-oXtb__/view?usp=drivesdk
 ">DOWNLOAD RESUME<img id="DownloadIcon" src={DownloadIcon} alt="Download Icon" /></a></div>
                     </div>
                     <h1 id="Prof">INDIE GAME DEVELOPER</h1>

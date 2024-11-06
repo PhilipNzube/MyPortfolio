@@ -222,7 +222,7 @@ export default function MainPage() {
                         <a href="https://github.com/PhilipNzube"><img id="GitHub" src={GitHub} alt="GITHUB" /></a>
                         <a href="https://www.linkedin.com/in/philip-onwubalili-54049823a"><img id="LinkedIn" src={LinkedIn} alt="LINKEDIN" /></a>
                     </div>
-                    <a id="Download" href="https://drive.google.com/file/d/1Xh5HzHFd9m9CttI2hBbm8ACVuqfvyj2w/view?usp=sharing
+                    <a id="Download" href="https://drive.google.com/file/d/1jmRBKeP_v-smwdSB-HA04yGDW-oXtb__/view?usp=drive_link
 ">View CV</a>
                 </div>
                 <img id="Profile" src={ProfilePic} alt="PROFILE PIC" />

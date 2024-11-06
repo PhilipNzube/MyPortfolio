@@ -1,0 +1,1837 @@
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+#PicOverlay {
+  z-index: 1;
+  object-fit: contain;
+  background: url('./images/ProfilePic.jpg') center no-repeat;
+  background-size: contain;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  animation-name: PicOverlaySlideIn;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  backdrop-filter: blur(0.2em);
+}
+
+.PlayButtonClass {
+  width: 20%;
+  height: 30px;
+}
+
+
+@media only screen and (min-width:781px) {
+  #HamBurger {
+    display: none;
+  }
+
+  #Overlay {
+    display: none;
+  }
+
+
+  #LOADINGTOP {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #000000;
+    width: 100%;
+    height: 10px;
+    animation-name: Load;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes Load {
+    0% {
+      width: 10%;
+    }
+
+    50% {
+      width: 50%;
+    }
+
+    100% {
+      width: 90%;
+    }
+  }
+
+  #LOADING {
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    font-size: 500%;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    animation-name: LOADIN;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes LOADIN {
+    30% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #LOADINGBG {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+
+  #Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+    row-gap: 30px;
+    opacity: 0;
+    animation-name: FADEIN;
+    animation-delay: 6s;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    height: 100%;
+  }
+
+  #ContainerCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    height: 100%;
+  }
+
+  #AboutContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+  }
+
+  #ProjectsContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+  }
+
+  #ContactContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+  }
+
+  @keyframes FADEIN {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+  }
+
+  #About {
+    cursor: pointer;
+  }
+
+
+  #Projects {
+    cursor: pointer;
+  }
+
+
+  #Contact {
+    cursor: pointer;
+    box-shadow: 2px 2px #000000;
+    border: 1px solid #FCF9F8;
+    padding: 5%;
+  }
+
+  #ContactMeLink {
+    cursor: pointer;
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  #Contact:hover {
+    box-shadow: 0px 0px #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    background: #000000;
+  }
+
+  @keyframes Underline {
+    0% {
+      text-decoration-color: hsla(236, 48%, 33%, 0.068);
+      text-decoration-thickness: 1px;
+    }
+
+    50% {
+      text-decoration-color: hsla(236, 48%, 33%, 0.527);
+      text-decoration-thickness: 2px;
+    }
+
+    100% {
+      text-decoration-color: #000000;
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  #NavBar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+    text-wrap: nowrap;
+    position: fixed;
+    right: 5%;
+    height: 100px;
+  }
+
+  #MainNavBar {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: #FCF9F8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #NavBarCont {
+    width: 37%;
+    backdrop-filter: blur(0.2em);
+    font-size: xx-large;
+    position: fixed;
+    top: 2%;
+    right: 0;
+    z-index: 1;
+  }
+
+  #Name {
+    cursor: pointer;
+    height: 100px;
+  }
+
+  #Hi {
+    color: black;
+  }
+
+  #Name2 {
+    text-wrap: nowrap;
+    font-weight: bold;
+    font-size: 60px;
+    color: #000000;
+  }
+
+  #Prof {
+    font-size: 25px;
+    text-align: left;
+    max-width: fit-content;
+    color: black;
+    border-right: 0.1em solid #000000;
+    white-space: nowrap;
+    letter-spacing: .10em;
+    animation: blink .5s step-end infinite alternate;
+  }
+
+
+  #Download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    text-decoration: none;
+    text-wrap: nowrap;
+    box-shadow: 0 0 15px black;
+    font-size: larger;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    width: 220px;
+    background-color: #000000;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Download:hover {
+    cursor: pointer;
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+
+
+  #Aboutme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: #000000;
+  }
+
+  #Aboutbody {
+    position: relative;
+    right: 0.5%;
+    font-weight: 540;
+    font-size: 30px;
+    color: black;
+  }
+
+  #Skills {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 150%;
+    position: relative;
+    color: #000000;
+  }
+
+  #SkillIcons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+
+  #SkillImage {
+    width: 20%;
+  }
+
+
+  #SkillText {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #SkillParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #MyProjects {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: #000000;
+  }
+
+  #Filter {
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    color: bisque;
+    font-size: large;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+    background-color: hsl(210, 13%, 6%);
+    border: 2px solid #000000;
+    width: 20%;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  #ProjCards {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 60px;
+  }
+
+
+  .Proj {
+    position: relative;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 25%;
+    height: 250px;
+  }
+
+  .ProjText {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  .ProjInfo {
+    text-align: center;
+    position: absolute;
+    top: 220px;
+    left: 2%;
+    padding: 1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+
+
+
+
+
+
+
+  .ProjImg {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  .ProjOverlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+  .VLS {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .VLS:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+  .VC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .VC:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+
+  .PlayAndPause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .PlayAndPause:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+
+  .ProjVid {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  .ProjLink {
+    text-decoration: none;
+    color: bisque;
+  }
+
+
+  @keyframes ProjOverlayAnim {
+    0% {
+      height: 1px;
+    }
+
+    100% {
+      height: -150px;
+    }
+  }
+
+  @keyframes ProjOverlayAnimOut {
+    0% {
+      height: -150px;
+    }
+
+    100% {
+      height: 1px;
+    }
+  }
+
+  #Contactme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: #000000;
+  }
+
+  #ContactName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #ContactName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #ContactNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #EmailNameParent {
+    position: relative;
+    left: 50%;
+    bottom: 87px;
+  }
+
+  #EmailName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #EmailName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #EmailNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+
+  #SubjectNameParent {
+    position: relative;
+    bottom: 50px;
+  }
+
+  #SubjectName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 97.5%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #SubjectName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #SubjectNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #MessageName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 120px;
+    width: 97.5%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #MessageName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #MessageNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #Submit {
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    width: 15%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Submit:hover {
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  #Elipses {
+    opacity: 0;
+    animation-name: Dot1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot1 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses2 {
+    opacity: 0;
+    animation-name: Dot2;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot2 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses3 {
+    opacity: 0;
+    animation-name: Dot3;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot3 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #SocialIcons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  #Twitter {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #GitHub {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #LinkedIn {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #Profile {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.767);
+    border: 1px solid rgba(255, 255, 255, 0.767);
+  }
+}
+
+@media only screen and (max-width:780px) {
+
+  #Overlay {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FCF9F8;
+    animation-name: OverlaySlideIn;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    backdrop-filter: blur(0.2em);
+    z-index: 1;
+  }
+
+
+  @keyframes OverlaySlideIn {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes OverlaySlideOut {
+    0% {
+      transform: translateY(0%);
+    }
+
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+
+
+  @keyframes PicOverlaySlideIn {
+    0% {
+      width: 0%;
+      height: 0%;
+    }
+
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @keyframes PicOverlaySlideOut {
+    0% {
+      width: 100%;
+      height: 100%;
+    }
+
+    100% {
+      width: 0%;
+      height: 0%;
+    }
+  }
+
+
+  #Close {
+    cursor: pointer;
+    top: 6.8%;
+    right: 5%;
+    position: fixed;
+    cursor: pointer;
+    height: 30px;
+    display: block;
+  }
+
+  #ClosePicOverlay {
+    cursor: pointer;
+    top: 6.8%;
+    right: 5%;
+    position: fixed;
+    cursor: pointer;
+    height: 30px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.637);
+    box-shadow: 0 0 5px white;
+    border-radius: 10%;
+  }
+
+  #ContainerCont {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  #HamBurger {
+    top: 6.8%;
+    right: 5%;
+    position: fixed;
+    backdrop-filter: blur(0.2em);
+    z-index: 1;
+    cursor: pointer;
+    height: 30px;
+    display: block;
+  }
+
+  #LOADINGTOP {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #000000;
+    width: 100%;
+    height: 10px;
+    animation-name: Load;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes Load {
+    0% {
+      width: 10%;
+    }
+
+    50% {
+      width: 50%;
+    }
+
+    100% {
+      width: 90%;
+    }
+  }
+
+  #LOADING {
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    font-size: 400%;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    animation-name: LOADIN;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes LOADIN {
+    30% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #LOADINGBG {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+
+  #Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+    row-gap: 30px;
+    opacity: 0;
+    animation-name: FADEIN;
+    animation-delay: 6s;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+  }
+
+  #ContainerCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  #AboutContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+  }
+
+  #ProjectsContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+  }
+
+  #ContactContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 100px;
+  }
+
+  @keyframes FADEIN {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+    }
+  }
+
+  #AboutOverlay {
+    font-size: 40px;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  #ProjectsOverlay {
+    font-size: 40px;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  #ContactOverlay {
+    position: fixed;
+    bottom: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px #000000;
+    border: 1px solid #000000;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 20px;
+  }
+
+  #ContactOverlay:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px #000000;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    background: #000000;
+  }
+
+
+  @keyframes Underline {
+    0% {
+      text-decoration-color: hsla(236, 48%, 33%, 0.123);
+      text-decoration-thickness: 1px;
+    }
+
+    50% {
+      text-decoration-color: hsla(236, 48%, 33%, 0.493);
+      text-decoration-thickness: 2px;
+    }
+
+    100% {
+      text-decoration-color: #000000;
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  #About {
+    display: none;
+  }
+
+  #Projects {
+    display: none;
+  }
+
+  #Contact {
+    display: none;
+  }
+
+  #ContactMeLink {
+    cursor: pointer;
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  #NavBar {
+    display: none;
+  }
+
+  #MainNavBar {
+    display: none;
+    flex-direction: row;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: #FCF9F8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+
+
+  #Name {
+    cursor: pointer;
+    height: 100px;
+  }
+
+  #Hi {
+    color: black;
+  }
+
+  #Name2 {
+    text-wrap: nowrap;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+  }
+
+
+  #Prof {
+    text-wrap: nowrap;
+    font-size: 25px;
+    text-align: left;
+    max-width: fit-content;
+    color: black;
+    border-right: 0.1em solid #000000;
+    white-space: nowrap;
+    letter-spacing: .10em;
+    animation: blink .5s step-end infinite alternate;
+  }
+
+
+
+  #Aboutme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: #000000;
+  }
+
+  #Aboutbody {
+    position: relative;
+    right: 0.5%;
+    font-weight: 540;
+    font-size: 150%;
+    color: black;
+  }
+
+  #Skills {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 150%;
+    position: relative;
+    color: #000000;
+  }
+
+  #SkillIcons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+  }
+
+  #SkillImage {
+    width: 20%;
+  }
+
+
+  #SkillText {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #SkillParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  #MyProjects {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: #000000;
+  }
+
+  #Filter {
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    color: bisque;
+    font-size: large;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+    background-color: hsl(210, 13%, 6%);
+    border: 2px solid #000000;
+    width: 20%;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  #ProjCards {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 60px;
+  }
+
+  .Proj {
+    position: relative;
+    box-shadow: 0 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(210, 13%, 6%);
+    width: 40%;
+    height: 250px;
+  }
+
+
+  .ProjText {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+    font-size: 130%;
+    color: bisque;
+  }
+
+  .ProjInfo {
+    text-align: center;
+    position: absolute;
+    top: 220px;
+    left: 2%;
+    padding: 1%;
+    width: 50%;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+
+
+  .ProjImg {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+  .ProjOverlay {
+    cursor: pointer;
+    color: white;
+    display: none;
+    position: absolute;
+    left: 0.3%;
+    width: 100%;
+    height: 61%;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    animation-name: ProjOverlayAnim;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  Proj12Img {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .VLS {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .VLS:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+  .VC {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .VC:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+
+  #VC2 {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+
+  .PlayAndPause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    width: 60%;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .PlayAndPause:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+
+  .ProjVid {
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.829);
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  .ProjLink {
+    text-decoration: none;
+    color: bisque;
+  }
+
+
+  @keyframes ProjOverlayAnim {
+    0% {
+      height: 1px;
+    }
+
+    100% {
+      height: -150px;
+    }
+  }
+
+  @keyframes ProjOverlayAnimOut {
+    0% {
+      height: -150px;
+    }
+
+    100% {
+      height: 1px;
+    }
+  }
+
+
+
+  #Contactme {
+    font-size: 250%;
+    position: relative;
+    top: 10px;
+    color: #000000;
+  }
+
+  #ContactName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #ContactName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #ContactNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #EmailNameParent {
+    position: relative;
+    left: 50%;
+    bottom: 87px;
+  }
+
+  #EmailName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 47%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #EmailName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #EmailNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+
+  #SubjectNameParent {
+    position: relative;
+    bottom: 50px;
+  }
+
+  #SubjectName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 97.5%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #SubjectName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #SubjectNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #MessageName {
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 120px;
+    width: 97.5%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #MessageName:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
+  }
+
+  #MessageNameText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+
+  #Submit {
+    cursor: pointer;
+    position: relative;
+    top: 40px;
+    box-shadow: 0 0 5px black;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    width: 15%;
+    background-color: #000000;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Submit:hover {
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  #Elipses {
+    opacity: 0;
+    animation-name: Dot1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot1 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses2 {
+    opacity: 0;
+    animation-name: Dot2;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot2 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #Elipses3 {
+    opacity: 0;
+    animation-name: Dot3;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Dot3 {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  #SocialIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  #Download {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    text-decoration: none;
+    text-wrap: nowrap;
+    box-shadow: 0 0 15px black;
+    font-size: larger;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    width: 220px;
+    background-color: #000000;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+  }
+
+  #Download:hover {
+    cursor: pointer;
+    border-width: 1px;
+    box-shadow: 0 0 0px black;
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+
+  #Twitter {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #GitHub {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #LinkedIn {
+    cursor: pointer;
+    height: 80px;
+  }
+
+  #Profile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:600px) {
+
+  #Hi {
+    font-size: 25px;
+  }
+
+  #Prof {
+    white-space: normal;
+    overflow: hidden;
+    bottom: 40px;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  #Filter {
+    width: 97%;
+    height: 40px;
+  }
+
+  #ProjCards {
+    position: relative;
+    flex-direction: column;
+    top: 60px;
+  }
+
+  .Proj {
+    width: 97%;
+    height: 250px;
+  }
+
+  .ProjText {
+    font-size: 150%;
+  }
+
+  .ProjInfo {
+    top: 220px;
+    left: 0%;
+    padding: 1%;
+    width: 50%;
+  }
+
+  /* Increment the "top" value by 60px for every "Proj" to come. This only works for the mobile view because the projects are aligned in a straight line */
+
+  .VLS {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .VLS:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+  .VC {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  .VC:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    background-color: hsl(210, 13%, 6%);
+    color: #000000;
+  }
+
+  #VLS2 {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #VC2 {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 15.7%;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    color: bisque;
+  }
+
+  #ContactName {
+    height: 30px;
+    width: 97.5%;
+  }
+
+  #EmailNameParent {
+    position: relative;
+    left: 0%;
+    bottom: 0;
+  }
+
+  #EmailName {
+    height: 30px;
+    width: 97.5%;
+  }
+
+
+  #SubjectNameParent {
+    position: relative;
+    bottom: 0px;
+  }
+
+  #SubjectName {
+    height: 30px;
+    width: 97.5%;
+  }
+
+  #Submit {
+    left: 25%;
+    height: 40px;
+    width: 50%;
+  }
+
+  #Download {
+    white-space: nowrap;
+  }
+
+  #LOADING {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%;
+  }
+}

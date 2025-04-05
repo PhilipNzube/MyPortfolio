@@ -128,7 +128,7 @@ export default function MainPage() {
                         }
                         else {
                             clearInterval(timer);
-                            text = "FRONTEND WEB DEVELOPER";
+                            text = "ANDROID APP DEVELOPER";
                             setTimeout(() => {
                                 h1.innerHTML = "-";
                                 TypingEffect2(h1, 150);
@@ -136,6 +136,7 @@ export default function MainPage() {
                         }
                     }, speed);
                 }
+
 
                 const TypingEffect2 = (element, speed) => {
                     var i = 0;
@@ -146,7 +147,7 @@ export default function MainPage() {
                         }
                         else {
                             clearInterval(timer);
-                            text = "INDIE GAME DEVELOPER";
+                            text = "FRONTEND WEB DEVELOPER";
                             setTimeout(() => {
                                 h1.innerHTML = "-";
                                 TypingEffect3(h1, 150);
@@ -164,7 +165,7 @@ export default function MainPage() {
                         }
                         else {
                             clearInterval(timer);
-                            text = "TECH ENTHUSIAST";
+                            text = "INDIE GAME DEVELOPER";
                             setTimeout(() => {
                                 h1.innerHTML = "-";
                                 TypingEffect4(h1, 150);
@@ -174,6 +175,24 @@ export default function MainPage() {
                 }
 
                 const TypingEffect4 = (element, speed) => {
+                    var i = 0;
+                    var timer = setInterval(() => {
+                        if (i < text.length) {
+                            element.append(text.charAt(i));
+                            i++;
+                        }
+                        else {
+                            clearInterval(timer);
+                            text = "TECH ENTHUSIAST";
+                            setTimeout(() => {
+                                h1.innerHTML = "-";
+                                TypingEffect5(h1, 150);
+                            }, 1000);
+                        }
+                    }, speed);
+                }
+
+                const TypingEffect5 = (element, speed) => {
                     var i = 0;
                     var timer = setInterval(() => {
                         if (i < text.length) {
@@ -216,7 +235,7 @@ export default function MainPage() {
                 <div id="ContainerCont">
                     <h1 id="Hi">Hi I'm</h1>
                     <h1 id="Name2">Philip Nzube</h1>
-                    <h1 id="Prof">INDIE GAME DEVELOPER</h1>
+                    <h1 id="Prof"></h1>
                     <div id="SocialIcons">
                         <a href="https://twitter.com/Philip_nzube"><img id="Twitter" src={Twitter} alt="TWITTER" /></a>
                         <a href="https://github.com/PhilipNzube"><img id="GitHub" src={GitHub} alt="GITHUB" /></a>

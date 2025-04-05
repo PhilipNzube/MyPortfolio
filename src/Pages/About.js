@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import ReactJS from '../images/reactJs.png';
 import Javascript from '../images/javascript.png';
 import CSharp from '../images/csharp.png';
+import Flutter from '../images/FlutterImg.png';
 import OverlayNav from '../Components/OverlayNav';
 import { useEffect } from 'react';
 import SkillImage from '../Components/SkillImage';
@@ -100,9 +101,9 @@ export default function About() {
         <>
             <div id="AboutContainer">
                 <h1 id="Aboutme">About Me</h1>
-                <p id="Aboutbody">Hello, my name is Philip Nzube, and I am currently pursuing my undergraduate degree in Computer Science from Fedral University Lokoja in Nigeria. As a frontend web developer and an independent game developer, I specialize in creating Web Apps using ReactJS. And I create Android Games using C#.<br /><br />
-                    My passion lies in the fields of Web Development and Game Development, and I am constantly seeking new opportunities to explore and deepen my understanding of these areas.<br />
-                    I am currently available for collaboration regarding projects related to Web Development or Game Development. Feel free to <span id="ContactMeLink">contact me</span>.<br /><br />
+                <p id="Aboutbody">Hello, my name is Philip Nzube, and I am currently pursuing my undergraduate degree in Computer Science from Fedral University Lokoja in Nigeria. As a frontend web developer, an independent game developer and a flutter developer, I specialize in creating Web Apps using ReactJS, I create Android Games using C# and I create Android Apps using Flutter.<br /><br />
+                    My passion lies in the fields of Web Development, Game Development and Android App Development, and I am constantly seeking new opportunities to explore and deepen my understanding of these areas.<br />
+                    I am currently available for collaboration regarding projects related to Web Development, Android App Development or Game Development. Feel free to <span id="ContactMeLink">contact me</span>.<br /><br />
                     Apart from my academic pursuits, I am an avid learner and spend my free time learning more about tech.<br /><br />
                     <span id="Skills">Skills</span>
                 </p>
@@ -121,6 +122,11 @@ export default function About() {
                     <SkillImage
                         Image={CSharp}
                         SkillText="C#"
+                    />
+
+<SkillImage
+                        Image={Flutter}
+                        SkillText="Flutter"
                     />
                 </div>
             </div>

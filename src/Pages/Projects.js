@@ -10,6 +10,8 @@ import Proj8Vid from '../videos/InteractionSystem Video.mp4';
 import Proj9Img from '../images/Proj9Img.png';
 import Proj10Img from '../images/Proj10Img.png';
 import Proj11Img from '../images/Proj11Img.png';
+import Proj12Img from '../images/Proj12Img.png';
+import FlutterImg from '../images/FlutterImg.png';
 // //import Proj17Vid from '../videos/
 import PlayButton from '../images/Play Button.png';
 import PauseButton from '../images/PauseButton.png';
@@ -20,6 +22,7 @@ import { useEffect, useState } from 'react';
 export default function Projects() {
     const [CSharpActive, setCSActive] = useState(true);
     const [ReactJSActive, setReactActive] = useState(true);
+    const [FlutterActive, setFlutterActive] = useState(true);
     const navigate = useNavigate();
     // var SetTimer;
     useEffect(() => {
@@ -125,18 +128,27 @@ export default function Projects() {
         if (event.target.value === "All") {
             setReactActive(true);
             setCSActive(true);
+            setFlutterActive(true);
         }
         else
             if (event.target.value === "ReactJS") {
                 setReactActive(true);
-                setCSActive(!CSharpActive);
+                setCSActive(false);
+                setFlutterActive(false);
 
             }
             else
                 if (event.target.value === "C#") {
-                    setReactActive(!ReactJSActive);
+                    setFlutterActive(false);
+                    setReactActive(false);
                     setCSActive(true);
                 }
+                else
+                    if (event.target.value === "Flutter") {
+                        setReactActive(false);
+                        setCSActive(false);
+                        setFlutterActive(true);
+                    }
     }
     return (
         <>
@@ -146,6 +158,7 @@ export default function Projects() {
                     <option>All</option>
                     <option>ReactJS</option>
                     <option>C#</option>
+                    <option>Flutter</option>
                 </select>
                 <div id="ProjCards">
                     {/* {CSharpActive && <Card
@@ -342,6 +355,41 @@ export default function Projects() {
                     />}
 
 
+
+                    {FlutterActive && <Card
+                        vid={""}
+                        image={Proj12Img}
+                        hasVLS="True"
+                        hasVC="False"
+                        hasPlayBut="False"
+                        PlayButSrc={""}
+                        PlayButText=""
+                        VLS="https://signal-web-app.netlify.app"
+                        VLSText="View Live Site"
+                        VC=""
+                        VCText=""
+                        ProjText="SIGNAL LAB"
+                        ProjInfo="Flutter"
+                        hasImage="True"
+                    />}
+
+
+                    {FlutterActive && <Card
+                        vid={""}
+                        image={FlutterImg}
+                        hasVLS="False"
+                        hasVC="True"
+                        hasPlayBut="False"
+                        PlayButSrc={""}
+                        PlayButText=""
+                        VLS=""
+                        VLSText=""
+                        VC="https://github.com/PhilipNzube/facial_attendance"
+                        VCText="View Code"
+                        ProjText="FACIAL ATTENDANCE"
+                        ProjInfo="Flutter"
+                        hasImage="True"
+                    />}
 
 
                     {/* {ReactJSActive && <Card

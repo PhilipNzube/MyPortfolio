@@ -1,137 +1,130 @@
-import { useNavigate } from 'react-router-dom';
-import ReactJS from '../images/reactJs.png';
-import Javascript from '../images/javascript.png';
-import CSharp from '../images/csharp.png';
-import Flutter from '../images/FlutterImg.png';
-import OverlayNav from '../Components/OverlayNav';
-import { useEffect } from 'react';
-import SkillImage from '../Components/SkillImage';
+import { NavLink } from "react-router-dom";
+import { Box, Container, Typography, Fade } from "@mui/material";
+import ReactJS from "../images/reactJs.png";
+import Javascript from "../images/javascript.png";
+import CSharp from "../images/csharp.png";
+import Flutter from "../images/FlutterImg.png";
+import SkillImage from "../Components/SkillImage";
 
-export default function About() {
-    const navigate = useNavigate();
-    useEffect(() => {
-        window.addEventListener("popstate", e => {
-            document.getElementById("About").style.textDecoration = "none";
-            document.getElementById("About").style.bottom = "-1px";
-            document.getElementById("About").style.animationName = "none";
-            document.getElementById("About").style.cursor = "pointer";
-            document.getElementById("MainNavBar").style.display = "none";
-        });
-        document.getElementById("MainNavBar").style.display = "flex";
-        if (window.innerWidth > 780) {
-            document.getElementById("HamBurger").style.display = "none";
-        }
-        if (window.innerWidth < 780) {
-            document.body.style.overflowY = "auto";
-            if (window.innerWidth < 780) {
-                document.getElementById("HamBurger").style.display = "block";
-            }
-        }
-        else
-            if (window.innerWidth > 780) {
-                document.getElementById("Contact").style.textDecoration = "none";
-                document.getElementById("Contact").style.bottom = "-1px";
-                document.getElementById("Contact").style.animationName = "none";
-                document.getElementById("Contact").style.cursor = "pointer";
+export default function About({ navHeight = 64 }) {
+  return (
+    <Box
+      sx={{
+        position: "relative",
+        minHeight: "100vh",
+        bgcolor: "grey.900",
+        pt: `${navHeight + 32}px`,
+        pb: 8,
+        overflow: "hidden",
+      }}
+    >
+      {/* === Background Pattern === */}
+      <Box
+        sx={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          backgroundImage: `url("https://www.transparenttextures.com/patterns/cubes.png")`,
+          backgroundSize: "contain",
+          opacity: 0.04,
+          animation: "bgScroll 60s linear infinite",
+          "@keyframes bgScroll": {
+            from: { backgroundPosition: "0 0" },
+            to: { backgroundPosition: "1000px 1000px" },
+          },
+        }}
+      />
 
-                document.getElementById("Projects").style.textDecoration = "none";
-                document.getElementById("Projects").style.bottom = "-1px";
-                document.getElementById("Projects").style.animationName = "none";
-                document.getElementById("Projects").style.cursor = "pointer";
-            }
+      {/* === Foreground Content === */}
+      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
+        <Fade in timeout={1000}>
+          <Typography
+            variant="h3"
+            sx={{
+              mb: 4,
+              color: "white",
+              fontWeight: 700,
+              textAlign: "center",
+              fontFamily: "Sora, sans-serif",
+            }}
+          >
+            About Me
+          </Typography>
+        </Fade>
 
-        document.getElementById("Contact").addEventListener('click', (e) => {
-            navigate("/Contact");
-        });
+        <Fade in timeout={1500}>
+          <Typography
+            variant="body1"
+            sx={{
+              mb: 6,
+              fontSize: { xs: "1rem", md: "1.15rem" },
+              fontWeight: 400,
+              color: "grey.300",
+              lineHeight: 1.8,
+              textAlign: "justify",
+            }}
+          >
+            Hello, my name is <strong>Philip Nzube</strong>, and I am currently
+            pursuing my undergraduate degree in Computer Science from Federal
+            University Lokoja, Nigeria.
+            <br />
+            <br />
+            I’m a Frontend Web Developer, Indie Game Developer, and Flutter
+            Mobile App Developer. I specialize in building Web Apps using
+            <strong> ReactJS</strong>, Android Games with <strong>C#</strong>,
+            and cross-platform apps with <strong>Flutter</strong>.
+            <br />
+            <br />
+            I’m passionate about software engineering and continuously learning
+            new technologies in Web, Game, and Mobile Development.
+            <br />
+            <br />
+            I’m open to collaborations on creative projects. Feel free to{" "}
+            <NavLink
+              to="/Contact"
+              style={{ textDecoration: "underline", color: "#64b5f6" }}
+            >
+              contact me
+            </NavLink>{" "}
+            if you have something exciting in mind.
+            <br />
+            <br />
+            Outside academics, I’m an explorer of new tech, anime lover, and
+            lifelong learner.
+          </Typography>
+        </Fade>
 
-        document.getElementById("ContactOverlay").addEventListener('click', (e) => {
-            navigate("/Contact");
-        });
+        <Fade in timeout={2000}>
+          <Typography
+            variant="h5"
+            sx={{
+              textAlign: "center",
+              mb: 3,
+              fontWeight: 600,
+              color: "white",
+              fontFamily: "Sora, sans-serif",
+            }}
+          >
+            Skills
+          </Typography>
+        </Fade>
 
-        document.getElementById("ContactMeLink").addEventListener('click', (e) => {
-            navigate("/Contact");
-        });
-
-        document.getElementById("Projects").addEventListener('click', (e) => {
-            navigate("/Projects");
-        });
-
-        document.getElementById("ProjectsOverlay").addEventListener('click', (e) => {
-            navigate("/Projects");
-        });
-
-        document.getElementById("HamBurger").addEventListener('click', (e) => {
-            document.body.style.overflowY = "hidden";
-            document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
-            document.getElementById("Overlay").style.display = "flex";
-            document.getElementById("HamBurger").style.display = "none";
-        });
-
-
-        document.getElementById("Close").addEventListener('click', (e) => {
-            document.getElementById("Overlay").style.animationDuration = 0.3;
-            document.getElementById("Overlay").style.animationName = "OverlaySlideOut";
-            setTimeout(() => {
-                document.getElementById("Overlay").style.animationDuration = 0.8;
-                document.body.style.overflowY = "auto";
-                if (window.innerWidth < 780) {
-                    document.getElementById("HamBurger").style.display = "block";
-                }
-                document.getElementById("Overlay").style.display = "none";
-            }, 300);
-        });
-
-
-        document.getElementById("Name").addEventListener('click', (e) => {
-            document.getElementById("About").style.textDecoration = "none";
-            document.getElementById("About").style.bottom = "-1px";
-            document.getElementById("About").style.animationName = "none";
-            document.getElementById("About").style.cursor = "pointer";
-            if (window.innerWidth < 780) {
-                document.getElementById("HamBurger").style.display = "block";
-            }
-            if (document.getElementById("AboutContainer")) {
-                document.getElementById("MainNavBar").style.display = "none";
-                navigate("/");
-            }
-        });
-    }, []);
-
-    return (
-        <>
-            <div id="AboutContainer">
-                <h1 id="Aboutme">About Me</h1>
-                <p id="Aboutbody">Hello, my name is Philip Nzube, and I am currently pursuing my undergraduate degree in Computer Science from Fedral University Lokoja in Nigeria. As a frontend web developer, an independent game developer and a flutter developer, I specialize in creating Web Apps using ReactJS, I create Android Games using C# and I create Android Apps using Flutter.<br /><br />
-                    My passion lies in the fields of Web Development, Game Development and Android App Development, and I am constantly seeking new opportunities to explore and deepen my understanding of these areas.<br />
-                    I am currently available for collaboration regarding projects related to Web Development, Android App Development or Game Development. Feel free to <span id="ContactMeLink">contact me</span>.<br /><br />
-                    Apart from my academic pursuits, I am an avid learner and spend my free time learning more about tech.<br /><br />
-                    <span id="Skills">Skills</span>
-                </p>
-                <div id="SkillIcons">
-                    <SkillImage
-                        Image={ReactJS}
-                        SkillText="ReactJS"
-                    />
-
-                    <SkillImage
-                        Image={Javascript}
-                        SkillText="JavaScript"
-                    />
-
-
-                    <SkillImage
-                        Image={CSharp}
-                        SkillText="C#"
-                    />
-
-<SkillImage
-                        Image={Flutter}
-                        SkillText="Flutter"
-                    />
-                </div>
-            </div>
-
-            <OverlayNav />
-        </>
-    )
+        <Box
+          id="SkillIcons"
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 4,
+            px: { xs: 2, sm: 4 },
+          }}
+        >
+          <SkillImage Image={ReactJS} SkillText="ReactJS" />
+          <SkillImage Image={Javascript} SkillText="JavaScript" />
+          <SkillImage Image={CSharp} SkillText="C#" />
+          <SkillImage Image={Flutter} SkillText="Flutter" />
+        </Box>
+      </Container>
+    </Box>
+  );
 }

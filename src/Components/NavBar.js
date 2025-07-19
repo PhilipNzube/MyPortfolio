@@ -1,166 +1,200 @@
-import { useEffect } from 'react';
-import HamBurger from '../images/HamBurger.png';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import {
+  AppBar,
+  Box,
+  Typography,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Logo from "../images/Logo.png";
-export default function NavBar() {
-    useEffect(() => {
-        var AboutActive;
-        var ContactActive;
-        var ProjectsActive;
-        setInterval(() => {
-            if (document.getElementById("Container")) {
-                AboutActive = 1;
-                ProjectsActive = 1;
-                ContactActive = 1;
-            }
 
-            if (document.getElementById("AboutContainer")) {
-                AboutActive = 0;
-                ContactActive = 1;
-                ProjectsActive = 1;
-            }
+export default function NavBar({ navHeight = 64 }) {
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-            if (document.getElementById("ProjectsContainer")) {
-                ProjectsActive = 0;
-                ContactActive = 1;
-                AboutActive = 1;
-            }
+  const handleDrawerToggle = () => {
+    setDrawerOpen((prev) => !prev);
+  };
 
-            if (document.getElementById("ContactContainer")) {
-                ContactActive = 0;
-                AboutActive = 1;
-                ProjectsActive = 1;
-            }
-        }, 1000);
+  const handleNameClick = () => {};
 
+  const navLinks = [
+    { to: "/About", label: "ABOUT", id: "About" },
+    { to: "/Projects", label: "PROJECTS", id: "Projects" },
+    { to: "/Contact", label: "CONTACT", id: "Contact" },
+  ];
 
-        document.getElementById("Name").addEventListener('click', (e) => {
-            if (window.innerWidth < 780) {
-                if (document.getElementById("LOADING").style.display == "none") {
-                    if (document.getElementById("PicOverlay").style.display = "none") {
-                        document.body.style.overflowY = "hidden";
-                        document.getElementById("PicOverlay").style.animationName = "PicOverlaySlideIn";
-                        document.getElementById("PicOverlay").style.display = "block";
-                        setTimeout(() => {
-                            document.getElementById("HamBurger").style.display = "none";
-                        }, 100);
-                    }
-                }
-            }
-        });
+  return (
+    <>
+      <AppBar
+        id="MainNavBar"
+        position="fixed"
+        sx={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+          px: { xs: 1.5, sm: 3 },
+          height: navHeight,
+          bgcolor: "background.paper",
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.85))",
+          borderBottom: "1px solid #ccc",
+          boxShadow: 4,
+          zIndex: 1100,
+        }}
+      >
+        {/* Logo */}
+        <NavLink to="/" style={{ textDecoration: "none" }}>
+          <Box
+            component="img"
+            src={Logo}
+            alt="Logo"
+            onClick={handleNameClick}
+            sx={{
+              height: navHeight * 0.5,
+              cursor: "pointer",
+              transition: "transform 0.3s ease",
+              "&:hover": { transform: "scale(1.05)" },
+            }}
+          />
+        </NavLink>
 
+        {/* Desktop Navigation */}
+        <Box
+          sx={{
+            display: { xs: "none", md: "flex" },
+            gap: 4,
+            alignItems: "center",
+          }}
+        >
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.id}
+              to={link.to}
+              style={({ isActive }) => ({
+                position: "relative",
+                textDecoration: "none",
+                color: isActive ? "#1976d2" : "#222",
+                fontWeight: 600,
+                fontSize: "1rem",
+                letterSpacing: "0.5px",
+              })}
+            >
+              {({ isActive }) => (
+                <Typography
+                  variant="body1"
+                  sx={{
+                    transition: "all 0.3s ease",
+                    position: "relative",
+                    px: 1,
+                    pb: 0.5,
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      left: 0,
+                      bottom: 0,
+                      width: isActive ? "100%" : "0%",
+                      height: "2px",
+                      bgcolor: "primary.main",
+                      transition: "width 0.3s ease",
+                    },
+                    "&:hover::after": {
+                      width: "100%",
+                    },
+                    "&:hover": {
+                      color: "primary.main",
+                      transform: "translateY(-1px)",
+                    },
+                  }}
+                >
+                  {link.label}
+                </Typography>
+              )}
+            </NavLink>
+          ))}
+        </Box>
 
-        window.addEventListener('mouseover', () => {
-            if (document.getElementById("AboutContainer")) {
-                AboutActive = 0;
-                if (window.innerWidth > 780) {
-                    document.getElementById("About").style.textDecoration = "underline";
-                    document.getElementById("About").style.textUnderlineOffset = "10px";
-                    document.getElementById("About").style.textDecorationThickness = "2px";
-                }
-                else
-                    if (window.innerWidth < 780) {
-                        document.getElementById("AboutOverlay").style.textDecoration = "underline";
-                        document.getElementById("AboutOverlay").style.textUnderlineOffset = "10px";
-                        document.getElementById("AboutOverlay").style.textDecorationThickness = "2px";
-                    }
-            }
+        {/* Hamburger Icon */}
+        <IconButton
+          id="HamBurger"
+          onClick={handleDrawerToggle}
+          sx={{
+            display: { xs: "block", md: "none" },
+            fontSize: navHeight * 0.5,
+            color: "#222",
+            "&:hover": { bgcolor: "grey.100" },
+          }}
+        >
+          <MenuIcon fontSize="inherit" />
+        </IconButton>
+      </AppBar>
 
-
-            if (document.getElementById("ProjectsContainer")) {
-                ProjectsActive = 0;
-                if (window.innerWidth > 780) {
-                    document.getElementById("Projects").style.textDecoration = "underline";
-                    document.getElementById("Projects").style.textUnderlineOffset = "10px";
-                    document.getElementById("Projects").style.textDecorationThickness = "2px";
-                }
-                else
-                    if (window.innerWidth < 780) {
-                        document.getElementById("ProjectsOverlay").style.textDecoration = "underline";
-                        document.getElementById("ProjectsOverlay").style.textUnderlineOffset = "10px";
-                        document.getElementById("ProjectsOverlay").style.textDecorationThickness = "2px";
-                    }
-            }
-
-
-            if (document.getElementById("ContactContainer")) {
-                ContactActive = 0;
-            }
-        });
-
-
-        window.addEventListener('mouseover', (e) => {
-            if (window.innerWidth > 780) {
-                document.getElementById("About").addEventListener('mouseover', (e) => {
-                    if (AboutActive !== 0) {
-                        document.getElementById("About").style.textDecoration = "underline";
-                        document.getElementById("About").style.textUnderlineOffset = "10px";
-                        document.getElementById("About").style.textDecorationThickness = "2px";
-                    }
-                });
-                document.getElementById("About").addEventListener('mouseleave', (e) => {
-                    if (AboutActive !== 0) {
-                        document.getElementById("About").style.textDecoration = "none";
-                    }
-                });
-
-
-                document.getElementById("Projects").addEventListener('mouseover', (e) => {
-                    if (ProjectsActive !== 0) {
-                        document.getElementById("Projects").style.textDecoration = "underline";
-                        document.getElementById("Projects").style.textUnderlineOffset = "10px";
-                        document.getElementById("Projects").style.textDecorationThickness = "2px";
-                    }
-                });
-                document.getElementById("Projects").addEventListener('mouseleave', (e) => {
-                    if (ProjectsActive !== 0) {
-                        document.getElementById("Projects").style.textDecoration = "none";
-                    }
-                });
-            }
-            else
-                if (window.innerWidth < 780) {
-                    document.getElementById("AboutOverlay").addEventListener('mouseover', (e) => {
-                        if (AboutActive !== 0) {
-                            document.getElementById("AboutOverlay").style.textDecoration = "underline";
-                            document.getElementById("AboutOverlay").style.textUnderlineOffset = "10px";
-                            document.getElementById("AboutOverlay").style.textDecorationThickness = "2px";
-                        }
-                    });
-                    document.getElementById("AboutOverlay").addEventListener('mouseleave', (e) => {
-                        if (AboutActive !== 0) {
-                            document.getElementById("AboutOverlay").style.textDecoration = "none";
-                        }
-                    });
-
-
-                    document.getElementById("ProjectsOverlay").addEventListener('mouseover', (e) => {
-                        if (ProjectsActive !== 0) {
-                            document.getElementById("ProjectsOverlay").style.textDecoration = "underline";
-                            document.getElementById("ProjectsOverlay").style.textUnderlineOffset = "10px";
-                            document.getElementById("ProjectsOverlay").style.textDecorationThickness = "2px";
-                        }
-                    });
-                    document.getElementById("ProjectsOverlay").addEventListener('mouseleave', (e) => {
-                        if (ProjectsActive !== 0) {
-                            document.getElementById("ProjectsOverlay").style.textDecoration = "none";
-                        }
-                    });
-                }
-        });
-
-    }, []);
-
-    return (
-        <>
-            <div id="MainNavBar">
-            <img id="Name" src={Logo} alt="Logo" />
-                <div id="NavBar">
-                    <div id="About">ABOUT</div>
-                    <div id="Projects">PROJECTS</div>
-                    <div id="Contact">CONTACT</div>
-                </div>
-                <img id="HamBurger" src={HamBurger} alt="HamBurger" />
-            </div>
-        </>
-    )
+      {/* Mobile Drawer */}
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={handleDrawerToggle}
+        sx={{
+          "& .MuiDrawer-paper": {
+            width: 250,
+            bgcolor: "background.paper",
+            boxShadow: 4,
+            p: 2,
+          },
+        }}
+      >
+        <Box>
+          <IconButton
+            onClick={handleDrawerToggle}
+            sx={{
+              color: "grey.900",
+              alignSelf: "flex-end",
+              mb: 1,
+              "&:hover": { bgcolor: "grey.100" },
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <List>
+            {navLinks.map((link) => (
+              <ListItem
+                key={link.id}
+                component={NavLink}
+                to={link.to}
+                onClick={handleDrawerToggle}
+                sx={{
+                  justifyContent: "center",
+                  py: 2,
+                  "&.active .MuiTypography-root": {
+                    color: "primary.main",
+                    textDecoration: "underline",
+                    textUnderlineOffset: "6px",
+                  },
+                  "&:hover": {
+                    bgcolor: "grey.100",
+                    transition: "all 0.3s ease",
+                  },
+                }}
+              >
+                <ListItemText
+                  primary={link.label}
+                  primaryTypographyProps={{
+                    variant: "h6",
+                    color: "grey.900",
+                    fontWeight: 600,
+                    textAlign: "center",
+                  }}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+    </>
+  );
 }

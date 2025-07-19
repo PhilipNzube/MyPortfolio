@@ -1,255 +1,256 @@
-import ProfilePic from '../images/ProfilePic.jpg';
-import Twitter from '../images/Twitter.png';
-import GitHub from '../images/GitHub.png';
-import LinkedIn from '../images/LinkedIn.png';
-import { useNavigate } from 'react-router-dom';
-import OverlayNav from '../Components/OverlayNav';
-import PicOverlay from '../Components/PicOverlay';
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Stack,
+  Fade,
+  Grow,
+  useTheme,
+} from "@mui/material";
+import { NavLink } from "react-router-dom";
 
-export default function MainPage() {
-    // var AboutActive = 0;
-    const navigate = useNavigate();
-    const Unmount = () => {
-        // unmountComponentAtNode(<MainPage />);
-        console.log("MainPage");
-    }
-    window.addEventListener('resize', (e) => {
-        if (window.innerWidth > 780) {
-            // const Container = document.getElementById("SocialIcons");
-            // const Child = document.getElementById("Download");
-            // const Centralizer = document.getElementById("Centralizer");
-            // Container.appendChild(Child);
-            // Container.removeChild(Centralizer);
-            document.getElementById("HamBurger").style.display = "none";
-            document.getElementById("Overlay").style.display = "none";
-            document.getElementById("PicOverlay").style.display = "none";
+import Twitter from "../images/Twitter.png";
+import GitHub from "../images/GitHub.png";
+import LinkedIn from "../images/LinkedIn.png";
+
+export default function MainPage({ navHeight = 64 }) {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  const theme = useTheme();
+
+  const texts = [
+    "ANDROID APP DEVELOPER",
+    "FRONTEND WEB DEVELOPER",
+    "INDIE GAME DEVELOPER",
+    "TECH ENTHUSIAST",
+    "STUDENT",
+  ];
+
+  useEffect(() => {
+    let i = 0;
+    setDisplayText("");
+    setIsTyping(true);
+
+    const typeText = () => {
+      const current = texts[currentTextIndex];
+      const timer = setInterval(() => {
+        if (i <= current.length) {
+          setDisplayText(current.slice(0, i));
+          i++;
+        } else {
+          clearInterval(timer);
+          setIsTyping(false);
+          setTimeout(() => {
+            setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+          }, 1500);
         }
-        else
-            if (window.innerWidth < 780) {
-                // const Container = document.getElementById("SocialIcons");
-                // const Child = document.getElementById("Download");
-                // const Centralizer = document.createElement('center');
-                // Container.appendChild(Centralizer);
-                // Centralizer.id = "Centralizer";
-                // Centralizer.appendChild(Child);
-                document.getElementById("HamBurger").style.display = "block";
+      }, 100);
+      return () => clearInterval(timer);
+    };
+
+    const delay = setTimeout(typeText, 500);
+    return () => clearTimeout(delay);
+  }, [currentTextIndex]);
+
+  return (
+    <Box
+      sx={{
+        minHeight: "100vh",
+        pt: `${navHeight + 16}px`,
+        position: "relative",
+        overflow: "hidden",
+        bgcolor: "grey.900",
+      }}
+    >
+      {/* === Background === */}
+      <Box
+        sx={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          backgroundImage: `url("https://www.transparenttextures.com/patterns/cubes.png")`,
+          backgroundSize: "contain",
+          opacity: 0.04,
+          animation: "bgScroll 60s linear infinite",
+          "@keyframes bgScroll": {
+            from: { backgroundPosition: "0 0" },
+            to: { backgroundPosition: "1000px 1000px" },
+          },
+        }}
+      />
+
+      {/* === Content === */}
+      <Container maxWidth="md" sx={{ zIndex: 1 }}>
+        <Stack
+          spacing={6}
+          alignItems="center"
+          justifyContent="center"
+          textAlign="center"
+          sx={{ minHeight: "80vh" }}
+        >
+          <Fade in timeout={1000}>
+            <Typography variant="h6" sx={{ color: "text.secondary" }}>
+              Hi, my name is
+            </Typography>
+          </Fade>
+
+          <Fade in timeout={1500}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 700,
+                color: "white",
+                fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4rem" },
+                fontFamily: "Sora, sans-serif",
+              }}
+            >
+              Philip Nzube
+            </Typography>
+          </Fade>
+
+          <Fade in timeout={2000}>
+            <Box
+              sx={{
+                fontSize: "1.5rem",
+                fontFamily: "monospace",
+                color: "primary.main",
+                fontWeight: 500,
+                minHeight: "2rem",
+                display: "inline-block",
+                borderRight: isTyping ? "2px solid" : "none",
+                pr: "4px",
+                whiteSpace: "nowrap",
+                animation: isTyping ? "blink 1s step-end infinite" : "none",
+                "@keyframes blink": {
+                  "50%": { borderColor: "transparent" },
+                },
+              }}
+            >
+              {displayText}
+            </Box>
+          </Fade>
+
+          <Fade in timeout={2500}>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "grey.400",
+                fontSize: { xs: "1rem", sm: "1.1rem" },
+                maxWidth: 600,
+              }}
+            >
+              Crafting innovative web, mobile, and game solutions with passion
+              and creativity.
+            </Typography>
+          </Fade>
+
+          <Grow in timeout={3000}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              spacing={2}
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Button
+                component={NavLink}
+                to="/Projects"
+                variant="contained"
+                size="large"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: 600,
+                  fontFamily: "Sora, sans-serif",
+                  bgcolor: "primary.main",
+                  "&:hover": {
+                    bgcolor: "primary.dark",
+                    transform: "scale(1.05)",
+                    transition: "all 0.3s ease",
+                  },
+                }}
+              >
+                View Projects
+              </Button>
+              <Button
+                href="https://drive.google.com/file/d/1jmRBKeP_v-smwdSB-HA04yGDW-oXtb__/view?usp=drive_link"
+                variant="outlined"
+                size="large"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: 600,
+                  fontFamily: "Sora, sans-serif",
+                  color: "white",
+                  borderColor: "grey.500",
+                  "&:hover": {
+                    borderColor: "primary.main",
+                    transform: "scale(1.05)",
+                    transition: "all 0.3s ease",
+                  },
+                }}
+              >
+                View CV
+              </Button>
+            </Stack>
+          </Grow>
+        </Stack>
+      </Container>
+
+      {/* === Fixed Social Icons (Bottom Left on Desktop, Center on Mobile) === */}
+      <Box
+        sx={{
+          position: "fixed",
+          bottom: 24,
+          left: { xs: 32, sm: 32 },
+          transform: { xs: "translateX(-50%)", sm: "none" },
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          gap: 2,
+          zIndex: 2,
+        }}
+      >
+        {[Twitter, GitHub, LinkedIn].map((icon, i) => (
+          <Box
+            key={i}
+            component="a"
+            href={
+              i === 0
+                ? "https://twitter.com/Philip_nzube"
+                : i === 1
+                ? "https://github.com/PhilipNzube"
+                : "https://www.linkedin.com/in/philip-onwubalili-54049823a"
             }
-    });
-
-    useEffect(() => {
-        setTimeout(() => {
-
-            // if (window.innerWidth < 780) {
-            //     const Container = document.getElementById("SocialIcons");
-            //     const Child = document.getElementById("Download");
-            //     const Centralizer = document.createElement('center');
-            //     Container.appendChild(Centralizer);
-            //     Centralizer.id = "Centralizer";
-            //     Centralizer.appendChild(Child);
-            // }
-
-
-            document.getElementById("About").addEventListener('click', (e) => {
-                Unmount();
-                if (document.getElementById("Prof").innerHTML !== "") {
-                    navigate("/About");
-                }
-            });
-            document.getElementById("AboutOverlay").addEventListener('click', (e) => {
-                navigate("/About");
-            });
-
-            document.getElementById("Projects").addEventListener('click', (e) => {
-                navigate("/Projects");
-            });
-
-            document.getElementById("ProjectsOverlay").addEventListener('click', (e) => {
-                navigate("/Projects");
-            });
-
-            document.getElementById("Contact").addEventListener('click', (e) => {
-                navigate("/Contact");
-            });
-
-            document.getElementById("ContactOverlay").addEventListener('click', (e) => {
-                navigate("/Contact");
-            });
-
-            document.getElementById("HamBurger").addEventListener('click', (e) => {
-                document.body.style.overflowY = "hidden";
-                document.getElementById("Overlay").style.animationName = "OverlaySlideIn";
-                document.getElementById("Overlay").style.display = "flex";
-                document.getElementById("HamBurger").style.display = "none";
-            });
-
-
-            document.getElementById("Close").addEventListener('click', (e) => {
-                document.getElementById("Overlay").style.animationDuration = 0.3;
-                document.getElementById("Overlay").style.animationName = "OverlaySlideOut";
-                setTimeout(() => {
-                    document.getElementById("Overlay").style.animationDuration = 0.8;
-                    document.body.style.overflowY = "auto";
-                    if (window.innerWidth < 780) {
-                        document.getElementById("HamBurger").style.display = "block";
-                    }
-                    document.getElementById("Overlay").style.display = "none";
-                }, 300);
-            });
-
-
-            document.getElementById("ClosePicOverlay").addEventListener('click', (e) => {
-                document.getElementById("MainNavBar").style.display = "flex";
-                if (window.innerWidth < 780) {
-                    document.getElementById("PicOverlay").style.animationName = "PicOverlaySlideOut";
-                    setTimeout(() => {
-                        document.body.style.overflowY = "auto";
-                        document.getElementById("PicOverlay").style.display = "none";
-                        if (document.getElementById("Overlay").style.display !== "block") {
-                            if (window.innerWidth < 780) {
-                                document.getElementById("HamBurger").style.display = "block";
-                            }
-                        }
-                    }, 790);
-                }
-            });
-
-            document.getElementById("LOADINGTOP").style.display = "none";
-            setTimeout(() => {
-                var h1 = document.getElementById("Prof");
-                var text = h1.innerHTML;
-                h1.innerHTML = "-";
-                const TypingEffect = (element, speed) => {
-                    var i = 0;
-                    var timer = setInterval(() => {
-                        if (i < text.length) {
-                            element.append(text.charAt(i));
-                            i++;
-                        }
-                        else {
-                            clearInterval(timer);
-                            text = "ANDROID APP DEVELOPER";
-                            setTimeout(() => {
-                                h1.innerHTML = "-";
-                                TypingEffect2(h1, 150);
-                            }, 1000);
-                        }
-                    }, speed);
-                }
-
-
-                const TypingEffect2 = (element, speed) => {
-                    var i = 0;
-                    var timer = setInterval(() => {
-                        if (i < text.length) {
-                            element.append(text.charAt(i));
-                            i++;
-                        }
-                        else {
-                            clearInterval(timer);
-                            text = "FRONTEND WEB DEVELOPER";
-                            setTimeout(() => {
-                                h1.innerHTML = "-";
-                                TypingEffect3(h1, 150);
-                            }, 1000);
-                        }
-                    }, speed);
-                }
-
-                const TypingEffect3 = (element, speed) => {
-                    var i = 0;
-                    var timer = setInterval(() => {
-                        if (i < text.length) {
-                            element.append(text.charAt(i));
-                            i++;
-                        }
-                        else {
-                            clearInterval(timer);
-                            text = "INDIE GAME DEVELOPER";
-                            setTimeout(() => {
-                                h1.innerHTML = "-";
-                                TypingEffect4(h1, 150);
-                            }, 1000);
-                        }
-                    }, speed);
-                }
-
-                const TypingEffect4 = (element, speed) => {
-                    var i = 0;
-                    var timer = setInterval(() => {
-                        if (i < text.length) {
-                            element.append(text.charAt(i));
-                            i++;
-                        }
-                        else {
-                            clearInterval(timer);
-                            text = "TECH ENTHUSIAST";
-                            setTimeout(() => {
-                                h1.innerHTML = "-";
-                                TypingEffect5(h1, 150);
-                            }, 1000);
-                        }
-                    }, speed);
-                }
-
-                const TypingEffect5 = (element, speed) => {
-                    var i = 0;
-                    var timer = setInterval(() => {
-                        if (i < text.length) {
-                            element.append(text.charAt(i));
-                            i++;
-                        }
-                        else {
-                            clearInterval(timer);
-                            text = "STUDENT";
-                            setTimeout(() => {
-                                h1.innerHTML = "-";
-                                TypingEffect(h1, 150);
-                            }, 1000);
-                        }
-                    }, speed);
-                }
-
-                setTimeout(() => {
-                    // AboutActive = 1;
-                    var LoadLimiter = 0;
-                    LoadLimiter++;
-                    document.getElementById("LOADING").style.display = "none";
-                    document.getElementById("Container").style.opacity = 1;
-                    document.getElementById("MainNavBar").style.display = "flex";
-                    if (LoadLimiter === 1) {
-                        TypingEffect(h1, 150);
-                    }
-                }, 4500);
-            }, 1000);
-        }, 5000);
-    }, []);
-
-    return (
-        <>
-            <div id="LOADINGTOP"></div>
-            <div id="LOADINGBG">
-                <div id="LOADING">LOADING<span id="Elipses">.</span><span id="Elipses2">.</span><span id="Elipses3">.</span></div>
-            </div>
-            <div id="Container">
-                <div id="ContainerCont">
-                    <h1 id="Hi">Hi I'm</h1>
-                    <h1 id="Name2">Philip Nzube</h1>
-                    <h1 id="Prof"></h1>
-                    <div id="SocialIcons">
-                        <a href="https://twitter.com/Philip_nzube"><img id="Twitter" src={Twitter} alt="TWITTER" /></a>
-                        <a href="https://github.com/PhilipNzube"><img id="GitHub" src={GitHub} alt="GITHUB" /></a>
-                        <a href="https://www.linkedin.com/in/philip-onwubalili-54049823a"><img id="LinkedIn" src={LinkedIn} alt="LINKEDIN" /></a>
-                    </div>
-                    <a id="Download" href="https://drive.google.com/file/d/1jmRBKeP_v-smwdSB-HA04yGDW-oXtb__/view?usp=drive_link
-">View CV</a>
-                </div>
-                <img id="Profile" src={ProfilePic} alt="PROFILE PIC" />
-            </div>
-
-            <OverlayNav />
-
-            <PicOverlay />
-        </>
-    )
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              p: 1.2,
+              borderRadius: "50%",
+              backgroundColor: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(4px)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              transition: "transform 0.3s ease, background 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.2)",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+              },
+            }}
+          >
+            <Box
+              component="img"
+              src={icon}
+              alt="social"
+              sx={{
+                height: 28,
+                width: 28,
+                filter: "brightness(1.3)",
+              }}
+            />
+          </Box>
+        ))}
+      </Box>
+    </Box>
+  );
 }

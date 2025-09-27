@@ -221,6 +221,15 @@ export default function Projects({ navHeight = 64 }) {
                 ProjInfo="ReactJS"
                 hasImage="True"
               />
+              <CardComponent
+                image={Proj14Img}
+                hasVLS="True"
+                VLS="https://naija-luxury-homes.netlify.app/"
+                VLSText="View Live Site"
+                ProjText="NAIJA LUXURY HOMES"
+                ProjInfo="ReactJS"
+                hasImage="True"
+              />
             </>
           )}
 

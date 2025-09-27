@@ -19,6 +19,7 @@ import Proj8Vid from "../videos/InteractionSystem Video.mp4";
 import Proj10Img from "../images/Proj10Img.png";
 import Proj12Img from "../images/Proj12Img.png";
 import Proj13Img from "../images/Proj13Img.png";
+import Proj14Img from "../images/Proj14Img.png";
 import FlutterImg from "../images/FlutterImg.png";
 import PlayButton from "../images/Play Button.png";
 import CardComponent from "../Components/Card";

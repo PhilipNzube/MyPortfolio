@@ -174,7 +174,7 @@ export default function MainPage({ navHeight = 64 }) {
                 View Projects
               </Button>
               <Button
-                href="https://drive.google.com/file/d/1tHLpUe6HEvTgA-KjRjCT7LW2J1eDxtd8/view?usp=sharing"
+                href="https://flowcv.com/resume/mmi6fk4qra"
                 variant="outlined"
                 size="large"
                 sx={{

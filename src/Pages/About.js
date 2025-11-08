@@ -64,13 +64,13 @@ export default function About({ navHeight = 64 }) {
               textAlign: "justify",
             }}
           >
-            Hello, my name is <strong>Philip Nzube</strong>, and I am currently
-            pursuing my undergraduate degree in Computer Science from Federal
-            University Lokoja, Nigeria.
+            Hello, my name is <strong>Philip Nzube</strong>, and I graduated
+            with a Bachelor's degree in Computer Science from Federal University
+            Lokoja, Nigeria.
             <br />
             <br />
-            I’m a Frontend Web Developer, Indie Game Developer, and Flutter
-            Mobile App Developer. I specialize in building Web Apps using
+            I’m a Frontend Web Developer, Indie Game Developer, and Mobile App
+            Developer. I specialize in building Web Apps using
             <strong> ReactJS</strong>, Android Games with <strong>C#</strong>,
             and cross-platform apps with <strong>Flutter</strong>.
             <br />
@@ -119,7 +119,7 @@ export default function About({ navHeight = 64 }) {
             px: { xs: 2, sm: 4 },
           }}
         >
-          <SkillImage Image={ReactJS} SkillText="ReactJS" />
+          <SkillImage Image={ReactJS} SkillText="ReactJS/React Native" />
           <SkillImage Image={Javascript} SkillText="JavaScript" />
           <SkillImage Image={CSharp} SkillText="C#" />
           <SkillImage Image={Flutter} SkillText="Flutter" />

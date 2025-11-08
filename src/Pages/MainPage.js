@@ -22,11 +22,10 @@ export default function MainPage({ navHeight = 64 }) {
   const theme = useTheme();
 
   const texts = [
-    "ANDROID APP DEVELOPER",
+    "MOBILE APP DEVELOPER",
     "FRONTEND WEB DEVELOPER",
     "INDIE GAME DEVELOPER",
     "TECH ENTHUSIAST",
-    "STUDENT",
   ];
 
   useEffect(() => {

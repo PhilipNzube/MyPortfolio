@@ -26,7 +26,7 @@ export default function SkillImage(props) {
       <Typography
         id="SkillText"
         variant="body1"
-        sx={{ fontWeight: "bold", color: "text.primary" }}
+        sx={{ fontWeight: "bold", color: "white" }}
       >
         {props.SkillText}
       </Typography>

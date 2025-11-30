@@ -246,6 +246,51 @@ export default function Projects({ navHeight = 64 }) {
                 ProjInfo="Flutter"
                 hasImage="True"
               />
+              <CardComponent
+                image={FlutterImg}
+                hasVC="True"
+                VC="https://github.com/PhilipNzube/bcci_platform"
+                VCText="View Code"
+                ProjText="BCCI"
+                ProjInfo="Flutter"
+                hasImage="True"
+              />
+              <CardComponent
+                image={FlutterImg}
+                hasVC="True"
+                VC="https://github.com/PhilipNzube/Yarn"
+                VCText="View Code"
+                ProjText="YARN"
+                ProjInfo="Flutter"
+                hasImage="True"
+              />
+              <CardComponent
+                image={FlutterImg}
+                hasVC="True"
+                VC="https://github.com/PhilipNzube/Ojawa"
+                VCText="View Code"
+                ProjText="OJAWA"
+                ProjInfo="Flutter"
+                hasImage="True"
+              />
+              <CardComponent
+                image={FlutterImg}
+                hasVC="True"
+                VC="https://github.com/PhilipNzube/Bills-Plug"
+                VCText="View Code"
+                ProjText="BILLS-PLUG"
+                ProjInfo="Flutter"
+                hasImage="True"
+              />
+              <CardComponent
+                image={FlutterImg}
+                hasVC="True"
+                VC="https://github.com/PhilipNzube/SignalLab"
+                VCText="View Code"
+                ProjText="SIGNAL LAB"
+                ProjInfo="Flutter"
+                hasImage="True"
+              />
             </>
           )}
         </Box>

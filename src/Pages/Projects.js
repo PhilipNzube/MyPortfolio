@@ -20,6 +20,9 @@ import Proj10Img from "../images/Proj10Img.png";
 import Proj12Img from "../images/Proj12Img.png";
 import Proj13Img from "../images/Proj13Img.png";
 import Proj14Img from "../images/Proj14Img.png";
+import Proj15Img from "../images/Proj15Img.png";
+import Proj16Img from "../images/Proj16Img.png";
+import Proj17Img from "../images/Proj17Img.png";
 import FlutterImg from "../images/FlutterImg.png";
 import PlayButton from "../images/Play Button.png";
 import CardComponent from "../Components/Card";
@@ -247,7 +250,7 @@ export default function Projects({ navHeight = 64 }) {
                 hasImage="True"
               />
               <CardComponent
-                image={FlutterImg}
+                image={Proj15Img}
                 hasVC="True"
                 VC="https://github.com/PhilipNzube/bcci_platform"
                 VCText="View Code"
@@ -256,7 +259,7 @@ export default function Projects({ navHeight = 64 }) {
                 hasImage="True"
               />
               <CardComponent
-                image={FlutterImg}
+                image={Proj16Img}
                 hasVC="True"
                 VC="https://github.com/PhilipNzube/Yarn"
                 VCText="View Code"
@@ -274,16 +277,16 @@ export default function Projects({ navHeight = 64 }) {
                 hasImage="True"
               />
               <CardComponent
-                image={FlutterImg}
+                image={Proj17Img}
                 hasVC="True"
                 VC="https://github.com/PhilipNzube/Bills-Plug"
                 VCText="View Code"
-                ProjText="BILLS-PLUG"
+                ProjText="FLEXI DATA"
                 ProjInfo="Flutter"
                 hasImage="True"
               />
               <CardComponent
-                image={FlutterImg}
+                image={Proj12Img}
                 hasVC="True"
                 VC="https://github.com/PhilipNzube/SignalLab"
                 VCText="View Code"

@@ -8,9 +8,11 @@ import {
   Typography,
   IconButton,
   Fade,
+  Chip,
 } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
+import StoreIcon from "@mui/icons-material/Store";
 
 export default function CardComponent(props) {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -57,19 +59,50 @@ export default function CardComponent(props) {
       }}
       onClick={handleActivateOverlay}
     >
-      <CardMedia
-        component={props.hasImage === "True" ? "img" : "video"}
-        src={props.hasImage === "True" ? props.image : props.vid}
-        alt={props.hasImage === "True" ? "Project Image" : "Project Video"}
-        ref={props.hasImage !== "True" ? vidRef : null}
-        sx={{
-          height: 180,
-          objectFit: "cover",
-          borderTopLeftRadius: 8,
-          borderTopRightRadius: 8,
-        }}
-        loop
-      />
+      <Box sx={{ position: "relative" }}>
+        <CardMedia
+          component={props.hasImage === "True" ? "img" : "video"}
+          src={props.hasImage === "True" ? props.image : props.vid}
+          alt={props.hasImage === "True" ? "Project Image" : "Project Video"}
+          ref={props.hasImage !== "True" ? vidRef : null}
+          sx={{
+            height: 180,
+            objectFit: "cover",
+            borderTopLeftRadius: 8,
+            borderTopRightRadius: 8,
+          }}
+          loop
+        />
+        {props.hasGPS === "True" && (
+          <Chip
+            icon={<StoreIcon />}
+            label="Play Store"
+            size="small"
+            sx={{
+              position: "absolute",
+              top: 8,
+              right: 8,
+              bgcolor: "rgba(18, 18, 18, 0.9)",
+              backdropFilter: "blur(8px)",
+              color: "bisque",
+              border: "1px solid rgba(255, 228, 196, 0.4)",
+              fontWeight: 600,
+              fontSize: "0.7rem",
+              height: "28px",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.5)",
+              zIndex: 2,
+              "& .MuiChip-icon": {
+                color: "bisque",
+              },
+              "&:hover": {
+                bgcolor: "rgba(18, 18, 18, 0.95)",
+                borderColor: "rgba(255, 228, 196, 0.6)",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.6)",
+              },
+            }}
+          />
+        )}
+      </Box>
       <Fade in={isOverlayOpen} timeout={300}>
         <Box
           sx={{
@@ -85,7 +118,7 @@ export default function CardComponent(props) {
             alignItems: "center",
             borderTopLeftRadius: 8,
             borderTopRightRadius: 8,
-            zIndex: 1,
+            zIndex: 3,
             animation: isOverlayOpen
               ? "ProjOverlayAnim 0.3s ease-in"
               : "ProjOverlayAnimOut 0.3s ease-out",
@@ -115,6 +148,22 @@ export default function CardComponent(props) {
               }}
             >
               {props.VLSText}
+            </Button>
+          )}
+          {props.hasGPS === "True" && (
+            <Button
+              href={props.GPS}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outlined"
+              sx={{
+                mb: props.hasVLS === "True" ? 1 : 0,
+                color: "white",
+                borderColor: "grey.300",
+                "&:hover": { bgcolor: "grey.800", borderColor: "grey.300" },
+              }}
+            >
+              {props.GPSText || "View on Play Store"}
             </Button>
           )}
           {props.hasPlayBut === "True" ? (
@@ -169,8 +218,7 @@ export default function CardComponent(props) {
       >
         <Typography
           variant="h6"
-          align="center"
-          sx={{ fontWeight: "bold", color: "bisque" }}
+          sx={{ fontWeight: "bold", color: "bisque", textAlign: "center", mb: 1 }}
         >
           {props.ProjText}
         </Typography>

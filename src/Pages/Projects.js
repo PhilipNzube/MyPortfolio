@@ -20,10 +20,11 @@ import Proj10Img from "../images/Proj10Img.png";
 import Proj12Img from "../images/Proj12Img.png";
 import Proj13Img from "../images/Proj13Img.png";
 import Proj14Img from "../images/Proj14Img.png";
-import Proj15Img from "../images/Proj15Img.png";
-import Proj16Img from "../images/Proj16Img.png";
-import Proj17Img from "../images/Proj17Img.png";
-import FlutterImg from "../images/FlutterImg.png";
+// import Proj15Img from "../images/Proj15Img.png";
+// import Proj16Img from "../images/Proj16Img.png";
+// import Proj17Img from "../images/Proj17Img.png";
+import Proj18Img from "../images/Proj18Img.png";
+// import FlutterImg from "../images/FlutterImg.png";
 import PlayButton from "../images/Play Button.png";
 import CardComponent from "../Components/Card";
 
@@ -240,7 +241,7 @@ export default function Projects({ navHeight = 64 }) {
           {/* === Flutter Projects === */}
           {(filter === "All" || filter === "Flutter") && (
             <>
-              <CardComponent
+              {/* <CardComponent
                 image={FlutterImg}
                 hasVC="True"
                 VC="https://github.com/PhilipNzube/facial_attendance"
@@ -291,6 +292,15 @@ export default function Projects({ navHeight = 64 }) {
                 VC="https://github.com/PhilipNzube/SignalLab"
                 VCText="View Code"
                 ProjText="SIGNAL LAB"
+                ProjInfo="Flutter"
+                hasImage="True"
+              /> */}
+              <CardComponent
+                image={Proj18Img}
+                hasGPS="True"
+                GPS="https://play.google.com/store/apps/details?id=com.velarius.education"
+                GPSText="View on Play Store"
+                ProjText="VELARIUS EDUCATION"
                 ProjInfo="Flutter"
                 hasImage="True"
               />

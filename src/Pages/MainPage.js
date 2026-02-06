@@ -220,7 +220,7 @@ export default function MainPage({ navHeight = 64 }) {
                 ? "https://twitter.com/Philip_nzube"
                 : i === 1
                 ? "https://github.com/PhilipNzube"
-                : "https://www.linkedin.com/in/philip-onwubalili-54049823a"
+                : "www.linkedin.com/in/philipnzube"
             }
             target="_blank"
             rel="noopener noreferrer"
